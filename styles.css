@@ -1,0 +1,27 @@
+html {
+  min-width: 100%;
+  width: 100%;
+}
+
+.ContactInfoContainer {
+  font-size: 16px;
+
+  /* @media (min-width: 480px) {
+    margin-left: -7vh;
+  } */
+}
+
+.EntriesColumn {
+  height: 50vh;
+
+  /* @media (min-width: 480px) {
+    margin-right: -7vh;
+  } */
+}
+
+.row {
+  @media (max-width: 481px) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
