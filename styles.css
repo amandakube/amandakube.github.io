@@ -5,18 +5,32 @@ html {
 
 .ContactInfoContainer {
   font-size: 16px;
+}
 
-  /* @media (min-width: 480px) {
-    margin-left: -7vh;
-  } */
+.Headshot {
+  width: 280px;
+  height: 225px;
+}
+
+.ContactInfoTextMain {
+  font-family: "Oswald", sans-serif;
+}
+
+.NameAndTitles {
+  font-size: 30px;
+}
+
+.CurrentPosition {
+  font-size: 23px;
 }
 
 .EntriesColumn {
   height: 50vh;
+}
 
-  /* @media (min-width: 480px) {
-    margin-right: -7vh;
-  } */
+.SocialIcon {
+  width: 32px;
+  height: 32px;
 }
 
 .row {
