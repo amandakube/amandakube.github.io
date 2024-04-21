@@ -6,127 +6,265 @@
 -->
 
 <html lang="en">
-
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172221298-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-172221298-1"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'UA-172221298-1');
+      gtag("config", "UA-172221298-1");
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="author" content="Amanda R. Kube Jotte">
-    <meta name="robots" content="INDEX,FOLLOW">
-    <meta name="keywords" content="Amanda, Kube, Jotte, PhD, Data Science, Computational Social Science">
-    <meta name="description"
-        content="Data Science Preceptor studying applications of AI to Social Sciences and Public Health">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="UTF-8" />
+    <meta name="author" content="Amanda R. Kube Jotte" />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta
+      name="keywords"
+      content="Amanda, Kube, Jotte, PhD, Data Science, Computational Social Science"
+    />
+    <meta
+      name="description"
+      content="Data Science Preceptor studying applications of AI to Social Sciences and Public Health"
+    />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta name="google" content="notranslate" />
-    <meta name="google-site-verification" content="leIOIHzfotk4I-5IQ5_YwW-Ubl-t0JqtmYpaa6gzBJg" />
-	
-  <title>Amanda R. Kube Jotte</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-</head>
-<body>
+    <meta
+      name="google-site-verification"
+      content="leIOIHzfotk4I-5IQ5_YwW-Ubl-t0JqtmYpaa6gzBJg"
+    />
 
+    <title>Amanda R. Kube Jotte</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html" style="font-size: 20px">Home</a></li>
+            <li>
+              <a href="teaching.html" style="font-size: 20px">Teaching</a>
+            </li>
+            <li>
+              <a href="publications.html" style="font-size: 20px"
+                >Publications</a
+              >
+            </li>
+            <li>
+              <a
+                href="Amanda_Kube_CV_111423.pdf"
+                target="_blank"
+                style="font-size: 20px"
+                >CV</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html" style="font-size: 20px;">Home</a></li>
-			  	<li><a href="teaching.html" style="font-size: 20px;">Teaching</a></li>
-			  	<li><a href="publications.html" style="font-size: 20px;">Publications</a></li>
-				  <li><a href="Amanda_Kube_CV_111423.pdf" target="_blank" style="font-size: 20px;">CV</a></li> 
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
     <div class="container">
-
-        <div class="row">
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-		    <div style="font-size:16px; margin-left:-7vh"">
-                <img class="img-responsive" src="headshot_jotte.jpg" alt="image of me" style="width:280px;height:225px;"><br>
-                <div style="font-family: 'Oswald', sans-serif; font-size: 30px;"><b>Amanda R. Kube Jotte, M.S., Ph.D.</b></div><br>
-		<div style="font-family: 'Oswald', sans-serif; font-size: 23px;"><b>Assistant Instructional Professor</b></div><br>
-                <p><b>akube@uchicago.edu</b><br>
-                <p>Data Science Institute<br>
-                The University of Chicago<br>
-                </p>
-			    <a href="https://twitter.com/AmandaRKube"
-                                        title=""><img alt="twitter" target="_blank"
-                                            src="twitter.png" style="width:32px;height:32px;"></a>
-		   
-		    <a href="https://www.linkedin.com/in/amanda-kube-488071a8/"
-                                        title=""><img alt="linkedin" target="_blank"
-                                            src="linkedin.png" style="width:32px;height:32px;"></a>
-					
-		    <a href="https://scholar.google.com/citations?user=eML9qi8AAAAJ&hl=en&inst=2230987035966559800"
-                                        title=""><img alt="Google Scholar" target="_blank"
-                                            src="google-scholar.svg" style="width:32px;height:32px;"></a>
-					
-		    <a href="https://www.researchgate.net/profile/Amanda_Kube?cp=shp"
-                                        title=""><img alt="Follow me on ResearchGate" target="_blank"
-                                            src="researchgate.svg" style="width:32px;height:32px;"></a>
-					
-		    <a href="https://orcid.org/0000-0002-4814-3209"
-                                        title=""><img alt="orcid" target="_blank"
-							   src="orcid.svg" style="width:32px;height:32px;"></a>
+      <div class="row">
+        <!-- Contact Info on the Sidebar -->
+        <div class="col-sm-12 col-md-4">
+          <div class="ContactInfoContainer">
+            <img
+              class="img-responsive Headshot"
+              src="headshot_jotte.jpg"
+              alt="image of me"
+            /><br />
+            <div class="ContactInfoTextMain NameAndTitles">
+              <b>Amanda R. Kube Jotte, M.S., Ph.D.</b>
             </div>
-		    </div>
-	
-	<!-- Page Content -->
-
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 50vh; margin-right:-7vh">
-                
-                <div style="margin-top:3%; text-align:justify; font-size:20px; line-height:1.5">                
-					<p style="line-height:134%"> I am an Assistant Professor of Data Science at The University of Chicago's <a href="https://datascience.uchicago.edu/" target="_blank">Data Science Institute</a>. My current interests involve classroom action research on effective teaching strategies in data science as well as the development of best practices in teaching data science ethics. I am currently building a transferable data science curriculum for the City Colleges of Chicago as part of The University of Chicago’s Preceptorship Program and I am excited to continue contributing to the data science undergraduate major and new masters program at the University of Chicago. </p>
-						
-			<p style="line-height:134%"> Before coming to the University of Chicago I attended Washington University in St. Louis where I received a double major in mathematics and psychology, graduating summa cum laude and as a member of the Phi Beta Kappa honor society. I earned my doctorate in <a href="https://datasciences.wustl.edu/" target="_blank">Computational and Data Sciences</a> from Washington University in St. Louis as the pioneering graduate of the program, where I studied applications of machine learning and AI for scarce resource allocation in the context of homelessness prevention services. I was advised by <a href="https://cs.gmu.edu/~sanmay/" target="_blank">Dr. Sanmay Das</a>&nbsp; at George Mason University and <a href="https://brownschool.wustl.edu/Faculty-and-Research/Pages/Patrick-Fowler.aspx" target="_blank">Dr. Patrick Fowler</a> in the Division of Computational and Data Sciences at Washington University in St. Louis. </p>
-					  </div>
-		    <div style="margin-top:10%; text-align:justify; font-size:20px; line-height:1.5">  
-		    <h2 id="news">News</h2>
-		    <ul>
-			<li>April 2024: Looking forward to starting my new position as Assistant Instructional Professor at the University of Chicago Data Science Institute.</li>
-			<li>October 2023: Thrilled to be presenting at ADSA this year in San Antonio! Looking forward to discussing data science education with so many wonderful instructors.</li>
-			<li>April 2023: Excited to announce our paper <i>Fair and Efficient Allocation of Scarce Resources Based on Predicted Outcomes: Implications for Homeless Service Delivery</i> is officially published and available <a
-                                        href="https://jair.org/index.php/jair/article/view/12847" target="_blank">here</a> </li>
-			<li>June 2022: I am now officially a Preceptor at UChicago's DSI - excited to welcome our Summer Lab students!</li>
-			<li>April 2022: I successfully defended my dissertation!</li>
-  			<li>February 2022: I accepted a position at the University of Chicago to begin June 2022</li>
-		    </ul>
-            </div> 
-		</div>
+            <br />
+            <div class="ContactInfoTextMain CurrentPosition">
+              <b>Assistant Instructional Professor</b>
             </div>
-	    </div>
+            <br />
+            <p><b>akube@uchicago.edu</b><br /></p>
+            <p>
+              Data Science Institute<br />
+              The University of Chicago<br />
+            </p>
+            <a href="https://twitter.com/AmandaRKube" title=""
+              ><img
+                alt="twitter"
+                target="_blank"
+                src="twitter.png"
+                class="SocialIcon"
+            /></a>
 
-    
-     
-</body>
+            <a href="https://www.linkedin.com/in/amanda-kube-488071a8/" title=""
+              ><img
+                alt="linkedin"
+                target="_blank"
+                src="linkedin.png"
+                class="SocialIcon"
+            /></a>
 
+            <a
+              href="https://scholar.google.com/citations?user=eML9qi8AAAAJ&hl=en&inst=2230987035966559800"
+              title=""
+              ><img
+                alt="Google Scholar"
+                target="_blank"
+                src="google-scholar.svg"
+                class="SocialIcon"
+            /></a>
+
+            <a
+              href="https://www.researchgate.net/profile/Amanda_Kube?cp=shp"
+              title=""
+              ><img
+                alt="Follow me on ResearchGate"
+                target="_blank"
+                src="researchgate.svg"
+                class="SocialIcon"
+            /></a>
+
+            <a href="https://orcid.org/0000-0002-4814-3209" title=""
+              ><img
+                alt="orcid"
+                target="_blank"
+                src="orcid.svg"
+                class="SocialIcon"
+            /></a>
+          </div>
+        </div>
+
+        <!-- Page Content -->
+
+        <!-- Entries Column -->
+        <div class="col-sm-12 col-md-8 EntriesColumn">
+          <div
+            style="
+              margin-top: 3%;
+              text-align: justify;
+              font-size: 20px;
+              line-height: 1.5;
+              line-height: 134%;
+            "
+          >
+            <p>
+              I am an Assistant Professor of Data Science at The University of
+              Chicago's
+              <a href="https://datascience.uchicago.edu/" target="_blank"
+                >Data Science Institute</a
+              >. My current interests involve classroom action research on
+              effective teaching strategies in data science as well as the
+              development of best practices in teaching data science ethics. I
+              am currently building a transferable data science curriculum for
+              the City Colleges of Chicago as part of The University of
+              Chicago’s Preceptorship Program and I am excited to continue
+              contributing to the data science undergraduate major and new
+              masters program at the University of Chicago.
+            </p>
+
+            <p>
+              Before coming to the University of Chicago I attended Washington
+              University in St. Louis where I received a double major in
+              mathematics and psychology, graduating summa cum laude and as a
+              member of the Phi Beta Kappa honor society. I earned my doctorate
+              in
+              <a href="https://datasciences.wustl.edu/" target="_blank"
+                >Computational and Data Sciences</a
+              >
+              from Washington University in St. Louis as the pioneering graduate
+              of the program, where I studied applications of machine learning
+              and AI for scarce resource allocation in the context of
+              homelessness prevention services. I was advised by
+              <a href="https://cs.gmu.edu/~sanmay/" target="_blank"
+                >Dr. Sanmay Das</a
+              >&nbsp; at George Mason University and
+              <a
+                href="https://brownschool.wustl.edu/Faculty-and-Research/Pages/Patrick-Fowler.aspx"
+                target="_blank"
+                >Dr. Patrick Fowler</a
+              >
+              in the Division of Computational and Data Sciences at Washington
+              University in St. Louis.
+            </p>
+          </div>
+          <div
+            style="
+              margin-top: 10%;
+              text-align: justify;
+              font-size: 20px;
+              line-height: 1.5;
+            "
+          >
+            <h2 id="news">News</h2>
+            <ul>
+              <li>
+                April 2024: Looking forward to starting my new position as
+                Assistant Instructional Professor at the University of Chicago
+                Data Science Institute.
+              </li>
+              <li>
+                October 2023: Thrilled to be presenting at ADSA this year in San
+                Antonio! Looking forward to discussing data science education
+                with so many wonderful instructors.
+              </li>
+              <li>
+                April 2023: Excited to announce our paper
+                <i
+                  >Fair and Efficient Allocation of Scarce Resources Based on
+                  Predicted Outcomes: Implications for Homeless Service
+                  Delivery</i
+                >
+                is officially published and available
+                <a
+                  href="https://jair.org/index.php/jair/article/view/12847"
+                  target="_blank"
+                  >here</a
+                >
+              </li>
+              <li>
+                June 2022: I am now officially a Preceptor at UChicago's DSI -
+                excited to welcome our Summer Lab students!
+              </li>
+              <li>April 2022: I successfully defended my dissertation!</li>
+              <li>
+                February 2022: I accepted a position at the University of
+                Chicago to begin June 2022
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
