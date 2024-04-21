@@ -5,6 +5,7 @@ html {
 
 .ContactInfoContainer {
   font-size: 16px;
+  padding: 20px;
 }
 
 .Headshot {
@@ -26,6 +27,7 @@ html {
 
 .EntriesColumn {
   height: 50vh;
+  padding: 20px;
 }
 
 .SocialIcon {
