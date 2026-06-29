@@ -39,3 +39,14 @@ html {
     margin-left: 0;
   }
 }
+
+.teaching-card {
+  border-left: 4px solid #800000;
+  padding: 12px 18px;
+  margin: 18px 0;
+  background-color: #f8f8f8;
+}
+
+.teaching-card h4 {
+  margin-top: 0;
+}
