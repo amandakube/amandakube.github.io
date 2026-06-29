@@ -27,11 +27,11 @@
     <meta name="robots" content="INDEX,FOLLOW" />
     <meta
       name="keywords"
-      content="Amanda, Kube, Jotte, PhD, Data Science, Computational Social Science"
+      content="Amanda Kube Jotte, Amanda R. Kube Jotte, Amanda Jotte, University of Chicago, Data Science Institute, Data Science Education, Teaching, Pedagogy, Machine Learning, Data Science Ethics"
     />
     <meta
       name="description"
-      content="Data Scientist studying applications of AI to Social Sciences and Public Health"
+      content="Assistant Instructional Professor at the University of Chicago specializing in data science education, ethics, curriculum development, and interactive approaches to teaching machine learning and programming."
     />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta name="google" content="notranslate" />
@@ -75,10 +75,10 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href="index.html" style="font-size: 20px">Home</a></li>
-            <!-- <li>
+            <li>
               <a href="teaching.html" style="font-size: 20px">Teaching</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="publications.html" style="font-size: 20px"
                 >Publications</a
               >
@@ -178,18 +178,17 @@
             "
           >
             <p>
-              I am an Assistant Professor of Data Science at The University of
-              Chicago's
-              <a href="https://datascience.uchicago.edu/" target="_blank"
-                >Data Science Institute</a
-              >. My current interests involve classroom action research on
-              effective teaching strategies in data science as well as the
-              development of best practices in teaching data science ethics. 
-            My most recent work has been in building a transferable data science curriculum for
-              the City Colleges of Chicago as part of The University of
-              Chicago’s Preceptorship Program and I am excited to continue
-              contributing to the data science undergraduate major and new
-              graduate programs as an Assistant Instructional Professor.
+              I am an Assistant Instructional Professor in the <a href="https://datascience.uchicago.edu/" target="_blank">
+                Data Science Institute</a at the University of Chicago. My teaching and scholarly work focus on data science education, 
+                 ethical data practice, and the design of accessible,interactive learning experiences for students 
+                 developing technical, statistical, and critical reasoning skills.</p>
+
+            <p>
+              I teach across the undergraduate data science curriculum, including
+              introductory data science, computer science for data science, machine
+              learning, and data science ethics. I am especially interested in helping
+              students connect technical methods to real-world decision-making, communicate
+              clearly about data, and develop confidence as problem solvers.
             </p>
 
             <p>
@@ -244,17 +243,17 @@
                    series <i>5 Minutes With...</i> The article can be found
                    <a href="https://data.org/news/5-minutes-with-dr-amanda-r-kube-jotte/" target="_blank"> here</a>.
               </li>
-              <li>
+              <li class="extra-news">
                 April 2024: Looking forward to starting my new position as
                 Assistant Instructional Professor at the University of Chicago
                 Data Science Institute.
               </li>
-              <li>
+              <li class="extra-news">
                 October 2023: Thrilled to be presenting at ADSA this year in San
                 Antonio! Looking forward to discussing data science education
                 with so many wonderful instructors.
               </li>
-              <li>
+              <li class="extra-news">
                 April 2023: Excited to announce our paper
                 <i
                   >Fair and Efficient Allocation of Scarce Resources Based on
@@ -268,16 +267,30 @@
                   >here</a
                 >
               </li>
-              <li>
+              <li class="extra-news">
                 June 2022: I am now officially a Preceptor at UChicago's DSI -
                 excited to welcome our Summer Lab students!
               </li>
-              <li>April 2022: I successfully defended my dissertation!</li>
-              <li>
+              <li class="extra-news">April 2022: I successfully defended my dissertation!</li>
+              <li class="extra-news">
                 February 2022: I accepted a position at the University of
                 Chicago to begin June 2022
               </li>
             </ul>
+              <button id="toggle-news" class="btn btn-default">See more</button>
+
+            <script>
+              const button = document.getElementById("toggle-news");
+              const extraNews = document.querySelectorAll(".extra-news");
+            
+              extraNews.forEach(item => item.style.display = "none");
+            
+              button.addEventListener("click", function () {
+                const hidden = extraNews[0].style.display === "none";
+                extraNews.forEach(item => item.style.display = hidden ? "list-item" : "none");
+                button.textContent = hidden ? "See less" : "See more";
+              });
+            </script>
           </div>
         </div>
       </div>
