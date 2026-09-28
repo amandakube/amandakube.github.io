@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Amanda R. Kube Jotte">
+<meta name="dcterms.date" content="2026-09-27">
+
+<title>VS Code Installation &amp; Setup Guide – Teaching Resources | Student Guides</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2a890b4f4ecfc8517c73d5eba00faa62.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2ae9d128b9b6acf21c0753cbc8859995.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Teaching Resources | Student Guides</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">VS Code Installation &amp; Setup Guide</a></li>
+  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before You Begin</a></li>
+  <li><a href="#what-is-vs-code" id="toc-what-is-vs-code" class="nav-link" data-scroll-target="#what-is-vs-code">What Is VS Code?</a></li>
+  <li><a href="#install-vs-code" id="toc-install-vs-code" class="nav-link" data-scroll-target="#install-vs-code">Install VS Code</a></li>
+  <li><a href="#get-to-know-your-workspace" id="toc-get-to-know-your-workspace" class="nav-link" data-scroll-target="#get-to-know-your-workspace">Get to Know Your Workspace</a>
+  <ul class="collapse">
+  <li><a href="#explorer" id="toc-explorer" class="nav-link" data-scroll-target="#explorer">Explorer</a></li>
+  <li><a href="#editor" id="toc-editor" class="nav-link" data-scroll-target="#editor">Editor</a></li>
+  <li><a href="#integrated-terminal" id="toc-integrated-terminal" class="nav-link" data-scroll-target="#integrated-terminal">Integrated Terminal</a></li>
+  <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a></li>
+  <li><a href="#problems-and-output" id="toc-problems-and-output" class="nav-link" data-scroll-target="#problems-and-output">Problems and Output</a></li>
+  </ul></li>
+  <li><a href="#open-a-project-folder" id="toc-open-a-project-folder" class="nav-link" data-scroll-target="#open-a-project-folder">Open a Project Folder</a></li>
+  <li><a href="#connect-vs-code-to-python" id="toc-connect-vs-code-to-python" class="nav-link" data-scroll-target="#connect-vs-code-to-python">Connect VS Code to Python</a>
+  <ul class="collapse">
+  <li><a href="#install-the-python-extension" id="toc-install-the-python-extension" class="nav-link" data-scroll-target="#install-the-python-extension">Install the Python Extension</a></li>
+  </ul></li>
+  <li><a href="#select-your-python-interpreter" id="toc-select-your-python-interpreter" class="nav-link" data-scroll-target="#select-your-python-interpreter">Select Your Python Interpreter</a>
+  <ul class="collapse">
+  <li><a href="#open-the-command-palette" id="toc-open-the-command-palette" class="nav-link" data-scroll-target="#open-the-command-palette">Open the Command Palette</a></li>
+  </ul></li>
+  <li><a href="#test-your-python-setup" id="toc-test-your-python-setup" class="nav-link" data-scroll-target="#test-your-python-setup">Test Your Python Setup</a></li>
+  <li><a href="#use-the-integrated-terminal" id="toc-use-the-integrated-terminal" class="nav-link" data-scroll-target="#use-the-integrated-terminal">Use the Integrated Terminal</a></li>
+  <li><a href="#set-up-the-tools-you-use" id="toc-set-up-the-tools-you-use" class="nav-link" data-scroll-target="#set-up-the-tools-you-use">Set Up the Tools You Use</a>
+  <ul class="collapse">
+  <li><a href="#jupyter-notebooks" id="toc-jupyter-notebooks" class="nav-link" data-scroll-target="#jupyter-notebooks">Jupyter Notebooks</a>
+  <ul class="collapse">
+  <li><a href="#install-the-jupyter-extension" id="toc-install-the-jupyter-extension" class="nav-link" data-scroll-target="#install-the-jupyter-extension">Install the Jupyter Extension</a></li>
+  <li><a href="#understand-the-kernel" id="toc-understand-the-kernel" class="nav-link" data-scroll-target="#understand-the-kernel">Understand the Kernel</a></li>
+  <li><a href="#my-notebook-opens-but-the-cells-will-not-run" id="toc-my-notebook-opens-but-the-cells-will-not-run" class="nav-link" data-scroll-target="#my-notebook-opens-but-the-cells-will-not-run">My notebook opens, but the cells will not run</a></li>
+  </ul></li>
+  <li><a href="#code-style-checking-with-pylint" id="toc-code-style-checking-with-pylint" class="nav-link" data-scroll-target="#code-style-checking-with-pylint">Code Style Checking with Pylint</a>
+  <ul class="collapse">
+  <li><a href="#set-up-pylint" id="toc-set-up-pylint" class="nav-link" data-scroll-target="#set-up-pylint">Set Up Pylint</a></li>
+  <li><a href="#understand-the-feedback" id="toc-understand-the-feedback" class="nav-link" data-scroll-target="#understand-the-feedback">Understand the Feedback</a></li>
+  </ul></li>
+  <li><a href="#testing-with-pytest" id="toc-testing-with-pytest" class="nav-link" data-scroll-target="#testing-with-pytest">Testing with pytest</a>
+  <ul class="collapse">
+  <li><a href="#configure-python-tests" id="toc-configure-python-tests" class="nav-link" data-scroll-target="#configure-python-tests">Configure Python Tests</a></li>
+  <li><a href="#run-tests" id="toc-run-tests" class="nav-link" data-scroll-target="#run-tests">Run Tests</a></li>
+  </ul></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a>
+  <ul class="collapse">
+  <li><a href="#install-the-quarto-extension" id="toc-install-the-quarto-extension" class="nav-link" data-scroll-target="#install-the-quarto-extension">Install the Quarto Extension</a></li>
+  <li><a href="#open-a-quarto-document" id="toc-open-a-quarto-document" class="nav-link" data-scroll-target="#open-a-quarto-document">Open a Quarto Document</a></li>
+  <li><a href="#preview-the-document" id="toc-preview-the-document" class="nav-link" data-scroll-target="#preview-the-document">Preview the Document</a></li>
+  </ul></li>
+  <li><a href="#git-source-control" id="toc-git-source-control" class="nav-link" data-scroll-target="#git-source-control">Git Source Control</a></li>
+  <li><a href="#markdown-preview" id="toc-markdown-preview" class="nav-link" data-scroll-target="#markdown-preview">Markdown Preview</a></li>
+  </ul></li>
+  <li><a href="#common-problems" id="toc-common-problems" class="nav-link" data-scroll-target="#common-problems">Common Problems</a>
+  <ul class="collapse">
+  <li><a href="#vs-code-cannot-find-python" id="toc-vs-code-cannot-find-python" class="nav-link" data-scroll-target="#vs-code-cannot-find-python">VS Code cannot find Python</a></li>
+  <li><a href="#a-package-installed-but-vs-code-still-cannot-import-it" id="toc-a-package-installed-but-vs-code-still-cannot-import-it" class="nav-link" data-scroll-target="#a-package-installed-but-vs-code-still-cannot-import-it">A package installed, but VS Code still cannot import it</a></li>
+  <li><a href="#my-terminal-is-in-the-wrong-folder" id="toc-my-terminal-is-in-the-wrong-folder" class="nav-link" data-scroll-target="#my-terminal-is-in-the-wrong-folder">My terminal is in the wrong folder</a></li>
+  <li><a href="#i-see-colored-underlines-everywhere" id="toc-i-see-colored-underlines-everywhere" class="nav-link" data-scroll-target="#i-see-colored-underlines-everywhere">I see colored underlines everywhere</a></li>
+  <li><a href="#something-worked-yesterday-but-not-today" id="toc-something-worked-yesterday-but-not-today" class="nav-link" data-scroll-target="#something-worked-yesterday-but-not-today">Something worked yesterday but not today</a></li>
+  <li><a href="#vs-code-was-installed-but-now-i-cant-find-it" id="toc-vs-code-was-installed-but-now-i-cant-find-it" class="nav-link" data-scroll-target="#vs-code-was-installed-but-now-i-cant-find-it">VS Code was installed, but now I can’t find it</a></li>
+  </ul></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#verify-your-setup" id="toc-verify-your-setup" class="nav-link" data-scroll-target="#verify-your-setup">Verify Your Setup</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">VS Code Installation &amp; Setup Guide</h1>
+<p class="subtitle lead">Install Visual Studio Code, connect it to Python, and configure the tools you use</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Amanda R. Kube Jotte </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 27, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="section" class="level1 guide-header">
+<h1>VS Code Installation &amp; Setup Guide</h1>
+<div class="subtitle">
+<p>Install Visual Studio Code, connect it to Python, and configure the tools you use</p>
+</div>
+<div class="guide-meta-inline">
+<p>Beginning programming and data science students · 20–40 minutes · Beginner · Version 0.1</p>
+</div>
+</section>
+<section id="before-you-begin" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-begin">Before You Begin</h2>
+<p>Visual Studio Code, usually called <strong>VS Code</strong>, is a code editor that brings the different tools you use for programming into one workspace.</p>
+<p>This guide is for you if you:</p>
+<ul>
+<li>are using VS Code for the first time</li>
+<li>have installed Python and want to use it from VS Code</li>
+<li>are preparing for a programming or data science course</li>
+<li>are unsure which Python installation VS Code is using or</li>
+<li>want to configure VS Code for tools such as Jupyter, Pylint, pytest, Quarto, Git, or Markdown.</li>
+</ul>
+<p>By the end of this guide, you will be able to:</p>
+<ul>
+<li>install VS Code</li>
+<li>understand the main parts of the VS Code interface</li>
+<li>open a project folder correctly</li>
+<li>connect VS Code to your Python installation</li>
+<li>create and run a Python script</li>
+<li>use the integrated terminal and</li>
+<li>configure the additional tools you need for your work.</li>
+</ul>
+<div class="guide-checklist">
+<p><strong>Before you start</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Python is installed on your computer.</label></li>
+<li><label><input type="checkbox">You can open a terminal.</label></li>
+<li><label><input type="checkbox">You know where you would like to store your programming projects.</label></li>
+</ul>
+</div>
+<p>If Python is not installed yet, complete the <strong>Python Installation Guide</strong> first.</p>
+</section>
+<section id="what-is-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-vs-code">What Is VS Code?</h2>
+<p>One of the most important things to understand about VS Code is that it is a <strong>workspace</strong>, not the programming tools themselves.</p>
+<p>For example, VS Code can help you work with:</p>
+<ul>
+<li>Python</li>
+<li>Jupyter notebooks</li>
+<li>Pylint</li>
+<li>pytest</li>
+<li>Quarto</li>
+<li>Git and</li>
+<li>Markdown.</li>
+</ul>
+<p>But those tools do not all become part of VS Code simply because you install the editor.</p>
+<div class="recommendation">
+<p><strong>Mental Model</strong></p>
+<p>Think of VS Code as your workspace.</p>
+<p>Your files live on your computer. Python executes your Python code. Git tracks changes. Quarto renders documents. Other tools check, test, or display your work.</p>
+<p>VS Code gives you one place to work with all of them.</p>
+</div>
+<p>This distinction is useful when troubleshooting. If something goes wrong, one of the first questions to ask is:</p>
+<blockquote class="blockquote">
+<p><strong>Which tool is actually producing the problem?</strong></p>
+</blockquote>
+</section>
+<section id="install-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="install-vs-code">Install VS Code</h2>
+<div class="guide-steps">
+<section id="download-vs-code" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="download-vs-code">Download VS Code</h3>
+<p>Go to the official Visual Studio Code website, <code>https://code.visualstudio.com/Download</code>, and download the version for your operating system.</p>
+<!-- SCREENSHOT: VS Code download page -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-download-page.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The official Visual Studio Code downloads page</figcaption>
+</figure>
+</div>
+<p>Avoid downloading from an advertisement, third-party download site, or an unfamiliar app store listing.</p>
+</section>
+<section id="download-the-recommended-stable-release" class="level3 step">
+<h3 class="anchored" data-anchor-id="download-the-recommended-stable-release">Download the recommended stable release</h3>
+<p>Choose the current VS Code release for your operating system.</p>
+<p>Save the installer somewhere you can find it, such as your Downloads folder.</p>
+</section>
+<section id="install-vs-code-1" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="install-vs-code-1">Install VS Code</h3>
+<p>Open the installer and follow the instructions for your operating system.</p>
+<section id="macos" class="level4">
+<h4 class="anchored" data-anchor-id="macos">macOS</h4>
+<ol type="1">
+<li>Open the downloaded VS Code file.</li>
+<li>Drag <strong>Visual Studio Code</strong> into your <strong>Applications</strong> folder.</li>
+<li>Open VS Code from <strong>Applications</strong>, Launchpad, or Spotlight.</li>
+<li>Once you have confirmed that VS Code opens from Applications, you can remove the downloaded installer or disk image.</li>
+</ol>
+<div class="common-mistake">
+<p><strong>Common Mistake</strong></p>
+<p>Do not repeatedly open VS Code from your <strong>Downloads</strong> folder or directly from the downloaded installer.</p>
+<p>On macOS, make sure Visual Studio Code has been moved into the <strong>Applications</strong> folder. This gives it a permanent location on your computer.</p>
+</div>
+</section>
+<section id="windows" class="level4">
+<h4 class="anchored" data-anchor-id="windows">Windows</h4>
+<ol type="1">
+<li>Open the downloaded VS Code installer.</li>
+<li>Follow the installation prompts.</li>
+<li>Complete the installation before opening VS Code.</li>
+<li>After installation, open VS Code from the Start menu or its installed shortcut rather than reopening the downloaded installer.</li>
+</ol>
+</section>
+</section>
+<section id="open-vs-code" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="open-vs-code">Open VS Code</h3>
+<p>Launch Visual Studio Code.</p>
+<p>You should see the Welcome screen.</p>
+<!-- SCREENSHOT: VS Code Welcome screen -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-welcome-page.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The VS Code Welcome Screen. Your screen may look slightly different depending on the extensions you have installed.</figcaption>
+</figure>
+</div>
+</section>
+</div>
+</section>
+<section id="get-to-know-your-workspace" class="level2">
+<h2 class="anchored" data-anchor-id="get-to-know-your-workspace">Get to Know Your Workspace</h2>
+<p>Before configuring anything, it helps to know the names of the major parts of VS Code.</p>
+<!-- SCREENSHOT: Annotated VS Code interface -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-workspace.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The major parts of the VS Code interface.</figcaption>
+</figure>
+</div>
+<section id="explorer" class="level3">
+<h3 class="anchored" data-anchor-id="explorer">Explorer</h3>
+<p>The <strong>Explorer</strong> (<span style="color: #00B0F0;">blue</span> in the image) shows the files and folders in your current project.</p>
+<p>You can use it to create, open, rename, move, and organize files.</p>
+</section>
+<section id="editor" class="level3">
+<h3 class="anchored" data-anchor-id="editor">Editor</h3>
+<p>The <strong>editor</strong> (<span style="color: #48D65A;">green</span> in the image) is the main area where you write and edit your files.</p>
+<p>Depending on the file, the editor might contain Python code, Markdown, a Quarto document, a Jupyter notebook, or another type of content.</p>
+</section>
+<section id="integrated-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="integrated-terminal">Integrated Terminal</h3>
+<p>The <strong>terminal</strong> (<span style="color: #FFFF00; -webkit-text-stroke: 0.25px black;">yellow</span> in the image) lets you run command-line tools without leaving VS Code.</p>
+<p>You may use it to:</p>
+<ul>
+<li>run Python</li>
+<li>install packages</li>
+<li>run tests</li>
+<li>use Git</li>
+<li>render documents</li>
+<li>perform other project-related tasks</li>
+</ul>
+</section>
+<section id="extensions" class="level3">
+<h3 class="anchored" data-anchor-id="extensions">Extensions</h3>
+<p><strong>Extensions</strong> (button to view highlighted in <span style="color: #D86ECC;">magenta</span> in the image) add support for languages and tools that are not built directly into the basic editor.</p>
+<p>You will install some of these later in this guide.</p>
+</section>
+<section id="problems-and-output" class="level3">
+<h3 class="anchored" data-anchor-id="problems-and-output">Problems and Output</h3>
+<p>The <strong>Problems</strong> and <strong>Output</strong> (<span style="color: #FF0000;">red</span> and <span style="color: #EE9F00;">orange</span> respectively in the image) panels contain information from VS Code and its extensions.</p>
+<p>When something goes wrong, notice <strong>where the message appears</strong>. A Python error, Pylint warning, failed pytest test, and VS Code extension error mean different things.</p>
+</section>
+</section>
+<section id="open-a-project-folder" class="level2">
+<h2 class="anchored" data-anchor-id="open-a-project-folder">Open a Project Folder</h2>
+<p>One of the most useful VS Code habits is also one of the simplest:</p>
+<p><strong>Open the project folder, not just the file you want to edit.</strong></p>
+<div class="recommendation">
+<p><strong>Recommendation</strong></p>
+<p>Start by opening the folder containing your project. Then open individual files from the Explorer.</p>
+</div>
+<p>Opening the project folder gives VS Code context for your work. It helps VS Code understand:</p>
+<ul>
+<li>which files belong together</li>
+<li>where the terminal should start</li>
+<li>how relative file paths should behave</li>
+<li>whether the project is a Git repository</li>
+<li>which project-specific settings apply</li>
+</ul>
+<div class="guide-steps">
+<section id="create-a-test-project-folder" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="create-a-test-project-folder">Create a test project folder</h3>
+<p>Create a folder somewhere easy to find.</p>
+<p>For example:</p>
+<pre class="text"><code>vscode-test</code></pre>
+</section>
+<section id="open-the-folder" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="open-the-folder">Open the folder</h3>
+<p>In VS Code, choose:</p>
+<p><strong>File → Open Folder</strong></p>
+<p>Select your <code>vscode-test</code> folder.</p>
+<div class="expected-result">
+<p>The folder name appears in the Explorer on the left side of VS Code.</p>
+</div>
+</section>
+</div>
+<div class="common-mistake">
+<p><strong>Common Mistake</strong></p>
+<p>Opening a <code>.py</code> file by itself may make everything appear normal at first, but VS Code may not have the project context you expect.</p>
+<p>When possible, open the project folder first.</p>
+</div>
+</section>
+<section id="connect-vs-code-to-python" class="level2">
+<h2 class="anchored" data-anchor-id="connect-vs-code-to-python">Connect VS Code to Python</h2>
+<p>Installing VS Code does not install Python support automatically.</p>
+<p>There are two separate pieces:</p>
+<pre class="text"><code>Python installation → Executes Python code
+
+Python extension → Helps VS Code work with Python</code></pre>
+<p>You need both.</p>
+<section id="install-the-python-extension" class="level3">
+<h3 class="anchored" data-anchor-id="install-the-python-extension">Install the Python Extension</h3>
+</section>
+<div class="guide-steps">
+<section id="open-extensions" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="open-extensions">Open Extensions</h3>
+<p>Select the <strong>Extensions</strong> icon in the Activity (left side) Bar.</p>
+</section>
+<section id="find-the-python-extension" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="find-the-python-extension">Find the Python extension</h3>
+<p>Search for:</p>
+<pre class="text"><code>Python</code></pre>
+<p>Choose the official Python extension published by Microsoft.</p>
+<!-- SCREENSHOT: Python extension -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-python-extension.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The official Microsoft Python extension in VS Code.</figcaption>
+</figure>
+</div>
+</section>
+<section id="install-it" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="install-it">Install it</h3>
+<p>Select <strong>Install</strong>.</p>
+<p>Restart or reload VS Code if prompted.</p>
+</section>
+</div>
+<div class="common-mistake">
+<p><strong>Common Mistake</strong></p>
+<p>Installing the Python extension does <strong>not</strong> install Python.</p>
+<p>The extension allows VS Code to communicate with a Python installation that already exists on your computer.</p>
+</div>
+</section>
+<section id="select-your-python-interpreter" class="level2">
+<h2 class="anchored" data-anchor-id="select-your-python-interpreter">Select Your Python Interpreter</h2>
+<p>Your computer may contain more than one Python installation or environment.</p>
+<p>VS Code therefore needs to know:</p>
+<blockquote class="blockquote">
+<p><strong>Which Python should run this project?</strong></p>
+</blockquote>
+<section id="open-the-command-palette" class="level3">
+<h3 class="anchored" data-anchor-id="open-the-command-palette">Open the Command Palette</h3>
+<p>On macOS:</p>
+<pre class="text"><code>Command + Shift + P</code></pre>
+<p>On Windows or Linux:</p>
+<pre class="text"><code>Ctrl + Shift + P</code></pre>
+<p>Search for:</p>
+<pre class="text"><code>Python: Select Interpreter</code></pre>
+<p>Choose the Python environment you intend to use.</p>
+<!-- SCREENSHOT: interpreter selector -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-interpreter-selector.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The interface for selecting your Python interpreter.</figcaption>
+</figure>
+</div>
+<div class="best-practice">
+<p><strong>Best Practice</strong></p>
+<p>Check your interpreter before troubleshooting package problems.</p>
+<p>A package can be installed successfully in one Python environment while VS Code is running your code with another.</p>
+</div>
+</section>
+</section>
+<section id="test-your-python-setup" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-python-setup">Test Your Python Setup</h2>
+<p>Let’s verify that VS Code and Python are connected.</p>
+<div class="guide-steps">
+<section id="create-a-python-file" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="create-a-python-file">Create a Python file</h3>
+<p>In the Explorer, create:</p>
+<pre class="text"><code>hello.py</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-new-file.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The button for creating a new file. Hover for the button to appear. To create a new file within your project folder (recommended) click the button next to the project folder name.</figcaption>
+</figure>
+</div>
+</section>
+<section id="add-some-python" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="add-some-python">Add some Python</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Python is running in VS Code!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Save the file using: <strong>File → Save</strong></p>
+</section>
+<section id="run-the-file" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="run-the-file">Run the file</h3>
+<p>Use <strong>Run Python File</strong> in VS Code.</p>
+<!-- SCREENSHOT: Run Python File button -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-run-python-file.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The button for running a Python file. Looks like a ‘play’ button.</figcaption>
+</figure>
+</div>
+<div class="expected-result">
+<p>The integrated terminal opens and displays:</p>
+<pre class="text"><code>Python is running in VS Code!</code></pre>
+</div>
+</section>
+</div>
+</section>
+<section id="use-the-integrated-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="use-the-integrated-terminal">Use the Integrated Terminal</h2>
+<p>Open the terminal with:</p>
+<p><strong>Terminal → New Terminal</strong></p>
+<p>Because you opened a project folder, the terminal should normally begin inside that folder.</p>
+<p>Check Python with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>or:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You can also check which <code>pip</code> belongs to that Python installation:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>or:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="recommendation">
+<p><strong>Mental Model</strong></p>
+<p>The terminal is not a separate copy of your project.</p>
+<p>It is another way of interacting with the files and tools on your computer. Its <strong>current working directory</strong> determines where commands are being run.</p>
+</div>
+</section>
+<section id="set-up-the-tools-you-use" class="level1">
+<h1>Set Up the Tools You Use</h1>
+<p>The rest of this guide is optional.</p>
+<p>You <strong>do not need to configure every tool below</strong>.</p>
+<p>Choose the sections that match the work you plan to do.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>If you will…</th>
+<th>Set up…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Work with <code>.ipynb</code> notebooks</td>
+<td>Jupyter</td>
+</tr>
+<tr class="even">
+<td>Receive automatic Python style feedback</td>
+<td>Pylint</td>
+</tr>
+<tr class="odd">
+<td>Write or run automated tests</td>
+<td>pytest</td>
+</tr>
+<tr class="even">
+<td>Work with <code>.qmd</code> documents</td>
+<td>Quarto</td>
+</tr>
+<tr class="odd">
+<td>Work in Git repositories</td>
+<td>Git Source Control</td>
+</tr>
+<tr class="even">
+<td>Edit <code>.md</code> files</td>
+<td>Markdown Preview</td>
+</tr>
+</tbody>
+</table>
+<section id="jupyter-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="jupyter-notebooks">Jupyter Notebooks</h2>
+<p>If you work with <code>.ipynb</code> files, VS Code can provide a notebook interface directly inside your workspace.</p>
+<section id="install-the-jupyter-extension" class="level3">
+<h3 class="anchored" data-anchor-id="install-the-jupyter-extension">Install the Jupyter Extension</h3>
+<p>Open Extensions and search for:</p>
+<pre class="text"><code>Jupyter</code></pre>
+<p>Install the official Jupyter extension published by Microsoft.</p>
+</section>
+<section id="understand-the-kernel" class="level3">
+<h3 class="anchored" data-anchor-id="understand-the-kernel">Understand the Kernel</h3>
+<p>A Jupyter notebook needs a <strong>kernel</strong> to execute its code.</p>
+<p>For a Python notebook, that kernel is connected to a Python environment.</p>
+<p>Open a notebook in your project folder or create a new notebook in the same way you created a python file, except use the file extension <code>.ipynb</code>. Then, use the kernel selector to choose the Python environment you want.</p>
+<p><strong>Select Kernel → Python Environments → Choose your desired environment</strong></p>
+<div class="expected-result">
+<p>You can run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Jupyter is ready!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>and see the output directly below the cell.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-jupyter.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The jupyter interface in VS Code.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="my-notebook-opens-but-the-cells-will-not-run" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="my-notebook-opens-but-the-cells-will-not-run">My notebook opens, but the cells will not run</h3>
+<div class="quick-answer">
+<p>Check the Jupyter extension and selected kernel before reinstalling Python.</p>
+</div>
+<p>Confirm that:</p>
+<ol type="1">
+<li>the Python extension is installed,</li>
+<li>the Jupyter extension is installed and enabled,</li>
+<li>a Python kernel is selected, and</li>
+<li>the selected environment contains the packages you need.</li>
+</ol>
+<p>If VS Code asks to install <code>ipykernel</code>, follow the prompt for the environment you intend to use.</p>
+</section>
+</section>
+<section id="code-style-checking-with-pylint" class="level2">
+<h2 class="anchored" data-anchor-id="code-style-checking-with-pylint">Code Style Checking with Pylint</h2>
+<p>Pylint analyzes Python code and identifies potential problems with code quality and style.</p>
+<p>It is important to understand what this means:</p>
+<div class="recommendation">
+<p><strong>Pylint is a development tool.</strong></p>
+<p>Its purpose is not simply to assign penalties to your code.</p>
+<p>It gives you feedback <strong>while you are writing</strong> so that you can identify potential problems before submitting or sharing your work.</p>
+</div>
+<section id="set-up-pylint" class="level3">
+<h3 class="anchored" data-anchor-id="set-up-pylint">Set Up Pylint</h3>
+<p>Open Extensions and search for:</p>
+<pre class="text"><code>Pylint</code></pre>
+<p>Install the appropriate Pylint support for VS Code.</p>
+<p>Depending on your setup, VS Code may also prompt you to install the <code>pylint</code> Python package into your selected environment.</p>
+</section>
+<section id="understand-the-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="understand-the-feedback">Understand the Feedback</h3>
+<p>Pylint feedback may appear as:</p>
+<ul>
+<li>colored underlines in the editor</li>
+<li>messages when you hover over code</li>
+<li>entries in the <strong>Problems</strong> panel</li>
+</ul>
+<div class="common-mistake">
+<p><strong>Common Mistake</strong></p>
+<p>A Pylint warning is not necessarily a Python error.</p>
+<p>Python may be able to run code that Pylint recommends changing.</p>
+<p>Always identify whether you are looking at:</p>
+<ul>
+<li>a Python runtime error,</li>
+<li>a syntax error, or</li>
+<li>a linting/style message.</li>
+</ul>
+</div>
+<p>A separate Python style guide can explain the conventions themselves in more detail. Here, the goal is simply to make the feedback available while you work.</p>
+</section>
+</section>
+<section id="testing-with-pytest" class="level2">
+<h2 class="anchored" data-anchor-id="testing-with-pytest">Testing with pytest</h2>
+<p>Tests let you check whether your code behaves the way you expect.</p>
+<p>Like Pylint, pytest should not be thought of only as something an instructor or autograder uses.</p>
+<div class="recommendation">
+<p><strong>Tests are feedback while you develop.</strong></p>
+<p>Running tests yourself lets you find problems earlier and determine whether a change accidentally broke something that previously worked.</p>
+</div>
+<section id="configure-python-tests" class="level3">
+<h3 class="anchored" data-anchor-id="configure-python-tests">Configure Python Tests</h3>
+<p>Open the Command Palette and search for:</p>
+<pre class="text"><code>Python: Configure Tests</code></pre>
+<p>Choose:</p>
+<pre class="text"><code>pytest</code></pre>
+<p>Then select the folder containing your tests when prompted. VS Code may also prompt you to install pytest in your Python environment if you haven’t already.</p>
+<p>VS Code should discover tests that follow pytest’s expected naming conventions.</p>
+</section>
+<section id="run-tests" class="level3">
+<h3 class="anchored" data-anchor-id="run-tests">Run Tests</h3>
+<p>Open the <strong>Testing</strong> panel (click the icon that looks like an erlenmeyer flask on the left side panel).</p>
+<p>From there, you can run:</p>
+<ul>
+<li>all tests,</li>
+<li>one test file, or</li>
+<li>an individual test.</li>
+</ul>
+<!-- SCREENSHOT: Testing panel -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-testing-panel.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The testing panel in VS Code, showing 1 out of 1 tests passed.</figcaption>
+</figure>
+</div>
+<div class="expected-result">
+<p>VS Code displays which tests passed and which tests failed.</p>
+</div>
+<div class="common-mistake">
+<p><strong>Common Mistake</strong></p>
+<p>A failed test does not necessarily mean pytest is broken.</p>
+<p>It usually means pytest successfully ran the test and discovered that the actual behavior did not match the expected behavior.</p>
+<p>Read the failure output before changing your setup.</p>
+</div>
+</section>
+</section>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>If you write <code>.qmd</code> documents, VS Code can provide editor support for Quarto.</p>
+<p>There are again two separate pieces:</p>
+<pre class="text"><code>Quarto installation → Renders Quarto documents
+
+Quarto VS Code extension → Adds editor support inside VS Code</code></pre>
+<p>Installing the extension does not install Quarto itself.</p>
+<section id="install-the-quarto-extension" class="level3">
+<h3 class="anchored" data-anchor-id="install-the-quarto-extension">Install the Quarto Extension</h3>
+<p>Open Extensions and search for:</p>
+<pre class="text"><code>Quarto</code></pre>
+<p>Install the official Quarto extension.</p>
+</section>
+<section id="open-a-quarto-document" class="level3">
+<h3 class="anchored" data-anchor-id="open-a-quarto-document">Open a Quarto Document</h3>
+<p>Open a <code>.qmd</code> file from your project or create a new <code>.qmd</code> file.</p>
+<p>VS Code should recognize it as a Quarto document and provide Quarto-specific editing features.</p>
+</section>
+<section id="preview-the-document" class="level3">
+<h3 class="anchored" data-anchor-id="preview-the-document">Preview the Document</h3>
+<p>Use Quarto’s preview functionality to render the document.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-quarto-preview.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>Quarto file and resulting preview in VS Code. The curser is pointing to the ‘Preview’ button in the upper right corner of the editor.</figcaption>
+</figure>
+</div>
+<div class="expected-result">
+<p>Your <code>.qmd</code> source renders into the requested output format and the preview opens successfully.</p>
+</div>
+<p>If Quarto itself is not installed, complete the <strong>Quarto Installation &amp; Setup Guide</strong>.</p>
+<p>For YAML, Markdown, code chunks, document formats, and the authoring workflow, continue to <strong>Getting Started with Quarto</strong>.</p>
+</section>
+</section>
+<section id="git-source-control" class="level2">
+<h2 class="anchored" data-anchor-id="git-source-control">Git Source Control</h2>
+<p>VS Code includes a <strong>Source Control</strong> interface for working with Git repositories.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-source-control-panel.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The source control panel in VS Code. The curser is pointing to the ‘Source Control’ icon in the Activity Bar on the left side of the workspace. The panel shows a list of files with changes that have not yet been committed to the Git repository.</figcaption>
+</figure>
+</div>
+<p>You do not need to learn Git from this section. The goal is simply to understand what you are seeing.</p>
+<p>If you open a folder that is already a Git repository, the Source Control panel may show files as:</p>
+<ul>
+<li>modified (M)</li>
+<li>added (A)</li>
+<li>deleted (D) or</li>
+<li>untracked (U).</li>
+</ul>
+<p>Those statuses come from <strong>Git</strong>.</p>
+<p>VS Code is displaying Git’s information through a graphical interface.</p>
+<div class="recommendation">
+<p><strong>Mental Model</strong></p>
+<p>Git performs the version control.</p>
+<p>VS Code’s Source Control panel gives you an interface for interacting with Git.</p>
+<p>They are related, but they are not the same thing.</p>
+</div>
+<p>If Git is not installed or you are ready to learn the workflow, continue with:</p>
+<ul>
+<li><strong>Git Installation &amp; Setup</strong></li>
+<li><strong>Git for Beginners</strong></li>
+</ul>
+<p>Those guides will cover repositories, commits, branches, pushing, pulling, and the larger Git workflow.</p>
+</section>
+<section id="markdown-preview" class="level2">
+<h2 class="anchored" data-anchor-id="markdown-preview">Markdown Preview</h2>
+<p>Markdown files use the <code>.md</code> extension and appear frequently in programming projects.</p>
+<p>For example:</p>
+<pre class="text"><code>README.md</code></pre>
+<p>VS Code can display both the Markdown source and a rendered preview.</p>
+<p>Open a Markdown file and use:</p>
+<p><strong>Open Preview</strong></p>
+<p>or:</p>
+<p><strong>Open Preview to the Side</strong></p>
+<p>in the upper right corner of the editor. (Placement may depend on other extensions you have installed.)</p>
+<p>This is useful when writing:</p>
+<ul>
+<li>README files</li>
+<li>project documentation</li>
+<li>GitHub documentation</li>
+<li>Markdown that will later be used inside Quarto or other tools.</li>
+</ul>
+<div class="best-practice">
+<p><strong>Best Practice</strong></p>
+<p>Use the preview to check how your Markdown will render rather than relying only on how the source looks in the editor.</p>
+</div>
+</section>
+</section>
+<section id="common-problems" class="level1">
+<h1>Common Problems</h1>
+<section id="vs-code-cannot-find-python" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="vs-code-cannot-find-python">VS Code cannot find Python</h3>
+<div class="quick-answer">
+<p>First confirm that Python works in a terminal, then select the interpreter manually.</p>
+</div>
+<p>Open the Command Palette and choose:</p>
+<pre class="text"><code>Python: Select Interpreter</code></pre>
+<p>If Python does not work in the terminal either, return to the <strong>Python Installation Guide</strong>.</p>
+</section>
+<section id="a-package-installed-but-vs-code-still-cannot-import-it" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="a-package-installed-but-vs-code-still-cannot-import-it">A package installed, but VS Code still cannot import it</h3>
+<div class="quick-answer">
+<p>The package may have been installed into a different Python environment.</p>
+</div>
+<p>Check the interpreter selected in VS Code.</p>
+<p>Then use that Python installation to run pip:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install package-name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>or:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install package-name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="my-terminal-is-in-the-wrong-folder" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="my-terminal-is-in-the-wrong-folder">My terminal is in the wrong folder</h3>
+<div class="quick-answer">
+<p>Check whether you opened the project folder rather than an individual file.</p>
+</div>
+<p>The terminal has a current working directory. Opening the project folder before creating the terminal usually gives you the correct starting location.</p>
+</section>
+<section id="i-see-colored-underlines-everywhere" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="i-see-colored-underlines-everywhere">I see colored underlines everywhere</h3>
+<div class="quick-answer">
+<p>Find out which tool produced them before trying to fix them.</p>
+</div>
+<p>Hover over the underline or open the Problems panel.</p>
+<p>The message may come from:</p>
+<ul>
+<li>Python</li>
+<li>Pylint</li>
+<li>another extension or</li>
+<li>a language-specific tool.</li>
+</ul>
+<p>The source of the message determines what it means.</p>
+</section>
+<section id="something-worked-yesterday-but-not-today" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="something-worked-yesterday-but-not-today">Something worked yesterday but not today</h3>
+<div class="quick-answer">
+<p>Before reinstalling anything, check your project folder and selected Python environment.</p>
+</div>
+<p>Ask:</p>
+<ol type="1">
+<li>Did I open the same project folder?</li>
+<li>Which Python interpreter is selected?</li>
+<li>Which notebook kernel is selected?</li>
+<li>Where is my terminal currently located?</li>
+<li>Did an extension become disabled or require an update?</li>
+</ol>
+<p>Reinstalling software should usually come <strong>after</strong> these checks, not before them.</p>
+</section>
+<section id="vs-code-was-installed-but-now-i-cant-find-it" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="vs-code-was-installed-but-now-i-cant-find-it">VS Code was installed, but now I can’t find it</h3>
+<div class="quick-answer">
+<p>First check whether VS Code was installed in a permanent location or whether you were previously opening it directly from the downloaded installer.</p>
+</div>
+<p><strong>Why it happens</strong></p>
+<p>Sometimes VS Code appeared to be installed because it opened successfully, but the application was actually being launched from a temporary or downloaded location.</p>
+<p>This is particularly easy to do on macOS if Visual Studio Code was opened from the downloaded disk image instead of being moved into the <strong>Applications</strong> folder.</p>
+<p><strong>Check</strong></p>
+<p>On macOS:</p>
+<ol type="1">
+<li>Open the <strong>Applications</strong> folder.</li>
+<li>Look for <strong>Visual Studio Code</strong>.</li>
+<li>You can also use Spotlight (<code>Command + Space</code>) and search for <code>Visual Studio Code</code>.</li>
+</ol>
+<p>On Windows:</p>
+<ol type="1">
+<li>Search the Start menu for <strong>Visual Studio Code</strong>.</li>
+<li>Check <strong>Settings → Apps → Installed apps</strong> to see whether VS Code is still installed.</li>
+</ol>
+<p><strong>Fix</strong></p>
+<p>If VS Code is not installed:</p>
+<ol type="1">
+<li>Download it again from the official VS Code website.</li>
+<li>Install it completely.</li>
+<li>On macOS, make sure you move it into <strong>Applications</strong>.</li>
+<li>Open VS Code from its installed location rather than from the downloaded installer.</li>
+</ol>
+<div class="expected-result">
+<p>After restarting your computer, you can still find and launch VS Code from Applications on macOS or the Start menu on Windows.</p>
+</div>
+</section>
+</section>
+<section id="best-practices" class="level1">
+<h1>Best Practices</h1>
+<ul>
+<li>Open the project folder before opening individual files.</li>
+<li>Know which Python interpreter your project is using.</li>
+<li>Use the integrated terminal to keep your commands connected to your project.</li>
+<li>Install only the extensions you actually need.</li>
+<li>Treat linting and testing tools as feedback during development.</li>
+<li>Pay attention to which tool generated a warning or error.</li>
+<li>Preview Markdown and Quarto documents rather than judging them only from the source.</li>
+<li>Restart VS Code after major installation or extension changes.</li>
+<li>Copy the complete error message when asking for help.</li>
+</ul>
+</section>
+<section id="next-steps" class="level1">
+<h1>Next Steps</h1>
+<p>Your VS Code workspace is now ready for the tools you use.</p>
+<p>Depending on your work, continue with:</p>
+<ul>
+<li>Git Installation &amp; Setup</li>
+<li>Git for Beginners</li>
+<li>Quarto Installation &amp; Setup</li>
+<li>Getting Started with Quarto</li>
+<li>Jupyter Notebooks for Beginners</li>
+<li>Python Packages &amp; Environments</li>
+<li>Python Style &amp; Pylint</li>
+<li>Testing Python Code with pytest</li>
+</ul>
+<p>You do not need to learn all of these at once. Choose the next guide based on the tools required for your course or project.</p>
+</section>
+<section id="verify-your-setup" class="level1">
+<h1>Verify Your Setup</h1>
+<p>You do not need every optional tool below.</p>
+<p>Check only the tools you plan to use.</p>
+<div class="guide-checklist">
+<p><strong>Core VS Code Setup</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">VS Code opens successfully.</label></li>
+<li><label><input type="checkbox">VS Code is installed in a permanent location and I can still find it after restarting my computer.</label></li>
+<li><label><input type="checkbox">I know how to open a project folder.</label></li>
+<li><label><input type="checkbox">I can identify the Explorer, editor, terminal, Extensions, and Problems panels.</label></li>
+<li><label><input type="checkbox">The Python extension is installed.</label></li>
+<li><label><input type="checkbox">I know how to select a Python interpreter.</label></li>
+<li><label><input type="checkbox">I can run a <code>.py</code> file.</label></li>
+<li><label><input type="checkbox">I can open the integrated terminal.</label></li>
+<li><label><input type="checkbox">The terminal can find Python.</label></li>
+</ul>
+</div>
+<div class="guide-checklist">
+<p><strong>Optional Tools</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Jupyter notebooks run with the intended kernel.</label></li>
+<li><label><input type="checkbox">Pylint provides code feedback.</label></li>
+<li><label><input type="checkbox">pytest discovers and runs tests.</label></li>
+<li><label><input type="checkbox">Quarto <code>.qmd</code> files are recognized and can be previewed.</label></li>
+<li><label><input type="checkbox">I recognize the Git Source Control panel.</label></li>
+<li><label><input type="checkbox">I can preview Markdown files.</label></li>
+</ul>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/amandakube\.github\.io\/teaching\/guides\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Amanda R. Kube Jotte</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>All Rights Reserved</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

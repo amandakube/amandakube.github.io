@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Amanda R. Kube Jotte">
+<meta name="dcterms.date" content="2026-09-27">
+
+<title>Git &amp; GitHub Installation &amp; Setup Guide – Teaching Resources | Student Guides</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2a890b4f4ecfc8517c73d5eba00faa62.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2ae9d128b9b6acf21c0753cbc8859995.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Teaching Resources | Student Guides</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">Git &amp; GitHub Installation &amp; Setup Guide</a></li>
+  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before You Begin</a></li>
+  <li><a href="#what-are-git-and-github" id="toc-what-are-git-and-github" class="nav-link" data-scroll-target="#what-are-git-and-github">What Are Git and GitHub?</a>
+  <ul class="collapse">
+  <li><a href="#what-is-version-control" id="toc-what-is-version-control" class="nav-link" data-scroll-target="#what-is-version-control">What Is Version Control?</a></li>
+  <li><a href="#what-is-a-repository" id="toc-what-is-a-repository" class="nav-link" data-scroll-target="#what-is-a-repository">What Is a Repository?</a></li>
+  <li><a href="#local-vs.-remote-repositories" id="toc-local-vs.-remote-repositories" class="nav-link" data-scroll-target="#local-vs.-remote-repositories">Local vs.&nbsp;Remote Repositories</a></li>
+  <li><a href="#git-vs.-github" id="toc-git-vs.-github" class="nav-link" data-scroll-target="#git-vs.-github">Git vs.&nbsp;GitHub</a></li>
+  </ul></li>
+  <li><a href="#create-a-github-account" id="toc-create-a-github-account" class="nav-link" data-scroll-target="#create-a-github-account">Create a GitHub Account</a>
+  <ul class="collapse">
+  <li><a href="#choose-your-username-carefully" id="toc-choose-your-username-carefully" class="nav-link" data-scroll-target="#choose-your-username-carefully">Choose Your Username Carefully</a></li>
+  <li><a href="#verify-your-email-address" id="toc-verify-your-email-address" class="nav-link" data-scroll-target="#verify-your-email-address">Verify Your Email Address</a></li>
+  </ul></li>
+  <li><a href="#install-git" id="toc-install-git" class="nav-link" data-scroll-target="#install-git">Install Git</a>
+  <ul class="collapse">
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
+  <li><a href="#macos" id="toc-macos" class="nav-link" data-scroll-target="#macos">macOS</a></li>
+  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux">Linux</a></li>
+  </ul></li>
+  <li><a href="#verify-the-git-installation" id="toc-verify-the-git-installation" class="nav-link" data-scroll-target="#verify-the-git-installation">Verify the Git Installation</a></li>
+  <li><a href="#configure-your-git-identity" id="toc-configure-your-git-identity" class="nav-link" data-scroll-target="#configure-your-git-identity">Configure Your Git Identity</a>
+  <ul class="collapse">
+  <li><a href="#set-your-name" id="toc-set-your-name" class="nav-link" data-scroll-target="#set-your-name">Set Your Name</a></li>
+  <li><a href="#set-your-email-address" id="toc-set-your-email-address" class="nav-link" data-scroll-target="#set-your-email-address">Set Your Email Address</a></li>
+  <li><a href="#verify-your-settings" id="toc-verify-your-settings" class="nav-link" data-scroll-target="#verify-your-settings">Verify Your Settings</a></li>
+  </ul></li>
+  <li><a href="#connect-git-to-github" id="toc-connect-git-to-github" class="nav-link" data-scroll-target="#connect-git-to-github">Connect Git to GitHub</a>
+  <ul class="collapse">
+  <li><a href="#authenticating-with-github" id="toc-authenticating-with-github" class="nav-link" data-scroll-target="#authenticating-with-github">Authenticating with GitHub</a></li>
+  </ul></li>
+  <li><a href="#test-the-github-connection" id="toc-test-the-github-connection" class="nav-link" data-scroll-target="#test-the-github-connection">Test the GitHub Connection</a>
+  <ul class="collapse">
+  <li><a href="#create-a-test-repository-on-github" id="toc-create-a-test-repository-on-github" class="nav-link" data-scroll-target="#create-a-test-repository-on-github">Create a Test Repository on GitHub</a></li>
+  <li><a href="#copy-the-https-url" id="toc-copy-the-https-url" class="nav-link" data-scroll-target="#copy-the-https-url">Copy the HTTPS URL</a></li>
+  <li><a href="#clone-the-repository" id="toc-clone-the-repository" class="nav-link" data-scroll-target="#clone-the-repository">Clone the Repository</a></li>
+  </ul></li>
+  <li><a href="#git-vs-code" id="toc-git-vs-code" class="nav-link" data-scroll-target="#git-vs-code">Git + VS Code</a>
+  <ul class="collapse">
+  <li><a href="#open-the-test-repository" id="toc-open-the-test-repository" class="nav-link" data-scroll-target="#open-the-test-repository">Open the Test Repository</a></li>
+  <li><a href="#open-source-control" id="toc-open-source-control" class="nav-link" data-scroll-target="#open-source-control">Open Source Control</a></li>
+  </ul></li>
+  <li><a href="#common-problems" id="toc-common-problems" class="nav-link" data-scroll-target="#common-problems">Common Problems</a>
+  <ul class="collapse">
+  <li><a href="#git-command-not-found-or-git-is-not-recognized" id="toc-git-command-not-found-or-git-is-not-recognized" class="nav-link" data-scroll-target="#git-command-not-found-or-git-is-not-recognized"><code>git: command not found</code> or Git is not recognized</a></li>
+  <li><a href="#git-asks-for-my-github-password" id="toc-git-asks-for-my-github-password" class="nav-link" data-scroll-target="#git-asks-for-my-github-password">Git asks for my GitHub password</a></li>
+  <li><a href="#git-keeps-asking-me-to-sign-in-to-github" id="toc-git-keeps-asking-me-to-sign-in-to-github" class="nav-link" data-scroll-target="#git-keeps-asking-me-to-sign-in-to-github">Git keeps asking me to sign in to GitHub</a></li>
+  <li><a href="#my-commits-do-not-appear-under-my-github-account" id="toc-my-commits-do-not-appear-under-my-github-account" class="nav-link" data-scroll-target="#my-commits-do-not-appear-under-my-github-account">My commits do not appear under my GitHub account</a></li>
+  <li><a href="#my-git-name-is-different-from-my-github-username" id="toc-my-git-name-is-different-from-my-github-username" class="nav-link" data-scroll-target="#my-git-name-is-different-from-my-github-username">My Git name is different from my GitHub username</a></li>
+  <li><a href="#vs-code-does-not-recognize-git" id="toc-vs-code-does-not-recognize-git" class="nav-link" data-scroll-target="#vs-code-does-not-recognize-git">VS Code does not recognize Git</a></li>
+  <li><a href="#vs-code-source-control-says-there-is-no-repository" id="toc-vs-code-source-control-says-there-is-no-repository" class="nav-link" data-scroll-target="#vs-code-source-control-says-there-is-no-repository">VS Code Source Control says there is no repository</a></li>
+  <li><a href="#i-accidentally-created-a-git-repository-inside-another-git-repository" id="toc-i-accidentally-created-a-git-repository-inside-another-git-repository" class="nav-link" data-scroll-target="#i-accidentally-created-a-git-repository-inside-another-git-repository">I accidentally created a Git repository inside another Git repository</a></li>
+  <li><a href="#cloning-fails-with-repository-not-found" id="toc-cloning-fails-with-repository-not-found" class="nav-link" data-scroll-target="#cloning-fails-with-repository-not-found">Cloning fails with “repository not found”</a></li>
+  <li><a href="#authentication-opens-the-wrong-github-account" id="toc-authentication-opens-the-wrong-github-account" class="nav-link" data-scroll-target="#authentication-opens-the-wrong-github-account">Authentication opens the wrong GitHub account</a></li>
+  <li><a href="#something-worked-before-but-github-suddenly-will-not-connect" id="toc-something-worked-before-but-github-suddenly-will-not-connect" class="nav-link" data-scroll-target="#something-worked-before-but-github-suddenly-will-not-connect">Something worked before, but GitHub suddenly will not connect</a></li>
+  </ul></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#verify-your-setup" id="toc-verify-your-setup" class="nav-link" data-scroll-target="#verify-your-setup">Verify Your Setup</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Git &amp; GitHub Installation &amp; Setup Guide</h1>
+<p class="subtitle lead">Install Git, create a GitHub account, and connect the tools you use</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Amanda R. Kube Jotte </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 27, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="section" class="level1 guide-header">
+<h1>Git &amp; GitHub Installation &amp; Setup Guide</h1>
+<div class="subtitle">
+<p>Install Git, create a GitHub account, and connect the tools you use</p>
+</div>
+<div class="guide-meta-inline">
+<p>Beginning programming and data science students · 30–45 minutes · Beginner · Version 0.1</p>
+</div>
+</section>
+<section id="before-you-begin" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-begin">Before You Begin</h2>
+<p>Git and GitHub are tools for keeping track of changes to your work and collaborating with others.</p>
+<p>Although they are often used together, <strong>Git and GitHub are not the same thing</strong>.</p>
+<p>This guide is for you if you:</p>
+<ul>
+<li>are installing Git for the first time</li>
+<li>need to create a GitHub account</li>
+<li>want to configure your name and email in Git</li>
+<li>want to connect Git on your computer to GitHub</li>
+<li>want to use Git through VS Code or</li>
+<li>are unsure whether Git, GitHub, and VS Code are configured correctly.</li>
+</ul>
+<p>By the end of this guide, you will be able to:</p>
+<ul>
+<li>explain the difference between Git and GitHub</li>
+<li>create and configure a GitHub account</li>
+<li>install Git</li>
+<li>verify that Git is available from the command line</li>
+<li>configure your Git name and email</li>
+<li>authenticate with GitHub</li>
+<li>verify that VS Code recognizes Git and</li>
+<li>identify several common setup problems.</li>
+</ul>
+<div class="guide-checklist">
+<p><strong>Before you start</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">I have access to a web browser.</label></li>
+<li><label><input type="checkbox">I have an email address I can use for a GitHub account.</label></li>
+<li><label><input type="checkbox">If I plan to use VS Code, VS Code is installed.</label></li>
+</ul>
+</div>
+<p>You do not need to know how to use Git yet. This guide focuses on getting everything installed and connected.</p>
+</section>
+<section id="what-are-git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-git-and-github">What Are Git and GitHub?</h2>
+<p>Before we talk about Git and GitHub, it helps to understand a few important ideas: <strong>version control</strong>, a <strong>repository</strong>, and the difference between <strong>local</strong> and <strong>remote</strong> repositories.</p>
+<section id="what-is-version-control" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-version-control">What Is Version Control?</h3>
+<p>Imagine you are writing a paper or working on a programming assignment.</p>
+<p>Without version control, your files might look something like this:</p>
+<pre class="text"><code>paper.docx
+paper-final.docx
+paper-final-final.docx
+paper-final-v2.docx
+paper-final-really-final.docx</code></pre>
+<p>It quickly becomes difficult to remember:</p>
+<ul>
+<li>which version is the newest,</li>
+<li>what changed,</li>
+<li>or how to return to an earlier version if something goes wrong.</li>
+</ul>
+<p><strong>Version control</strong> is a system for recording changes to files over time.</p>
+<p>Rather than creating many copies of the same project, version control keeps a history of changes so you can:</p>
+<ul>
+<li>see what changed,</li>
+<li>return to an earlier version,</li>
+<li>experiment without permanently losing your work, and</li>
+<li>collaborate with other people more easily.</li>
+</ul>
+</section>
+<section id="what-is-a-repository" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-repository">What Is a Repository?</h3>
+<p>A <strong>repository</strong> (often shortened to <strong>repo</strong>) is a project that Git tracks.</p>
+<p>A repository contains:</p>
+<ul>
+<li>your project files,</li>
+<li>the history of changes made to those files, and</li>
+<li>information Git uses to manage the project.</li>
+</ul>
+<p>You can think of a repository as a project folder that Git is watching.</p>
+</section>
+<section id="local-vs.-remote-repositories" class="level3">
+<h3 class="anchored" data-anchor-id="local-vs.-remote-repositories">Local vs.&nbsp;Remote Repositories</h3>
+<p>Repositories can exist in more than one place.</p>
+<p>A <strong>local repository</strong> lives on your computer. This is the copy you edit while working on a project.</p>
+<p>A <strong>remote repository</strong> is stored somewhere else, such as GitHub. Remote repositories make it possible to back up your work, share projects with others, and collaborate across multiple computers.</p>
+<p>Many projects have both:</p>
+<ul>
+<li>a <strong>local repository</strong> on your computer, and</li>
+<li>a <strong>remote repository</strong> on GitHub.</li>
+</ul>
+<p>Changes made to one copy do not automatically appear in the other. Git provides commands that allow you to synchronize the two when you are ready.</p>
+</section>
+<section id="git-vs.-github" class="level3">
+<h3 class="anchored" data-anchor-id="git-vs.-github">Git vs.&nbsp;GitHub</h3>
+<p>Now that we understand those ideas, we can distinguish Git and GitHub.</p>
+<p><strong>Git</strong> is a version control system. It runs on your computer and tracks changes to the files in a local repository.</p>
+<p><strong>GitHub</strong> is an online service that stores remote Git repositories, making it easier to back up your work, share projects, and collaborate with others.</p>
+<p>A simple mental model is:</p>
+<!-- IMAGE PLACEHOLDER:
+Create a diagram showing:
+- A local repository on your computer
+- A remote repository on GitHub
+- Git managing the local repository
+- GitHub hosting the remote repository
+- Synchronization between the two repositories
+-->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/git-github-mental-model.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>Git and GitHub work together but have different roles.</figcaption>
+</figure>
+</div>
+<div class="recommendation">
+<p><strong>Mental Model</strong></p>
+<p>Git manages the <strong>local repository</strong> on your computer by tracking changes to your project.</p>
+<p>GitHub stores a <strong>remote repository</strong>, providing an online copy of your project that you can use for backup, sharing, and collaboration.</p>
+<p>Many projects use both a local repository and a remote repository. Git provides the tools that allow you to synchronize changes between them when you are ready.</p>
+</div>
+<p>This distinction is useful when troubleshooting.</p>
+<p>If something goes wrong, ask yourself:</p>
+<blockquote class="blockquote">
+<p><strong>Is the problem with my local repository, my remote repository on GitHub, or the connection between them?</strong></p>
+</blockquote>
+</section>
+</section>
+<section id="create-a-github-account" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-github-account">Create a GitHub Account</h2>
+<p>If you already have a GitHub account that you plan to use, you can skip this section.</p>
+<p>Go to:</p>
+<p><code>https://github.com/</code></p>
+<p>Choose <strong>Sign up</strong> and follow the instructions to create an account.</p>
+<!-- SCREENSHOT PLACEHOLDER:
+Add screenshot of GitHub account creation page.
+-->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/github-sign-up.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The GitHub account creation page.</figcaption>
+</figure>
+</div>
+<section id="choose-your-username-carefully" class="level3">
+<h3 class="anchored" data-anchor-id="choose-your-username-carefully">Choose Your Username Carefully</h3>
+<p>Your GitHub username identifies your account and may appear publicly in:</p>
+<ul>
+<li>your GitHub profile</li>
+<li>repository URLs</li>
+<li>links you share</li>
+<li>collaborative projects</li>
+</ul>
+<p>Choose a username that you are comfortable using for school, research, or professional work.</p>
+<div class="best-practice">
+<p><strong>Best Practice</strong></p>
+<p>You do not need to use your full legal name as your GitHub username, but choose something you would be comfortable sharing with an instructor, classmate, collaborator, or future employer.</p>
+</div>
+</section>
+<section id="verify-your-email-address" class="level3">
+<h3 class="anchored" data-anchor-id="verify-your-email-address">Verify Your Email Address</h3>
+<p>Complete GitHub’s email verification process after creating your account.</p>
+<p>You will also want GitHub to recognize the email address you use later for your Git commits.</p>
+<div class="recommendation">
+<p><strong>Why does the email matter?</strong></p>
+<p>Git records an author name and email address with each commit.</p>
+<p>GitHub uses the commit email address to associate commits with your GitHub account. This is useful when multiple people are collaborating on a project.</p>
+<p>We will configure this later in the guide.</p>
+</div>
+</section>
+</section>
+<section id="install-git" class="level2">
+<h2 class="anchored" data-anchor-id="install-git">Install Git</h2>
+<p>Git needs to be installed on your computer before you can use Git from the command line or through tools such as VS Code.</p>
+<p>The installation process differs slightly by operating system.</p>
+<section id="windows" class="level3">
+<h3 class="anchored" data-anchor-id="windows">Windows</h3>
+<p>Go to the official Git website:</p>
+<p><code>https://git-scm.com/install/windows</code></p>
+<p>Download the current <strong>Git for Windows</strong> installer.</p>
+<!-- SCREENSHOT PLACEHOLDER:
+Add screenshot of Git for Windows download page.
+-->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/git-windows-download.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The Git for Windows download page.</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>Open the downloaded installer.</li>
+<li>Follow the installation prompts.</li>
+<li>For most beginning users, the default options are appropriate.</li>
+<li>Complete the installation.</li>
+<li>Close and reopen Command Prompt, PowerShell, or VS Code before verifying the installation.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Git Bash">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Git Bash
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Git for Windows also provides <strong>Git Bash</strong>, a terminal that supports Git and many Unix-style commands.</p>
+<p>You may encounter Git Bash in courses, tutorials, or Git documentation. You can also use Git from PowerShell or the VS Code terminal.</p>
+</div>
+</div>
+</section>
+<section id="macos" class="level3">
+<h3 class="anchored" data-anchor-id="macos">macOS</h3>
+<p>Your Mac may already have access to Git through Apple’s Command Line Tools.</p>
+<p>Open <strong>Terminal</strong> and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If Git is already available, you may see a version number.</p>
+<p>If macOS prompts you to install the <strong>Command Line Developer Tools</strong>, follow the prompts to install them.</p>
+<p>You can also request the installation directly with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">xcode-select</span> <span class="at">--install</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After installation, close and reopen Terminal.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Using Homebrew">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Using Homebrew
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you already use Homebrew, you can instead install a current version of Git with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You do not need to install Homebrew solely for this guide if the Apple Command Line Tools provide the Git installation you need.</p>
+</div>
+</div>
+</section>
+<section id="linux" class="level3">
+<h3 class="anchored" data-anchor-id="linux">Linux</h3>
+<p>Git is available through the package manager used by most Linux distributions.</p>
+<p>Follow the installation instructions for your distribution.</p>
+<p>For example, Debian- or Ubuntu-based systems commonly use:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>After installation, open a new terminal before continuing.</p>
+</section>
+</section>
+<section id="verify-the-git-installation" class="level2">
+<h2 class="anchored" data-anchor-id="verify-the-git-installation">Verify the Git Installation</h2>
+<p>Open a terminal and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A successful installation displays a Git version number.</p>
+<p>For example:</p>
+<pre class="text"><code>git version 2.55.0</code></pre>
+<p>Your version number may be different.</p>
+<div class="expected-result">
+<p>The terminal displays a Git version number without an error.</p>
+</div>
+<div class="best-practice">
+<p><strong>Best Practice</strong></p>
+<p>Verify Git from the command line before troubleshooting GitHub or VS Code.</p>
+<p>If <code>git --version</code> does not work, fix the Git installation before moving on.</p>
+</div>
+</section>
+<section id="configure-your-git-identity" class="level2">
+<h2 class="anchored" data-anchor-id="configure-your-git-identity">Configure Your Git Identity</h2>
+<p>Git records information about the author of each commit.</p>
+<p>Before using Git, configure the name and email address you want associated with your work.</p>
+<section id="set-your-name" class="level3">
+<h3 class="anchored" data-anchor-id="set-your-name">Set Your Name</h3>
+<p>Open a terminal and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Ada Lovelace"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled" title="Your Git name and GitHub username are different">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Your Git name and GitHub username are different
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your Git <code>user.name</code> does <strong>not</strong> need to match your GitHub username.</p>
+<p>Your Git name is the author name stored with your commits.</p>
+</div>
+</div>
+</section>
+<section id="set-your-email-address" class="level3">
+<h3 class="anchored" data-anchor-id="set-your-email-address">Set Your Email Address</h3>
+<p>Run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your-email@example.com"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use an email address associated with your GitHub account if you want GitHub to connect your command line commits to your account.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Email Privacy">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Email Privacy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you do not want your personal email address stored in your Git commits, GitHub provides a private <code>noreply</code> email address that you can use instead.</p>
+<p>You can find your GitHub email settings under:</p>
+<p><strong>GitHub → Settings → Emails</strong></p>
+<p>If you use a <code>noreply</code> address, configure that address in Git instead of your personal email.</p>
+</div>
+</div>
+</section>
+<section id="verify-your-settings" class="level3">
+<h3 class="anchored" data-anchor-id="verify-your-settings">Verify Your Settings</h3>
+<p>Check your name:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Check your email:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="expected-result">
+<p>Git displays the name and email address you configured.</p>
+</div>
+<div class="recommendation">
+<p><strong>Why <code>--global</code>?</strong></p>
+<p>The <code>--global</code> option applies these settings to Git repositories you use on this computer.</p>
+<p>Later, if a particular project needs a different identity, Git also allows repository-specific settings.</p>
+</div>
+</section>
+</section>
+<section id="connect-git-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="connect-git-to-github">Connect Git to GitHub</h2>
+<p>Git can work entirely on your computer.</p>
+<p>However, if you want to <strong>clone</strong>, <strong>push</strong>, <strong>pull</strong>, or perform other operations involving a remote repository on GitHub, Git needs a secure way to verify your identity.</p>
+<section id="authenticating-with-github" class="level3">
+<h3 class="anchored" data-anchor-id="authenticating-with-github">Authenticating with GitHub</h3>
+<p>When Git communicates with GitHub over <strong>HTTPS</strong>, there are several common ways to authenticate.</p>
+<section id="git-credential-manager" class="level4">
+<h4 class="anchored" data-anchor-id="git-credential-manager">Git Credential Manager</h4>
+<p><strong>Git Credential Manager (GCM)</strong> is a program that securely stores your GitHub credentials.</p>
+<p>The first time Git needs to connect to GitHub, GCM typically opens your web browser, asks you to sign in to GitHub, and securely stores your credentials for future Git operations.</p>
+<p>For most beginning users, this is the simplest authentication method because you usually only need to sign in once.</p>
+</section>
+<section id="personal-access-token-pat" class="level4">
+<h4 class="anchored" data-anchor-id="personal-access-token-pat">Personal Access Token (PAT)</h4>
+<p>A <strong>Personal Access Token (PAT)</strong> is a long, randomly generated string that GitHub issues in place of your GitHub account password.</p>
+<p>If you authenticate manually over HTTPS, GitHub requires a PAT rather than your account password.</p>
+<p>PATs are commonly used for:</p>
+<ul>
+<li>development environments</li>
+<li>remote servers</li>
+<li>automated scripts</li>
+<li>teaching environments</li>
+<li>applications that cannot use browser-based authentication</li>
+</ul>
+</section>
+<section id="github-cli" class="level4">
+<h4 class="anchored" data-anchor-id="github-cli">GitHub CLI</h4>
+<p><strong>GitHub CLI</strong> (<code>gh</code>) is an official command-line application developed by GitHub.</p>
+<p>GitHub CLI is <strong>not</strong> part of Git. Instead, it provides command-line access to many GitHub features, including authentication, repository management, pull requests, issues, and releases.</p>
+<p>Many developers also use GitHub CLI to authenticate Git with GitHub through a guided sign-in process.</p>
+<div class="recommendation">
+<p><strong>Which authentication method should I use?</strong></p>
+<p>For most beginning users, <strong>Git Credential Manager</strong> provides the simplest experience.</p>
+<p>If your instructor specifically asks you to create a <strong>Personal Access Token (PAT)</strong>, follow those instructions.</p>
+<p>If you already use <strong>GitHub CLI</strong>, you may prefer to authenticate using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth login</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>All three methods authenticate Git with GitHub over HTTPS. They differ only in how your identity is verified and how your credentials are managed.</p>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Your GitHub password is not your Git password">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Your GitHub password is not your Git password
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>GitHub no longer accepts your GitHub account password for Git operations over HTTPS.</p>
+<p>Instead, Git requires a more secure authentication method, such as Git Credential Manager, a Personal Access Token (PAT), or GitHub CLI.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="test-the-github-connection" class="level2">
+<h2 class="anchored" data-anchor-id="test-the-github-connection">Test the GitHub Connection</h2>
+<p>The most reliable way to verify the connection is to perform an authenticated Git operation.</p>
+<p>We will keep this test minimal because the <strong>Getting Started with Git &amp; GitHub</strong> guide will explain <strong>repositories</strong>, <strong>cloning</strong>, <strong>commits</strong>, <strong>pushing</strong>, and <strong>pulling</strong> in detail.</p>
+<section id="create-a-test-repository-on-github" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-test-repository-on-github">Create a Test Repository on GitHub</h3>
+<p>Sign in to GitHub.</p>
+<p>Create a new repository named:</p>
+<pre class="text"><code>git-setup-test</code></pre>
+<p>You can make the repository private if you prefer.</p>
+<!-- SCREENSHOT PLACEHOLDER:
+Add screenshot of GitHub Create a New Repository page.
+-->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/github-create-test-repository.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>Creating a test repository on GitHub.</figcaption>
+</figure>
+</div>
+<p>For this setup test, select the option to create the repository with a <strong>README</strong> file.</p>
+</section>
+<section id="copy-the-https-url" class="level3">
+<h3 class="anchored" data-anchor-id="copy-the-https-url">Copy the HTTPS URL</h3>
+<p>On the repository page, select <strong>Code</strong>.</p>
+<p>Make sure <strong>HTTPS</strong> is selected.</p>
+<p>Copy the repository URL.</p>
+<p>It will look similar to:</p>
+<pre class="text"><code>https://github.com/your-username/git-setup-test.git</code></pre>
+<!-- SCREENSHOT PLACEHOLDER:
+Add screenshot showing Code > HTTPS > copy URL.
+-->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/github-copy-https-url.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>Copy the HTTPS URL for the repository.</figcaption>
+</figure>
+</div>
+</section>
+<section id="clone-the-repository" class="level3">
+<h3 class="anchored" data-anchor-id="clone-the-repository">Clone the Repository</h3>
+<p>Open a terminal.</p>
+<p>Navigate to a location where you are comfortable creating a test folder.</p>
+<p>Run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/your-username/git-setup-test.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Replace the example URL with the URL you copied from GitHub.</p>
+<p>The first time Git connects to GitHub, you may be prompted to authenticate.</p>
+<p>Follow the browser or credential-manager prompts.</p>
+<div class="expected-result">
+<p>Git creates a new <code>git-setup-test</code> folder on your computer containing the README from GitHub.</p>
+</div>
+<div class="recommendation">
+<p><strong>What did <code>clone</code> do?</strong></p>
+<p>For now, you only need to know that cloning created a <strong>local</strong> copy of the GitHub repository on your computer.</p>
+<p>The <strong>Getting Started with Git &amp; GitHub</strong> guide will explain cloning and the relationship between <strong>local</strong> and <strong>remote repositories</strong> in more detail.</p>
+</div>
+</section>
+</section>
+<section id="git-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="git-vs-code">Git + VS Code</h2>
+<p>VS Code includes a <strong>Source Control</strong> interface that can work with Git.</p>
+<p>There are again two separate pieces:</p>
+<ol type="1">
+<li><strong>Git</strong> performs version control.</li>
+<li><strong>VS Code</strong> provides an interface for interacting with Git.</li>
+</ol>
+<p>Installing VS Code does not install or replace Git.</p>
+<section id="open-the-test-repository" class="level3">
+<h3 class="anchored" data-anchor-id="open-the-test-repository">Open the Test Repository</h3>
+<p>In VS Code, choose:</p>
+<p><strong>File → Open Folder</strong></p>
+<p>Open the <code>git-setup-test</code> folder you cloned.</p>
+</section>
+<section id="open-source-control" class="level3">
+<h3 class="anchored" data-anchor-id="open-source-control">Open Source Control</h3>
+<p>Select the <strong>Source Control</strong> icon in the Activity Bar.</p>
+<!-- SCREENSHOT PLACEHOLDER:
+Add screenshot of Source Control panel with repository recognized.
+-->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-git-source-control.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The Git repository recognized by VS Code Source Control.</figcaption>
+</figure>
+</div>
+<div class="expected-result">
+<p>VS Code recognizes the folder as a Git repository and displays the Source Control interface.</p>
+</div>
+<div class="recommendation">
+<p><strong>Mental Model</strong></p>
+<p>VS Code is showing you information from Git.</p>
+<p>The Source Control panel is not a separate version control system.</p>
+<p>Actions you perform there correspond to Git operations.</p>
+</div>
+</section>
+</section>
+<section id="common-problems" class="level1">
+<h1>Common Problems</h1>
+<section id="git-command-not-found-or-git-is-not-recognized" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="git-command-not-found-or-git-is-not-recognized"><code>git: command not found</code> or Git is not recognized</h3>
+<div class="quick-answer">
+<p>Git is either not installed or your terminal cannot find the installation.</p>
+</div>
+<p>Run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>in a new terminal.</p>
+<p>If the command still fails:</p>
+<ol type="1">
+<li>confirm that Git was installed</li>
+<li>close and reopen the terminal</li>
+<li>restart VS Code if it was open during installation</li>
+<li>reinstall Git only if the installation itself appears incomplete</li>
+</ol>
+</section>
+<section id="git-asks-for-my-github-password" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="git-asks-for-my-github-password">Git asks for my GitHub password</h3>
+<div class="quick-answer">
+<p>Do not enter your normal GitHub account password for a Git operation.</p>
+</div>
+<p>GitHub does not support password-based authentication for Git operations over HTTPS.</p>
+<p>Use the browser or credential-manager authentication prompt when available.</p>
+<p>If you are using manual HTTPS authentication, GitHub requires a personal access token instead of your account password.</p>
+</section>
+<section id="git-keeps-asking-me-to-sign-in-to-github" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="git-keeps-asking-me-to-sign-in-to-github">Git keeps asking me to sign in to GitHub</h3>
+<div class="quick-answer">
+<p>Your credentials may not be stored by a credential manager.</p>
+</div>
+<p>Check whether your Git installation is configured to use a credential manager.</p>
+<p>GitHub recommends using a credential helper such as Git Credential Manager or authenticating through GitHub CLI for HTTPS connections.</p>
+<p>Do not store your GitHub password or authentication token in a plain-text project file.</p>
+</section>
+<section id="my-commits-do-not-appear-under-my-github-account" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="my-commits-do-not-appear-under-my-github-account">My commits do not appear under my GitHub account</h3>
+<div class="quick-answer">
+<p>Check the email address stored in your Git configuration.</p>
+</div>
+<p>Run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>GitHub uses the email stored with a commit to associate that commit with an account.</p>
+<p>Make sure the displayed email is either:</p>
+<ul>
+<li>an email address added to your GitHub account or</li>
+<li>your GitHub-provided <code>noreply</code> email address.</li>
+</ul>
+<p>Changing the setting affects future commits, not commits that were already created.</p>
+</section>
+<section id="my-git-name-is-different-from-my-github-username" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="my-git-name-is-different-from-my-github-username">My Git name is different from my GitHub username</h3>
+<div class="quick-answer">
+<p>That is normal.</p>
+</div>
+<p>Your Git name:</p>
+<pre class="text"><code>user.name</code></pre>
+<p>is the author name stored with commits.</p>
+<p>Your GitHub username identifies your GitHub account.</p>
+<p>They do not need to be the same.</p>
+</section>
+<section id="vs-code-does-not-recognize-git" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="vs-code-does-not-recognize-git">VS Code does not recognize Git</h3>
+<div class="quick-answer">
+<p>First check whether Git works outside VS Code.</p>
+</div>
+<p>Open a terminal and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If that fails, troubleshoot the Git installation.</p>
+<p>If it works:</p>
+<ol type="1">
+<li>restart VS Code</li>
+<li>open the <strong>project folder</strong>, not only an individual file and</li>
+<li>confirm that the folder you opened is actually a Git repository.</li>
+</ol>
+</section>
+<section id="vs-code-source-control-says-there-is-no-repository" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="vs-code-source-control-says-there-is-no-repository">VS Code Source Control says there is no repository</h3>
+<div class="quick-answer">
+<p>You may have opened the wrong folder.</p>
+</div>
+<p>For the setup test, make sure you opened:</p>
+<pre class="text"><code>git-setup-test</code></pre>
+<p>rather than the folder containing <code>git-setup-test</code>.</p>
+<p>A Git repository contains a hidden <code>.git</code> directory that Git uses to store repository information.</p>
+<p>Do not manually edit or delete the <code>.git</code> directory.</p>
+</section>
+<section id="i-accidentally-created-a-git-repository-inside-another-git-repository" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="i-accidentally-created-a-git-repository-inside-another-git-repository">I accidentally created a Git repository inside another Git repository</h3>
+<div class="quick-answer">
+<p>This is called a nested repository and is usually not what a beginner intends.</p>
+</div>
+<p>This can happen when you run <code>git init</code> or <code>git clone &lt;&gt;</code> inside a folder that is already located within another Git repository.</p>
+<p>Before initializing a new repository, check which folder you have open and where your terminal is located.</p>
+<p>If you are unsure how to repair a nested repository, avoid deleting <code>.git</code> folders until you understand which repository each one belongs to.</p>
+</section>
+<section id="cloning-fails-with-repository-not-found" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="cloning-fails-with-repository-not-found">Cloning fails with “repository not found”</h3>
+<div class="quick-answer">
+<p>Check the repository URL and whether your GitHub account has permission to access the repository.</p>
+</div>
+<p>Return to the repository on GitHub.</p>
+<p>Select:</p>
+<p><strong>Code → HTTPS</strong></p>
+<p>and copy the URL again.</p>
+<p>Also confirm that you are signed into the GitHub account that owns the repository or has been given access to it.</p>
+</section>
+<section id="authentication-opens-the-wrong-github-account" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="authentication-opens-the-wrong-github-account">Authentication opens the wrong GitHub account</h3>
+<div class="quick-answer">
+<p>Your computer may already have credentials stored for another GitHub account.</p>
+</div>
+<p>This is especially common on shared computers or computers previously used with another GitHub account.</p>
+<p>Check which GitHub account is signed in through your browser and which credentials are stored by your credential manager.</p>
+<p>Do not delete credentials unless you know which account they belong to.</p>
+</section>
+<section id="something-worked-before-but-github-suddenly-will-not-connect" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="something-worked-before-but-github-suddenly-will-not-connect">Something worked before, but GitHub suddenly will not connect</h3>
+<div class="quick-answer">
+<p>Determine whether Git itself still works before changing your authentication setup.</p>
+</div>
+<p>Check:</p>
+<ol type="1">
+<li>Does <code>git --version</code> still work?</li>
+<li>Are you connected to the internet?</li>
+<li>Can you sign in to GitHub in your browser?</li>
+<li>Are you using the correct GitHub account?</li>
+<li>Does the repository still exist?</li>
+<li>Do you still have permission to access it?</li>
+<li>Is your credential manager asking you to authenticate again?</li>
+</ol>
+<p>Avoid reinstalling Git until you know that the Git installation itself is the problem.</p>
+</section>
+</section>
+<section id="best-practices" class="level1">
+<h1>Best Practices</h1>
+<ul>
+<li>Know the difference between Git and GitHub.</li>
+<li>Open the project folder rather than only an individual file.</li>
+<li>Verify Git from the terminal before troubleshooting VS Code.</li>
+<li>Use an email associated with your GitHub account if you want your commits attributed to your profile.</li>
+<li>Use GitHub’s <code>noreply</code> email if you prefer not to expose your personal email address in commits.</li>
+<li>Use secure credential storage rather than saving passwords or tokens in project files.</li>
+<li>Do not share personal access tokens, passwords, or other authentication credentials.</li>
+<li>Check which GitHub account you are using before changing authentication settings.</li>
+<li>Do not manually edit the <code>.git</code> directory.</li>
+<li>Avoid reinstalling Git until you have identified which part of the workflow is actually failing.</li>
+</ul>
+</section>
+<section id="next-steps" class="level1">
+<h1>Next Steps</h1>
+<p>Git and GitHub are now installed and connected.</p>
+<p>Other guides will fovus on actually using version control, including:</p>
+<ul>
+<li>repositories</li>
+<li>the working directory</li>
+<li>checking repository status</li>
+<li>tracking files</li>
+<li>staging changes</li>
+<li>commits</li>
+<li>commit messages</li>
+<li>local and remote repositories</li>
+<li>cloning</li>
+<li>pushing</li>
+<li>pulling</li>
+<li><code>.gitignore</code></li>
+<li>branches</li>
+<li>merge conflicts and</li>
+<li>the basic Git/GitHub workflow.</li>
+</ul>
+<p>You do not need to memorize Git commands before you begin.</p>
+</section>
+<section id="verify-your-setup" class="level1">
+<h1>Verify Your Setup</h1>
+<div class="guide-checklist">
+<p><strong>Git Setup</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox"><code>git --version</code> displays a version number.</label></li>
+<li><label><input type="checkbox">My Git <code>user.name</code> is configured.</label></li>
+<li><label><input type="checkbox">My Git <code>user.email</code> is configured.</label></li>
+<li><label><input type="checkbox">The email I use for commits is associated with my GitHub account or is my GitHub <code>noreply</code> address.</label></li>
+</ul>
+</div>
+<div class="guide-checklist">
+<p><strong>GitHub Setup</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">I have a GitHub account.</label></li>
+<li><label><input type="checkbox">My email address is verified.</label></li>
+<li><label><input type="checkbox">I created the <code>git-setup-test</code> repository.</label></li>
+<li><label><input type="checkbox">I can clone the repository using its HTTPS URL.</label></li>
+<li><label><input type="checkbox">Authentication completes successfully when Git connects to GitHub.</label></li>
+</ul>
+</div>
+<div class="guide-checklist">
+<p><strong>VS Code Setup</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">I can open the cloned repository as a folder in VS Code.</label></li>
+<li><label><input type="checkbox">VS Code recognizes the folder as a Git repository.</label></li>
+<li><label><input type="checkbox">I can see the Source Control panel.</label></li>
+</ul>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/amandakube\.github\.io\/teaching\/guides\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Amanda R. Kube Jotte</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>All Rights Reserved</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

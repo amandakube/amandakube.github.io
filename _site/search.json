@@ -1,0 +1,352 @@
+[
+  {
+    "objectID": "git/installation-guide/index.html",
+    "href": "git/installation-guide/index.html",
+    "title": "Git & GitHub Installation & Setup Guide",
+    "section": "",
+    "text": "Install Git, create a GitHub account, and connect the tools you use\n\n\nBeginning programming and data science students · 30–45 minutes · Beginner · Version 0.1"
+  },
+  {
+    "objectID": "git/installation-guide/index.html#before-you-begin",
+    "href": "git/installation-guide/index.html#before-you-begin",
+    "title": "Git & GitHub Installation & Setup Guide",
+    "section": "Before You Begin",
+    "text": "Before You Begin\nGit and GitHub are tools for keeping track of changes to your work and collaborating with others.\nAlthough they are often used together, Git and GitHub are not the same thing.\nThis guide is for you if you:\n\nare installing Git for the first time\nneed to create a GitHub account\nwant to configure your name and email in Git\nwant to connect Git on your computer to GitHub\nwant to use Git through VS Code or\nare unsure whether Git, GitHub, and VS Code are configured correctly.\n\nBy the end of this guide, you will be able to:\n\nexplain the difference between Git and GitHub\ncreate and configure a GitHub account\ninstall Git\nverify that Git is available from the command line\nconfigure your Git name and email\nauthenticate with GitHub\nverify that VS Code recognizes Git and\nidentify several common setup problems.\n\n\nBefore you start\n\nI have access to a web browser.\nI have an email address I can use for a GitHub account.\nIf I plan to use VS Code, VS Code is installed.\n\n\nYou do not need to know how to use Git yet. This guide focuses on getting everything installed and connected."
+  },
+  {
+    "objectID": "git/installation-guide/index.html#what-are-git-and-github",
+    "href": "git/installation-guide/index.html#what-are-git-and-github",
+    "title": "Git & GitHub Installation & Setup Guide",
+    "section": "What Are Git and GitHub?",
+    "text": "What Are Git and GitHub?\nBefore we talk about Git and GitHub, it helps to understand a few important ideas: version control, a repository, and the difference between local and remote repositories.\n\nWhat Is Version Control?\nImagine you are writing a paper or working on a programming assignment.\nWithout version control, your files might look something like this:\npaper.docx\npaper-final.docx\npaper-final-final.docx\npaper-final-v2.docx\npaper-final-really-final.docx\nIt quickly becomes difficult to remember:\n\nwhich version is the newest,\nwhat changed,\nor how to return to an earlier version if something goes wrong.\n\nVersion control is a system for recording changes to files over time.\nRather than creating many copies of the same project, version control keeps a history of changes so you can:\n\nsee what changed,\nreturn to an earlier version,\nexperiment without permanently losing your work, and\ncollaborate with other people more easily.\n\n\n\nWhat Is a Repository?\nA repository (often shortened to repo) is a project that Git tracks.\nA repository contains:\n\nyour project files,\nthe history of changes made to those files, and\ninformation Git uses to manage the project.\n\nYou can think of a repository as a project folder that Git is watching.\n\n\nLocal vs. Remote Repositories\nRepositories can exist in more than one place.\nA local repository lives on your computer. This is the copy you edit while working on a project.\nA remote repository is stored somewhere else, such as GitHub. Remote repositories make it possible to back up your work, share projects with others, and collaborate across multiple computers.\nMany projects have both:\n\na local repository on your computer, and\na remote repository on GitHub.\n\nChanges made to one copy do not automatically appear in the other. Git provides commands that allow you to synchronize the two when you are ready.\n\n\nGit vs. GitHub\nNow that we understand those ideas, we can distinguish Git and GitHub.\nGit is a version control system. It runs on your computer and tracks changes to the files in a local repository.\nGitHub is an online service that stores remote Git repositories, making it easier to back up your work, share projects, and collaborate with others.\nA simple mental model is:\n\n\n\n\nGit and GitHub work together but have different roles.\n\n\n\nMental Model\nGit manages the local repository on your computer by tracking changes to your project.\nGitHub stores a remote repository, providing an online copy of your project that you can use for backup, sharing, and collaboration.\nMany projects use both a local repository and a remote repository. Git provides the tools that allow you to synchronize changes between them when you are ready.\n\nThis distinction is useful when troubleshooting.\nIf something goes wrong, ask yourself:\n\nIs the problem with my local repository, my remote repository on GitHub, or the connection between them?"
+  },
+  {
+    "objectID": "git/installation-guide/index.html#create-a-github-account",
+    "href": "git/installation-guide/index.html#create-a-github-account",
+    "title": "Git & GitHub Installation & Setup Guide",
+    "section": "Create a GitHub Account",
+    "text": "Create a GitHub Account\nIf you already have a GitHub account that you plan to use, you can skip this section.\nGo to:\nhttps://github.com/\nChoose Sign up and follow the instructions to create an account.\n\n\n\n\nThe GitHub account creation page.\n\n\n\nChoose Your Username Carefully\nYour GitHub username identifies your account and may appear publicly in:\n\nyour GitHub profile\nrepository URLs\nlinks you share\ncollaborative projects\n\nChoose a username that you are comfortable using for school, research, or professional work.\n\nBest Practice\nYou do not need to use your full legal name as your GitHub username, but choose something you would be comfortable sharing with an instructor, classmate, collaborator, or future employer.\n\n\n\nVerify Your Email Address\nComplete GitHub’s email verification process after creating your account.\nYou will also want GitHub to recognize the email address you use later for your Git commits.\n\nWhy does the email matter?\nGit records an author name and email address with each commit.\nGitHub uses the commit email address to associate commits with your GitHub account. This is useful when multiple people are collaborating on a project.\nWe will configure this later in the guide."
+  },
+  {
+    "objectID": "git/installation-guide/index.html#install-git",
+    "href": "git/installation-guide/index.html#install-git",
+    "title": "Git & GitHub Installation & Setup Guide",
+    "section": "Install Git",
+    "text": "Install Git\nGit needs to be installed on your computer before you can use Git from the command line or through tools such as VS Code.\nThe installation process differs slightly by operating system.\n\nWindows\nGo to the official Git website:\nhttps://git-scm.com/install/windows\nDownload the current Git for Windows installer.\n\n\n\n\nThe Git for Windows download page.\n\n\n\nOpen the downloaded installer.\nFollow the installation prompts.\nFor most beginning users, the default options are appropriate.\nComplete the installation.\nClose and reopen Command Prompt, PowerShell, or VS Code before verifying the installation.\n\n\n\n\n\n\n\nNoteGit Bash\n\n\n\nGit for Windows also provides Git Bash, a terminal that supports Git and many Unix-style commands.\nYou may encounter Git Bash in courses, tutorials, or Git documentation. You can also use Git from PowerShell or the VS Code terminal.\n\n\n\n\nmacOS\nYour Mac may already have access to Git through Apple’s Command Line Tools.\nOpen Terminal and run:\ngit --version\nIf Git is already available, you may see a version number.\nIf macOS prompts you to install the Command Line Developer Tools, follow the prompts to install them.\nYou can also request the installation directly with:\nxcode-select --install\nAfter installation, close and reopen Terminal.\n\n\n\n\n\n\nNoteUsing Homebrew\n\n\n\nIf you already use Homebrew, you can instead install a current version of Git with:\nbrew install git\nYou do not need to install Homebrew solely for this guide if the Apple Command Line Tools provide the Git installation you need.\n\n\n\n\nLinux\nGit is available through the package manager used by most Linux distributions.\nFollow the installation instructions for your distribution.\nFor example, Debian- or Ubuntu-based systems commonly use:\nsudo apt install git\nAfter installation, open a new terminal before continuing."
+  },
+  {
+    "objectID": "git/installation-guide/index.html#verify-the-git-installation",
+    "href": "git/installation-guide/index.html#verify-the-git-installation",
+    "title": "Git & GitHub Installation & Setup Guide",
+    "section": "Verify the Git Installation",
+    "text": "Verify the Git Installation\nOpen a terminal and run:\ngit --version\nA successful installation displays a Git version number.\nFor example:\ngit version 2.55.0\nYour version number may be different.\n\nThe terminal displays a Git version number without an error.\n\n\nBest Practice\nVerify Git from the command line before troubleshooting GitHub or VS Code.\nIf git --version does not work, fix the Git installation before moving on."
+  },
+  {
+    "objectID": "git/installation-guide/index.html#configure-your-git-identity",
+    "href": "git/installation-guide/index.html#configure-your-git-identity",
+    "title": "Git & GitHub Installation & Setup Guide",
+    "section": "Configure Your Git Identity",
+    "text": "Configure Your Git Identity\nGit records information about the author of each commit.\nBefore using Git, configure the name and email address you want associated with your work.\n\nSet Your Name\nOpen a terminal and run:\ngit config --global user.name \"Your Name\"\nFor example:\ngit config --global user.name \"Ada Lovelace\"\n\n\n\n\n\n\nNoteYour Git name and GitHub username are different\n\n\n\nYour Git user.name does not need to match your GitHub username.\nYour Git name is the author name stored with your commits.\n\n\n\n\nSet Your Email Address\nRun:\ngit config --global user.email \"your-email@example.com\"\nUse an email address associated with your GitHub account if you want GitHub to connect your command line commits to your account.\n\n\n\n\n\n\nNoteEmail Privacy\n\n\n\nIf you do not want your personal email address stored in your Git commits, GitHub provides a private noreply email address that you can use instead.\nYou can find your GitHub email settings under:\nGitHub → Settings → Emails\nIf you use a noreply address, configure that address in Git instead of your personal email.\n\n\n\n\nVerify Your Settings\nCheck your name:\ngit config --global user.name\nCheck your email:\ngit config --global user.email\n\nGit displays the name and email address you configured.\n\n\nWhy --global?\nThe --global option applies these settings to Git repositories you use on this computer.\nLater, if a particular project needs a different identity, Git also allows repository-specific settings."
+  },
+  {
+    "objectID": "git/installation-guide/index.html#connect-git-to-github",
+    "href": "git/installation-guide/index.html#connect-git-to-github",
+    "title": "Git & GitHub Installation & Setup Guide",
+    "section": "Connect Git to GitHub",
+    "text": "Connect Git to GitHub\nGit can work entirely on your computer.\nHowever, if you want to clone, push, pull, or perform other operations involving a remote repository on GitHub, Git needs a secure way to verify your identity.\n\nAuthenticating with GitHub\nWhen Git communicates with GitHub over HTTPS, there are several common ways to authenticate.\n\nGit Credential Manager\nGit Credential Manager (GCM) is a program that securely stores your GitHub credentials.\nThe first time Git needs to connect to GitHub, GCM typically opens your web browser, asks you to sign in to GitHub, and securely stores your credentials for future Git operations.\nFor most beginning users, this is the simplest authentication method because you usually only need to sign in once.\n\n\nPersonal Access Token (PAT)\nA Personal Access Token (PAT) is a long, randomly generated string that GitHub issues in place of your GitHub account password.\nIf you authenticate manually over HTTPS, GitHub requires a PAT rather than your account password.\nPATs are commonly used for:\n\ndevelopment environments\nremote servers\nautomated scripts\nteaching environments\napplications that cannot use browser-based authentication\n\n\n\nGitHub CLI\nGitHub CLI (gh) is an official command-line application developed by GitHub.\nGitHub CLI is not part of Git. Instead, it provides command-line access to many GitHub features, including authentication, repository management, pull requests, issues, and releases.\nMany developers also use GitHub CLI to authenticate Git with GitHub through a guided sign-in process.\n\nWhich authentication method should I use?\nFor most beginning users, Git Credential Manager provides the simplest experience.\nIf your instructor specifically asks you to create a Personal Access Token (PAT), follow those instructions.\nIf you already use GitHub CLI, you may prefer to authenticate using:\ngh auth login\nAll three methods authenticate Git with GitHub over HTTPS. They differ only in how your identity is verified and how your credentials are managed.\n\n\n\n\n\n\n\nWarningYour GitHub password is not your Git password\n\n\n\nGitHub no longer accepts your GitHub account password for Git operations over HTTPS.\nInstead, Git requires a more secure authentication method, such as Git Credential Manager, a Personal Access Token (PAT), or GitHub CLI."
+  },
+  {
+    "objectID": "git/installation-guide/index.html#test-the-github-connection",
+    "href": "git/installation-guide/index.html#test-the-github-connection",
+    "title": "Git & GitHub Installation & Setup Guide",
+    "section": "Test the GitHub Connection",
+    "text": "Test the GitHub Connection\nThe most reliable way to verify the connection is to perform an authenticated Git operation.\nWe will keep this test minimal because the Getting Started with Git & GitHub guide will explain repositories, cloning, commits, pushing, and pulling in detail.\n\nCreate a Test Repository on GitHub\nSign in to GitHub.\nCreate a new repository named:\ngit-setup-test\nYou can make the repository private if you prefer.\n\n\n\n\nCreating a test repository on GitHub.\n\n\nFor this setup test, select the option to create the repository with a README file.\n\n\nCopy the HTTPS URL\nOn the repository page, select Code.\nMake sure HTTPS is selected.\nCopy the repository URL.\nIt will look similar to:\nhttps://github.com/your-username/git-setup-test.git\n\n\n\n\nCopy the HTTPS URL for the repository.\n\n\n\n\nClone the Repository\nOpen a terminal.\nNavigate to a location where you are comfortable creating a test folder.\nRun:\ngit clone https://github.com/your-username/git-setup-test.git\nReplace the example URL with the URL you copied from GitHub.\nThe first time Git connects to GitHub, you may be prompted to authenticate.\nFollow the browser or credential-manager prompts.\n\nGit creates a new git-setup-test folder on your computer containing the README from GitHub.\n\n\nWhat did clone do?\nFor now, you only need to know that cloning created a local copy of the GitHub repository on your computer.\nThe Getting Started with Git & GitHub guide will explain cloning and the relationship between local and remote repositories in more detail."
+  },
+  {
+    "objectID": "git/installation-guide/index.html#git-vs-code",
+    "href": "git/installation-guide/index.html#git-vs-code",
+    "title": "Git & GitHub Installation & Setup Guide",
+    "section": "Git + VS Code",
+    "text": "Git + VS Code\nVS Code includes a Source Control interface that can work with Git.\nThere are again two separate pieces:\n\nGit performs version control.\nVS Code provides an interface for interacting with Git.\n\nInstalling VS Code does not install or replace Git.\n\nOpen the Test Repository\nIn VS Code, choose:\nFile → Open Folder\nOpen the git-setup-test folder you cloned.\n\n\nOpen Source Control\nSelect the Source Control icon in the Activity Bar.\n\n\n\n\nThe Git repository recognized by VS Code Source Control.\n\n\n\nVS Code recognizes the folder as a Git repository and displays the Source Control interface.\n\n\nMental Model\nVS Code is showing you information from Git.\nThe Source Control panel is not a separate version control system.\nActions you perform there correspond to Git operations."
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html",
+    "href": "quarto/installation-guide/index.html",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "",
+    "text": "Install Quarto, verify that it works, and connect it to the tools you use\n\n\nBeginning programming and data science students · 20–40 minutes · Beginner · Version 0.1"
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html#before-you-begin",
+    "href": "quarto/installation-guide/index.html#before-you-begin",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "Before You Begin",
+    "text": "Before You Begin\nQuarto is a publishing system that lets you combine text, code, output, figures, and other content into documents such as HTML pages, PDFs, presentations, and reports.\nThis guide is for you if you:\n\nare installing Quarto for the first time\nwant to check whether Quarto is installed correctly\nwant to use Quarto from VS Code\nwant to execute Python code through Jupyter\nwant to execute R code through knitr\nwant to use Quarto from RStudio or\nare seeing errors such as quarto: command not found.\n\nBy the end of this guide, you will be able to:\n\ninstall Quarto\nverify that Quarto is available from the command line\ncreate and render a basic .qmd document\nunderstand the difference between Quarto and the editor you use\nconnect Quarto to VS Code\nverify a Python + Jupyter workflow\nverify an R + knitr workflow\nwork with Quarto from RStudio and\ndiagnose several common setup problems.\n\n\nBefore you start\nYou only need the tools that match the way you plan to use Quarto.\n\nI have access to a web browser.\nI know where I want to store my Quarto projects.\nIf I plan to use Python, Python is installed.\nIf I plan to use R, R is installed.\nIf I plan to use VS Code, VS Code is installed.\nIf I plan to use RStudio, RStudio is installed.\n\n\nIf you are missing one of those tools, install it first or return to that part of this guide later."
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html#what-is-quarto",
+    "href": "quarto/installation-guide/index.html#what-is-quarto",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "What Is Quarto?",
+    "text": "What Is Quarto?\nQuarto is a publishing system.\nIt takes a source file, such as a .qmd file, and turns it into a finished document.\nA simple mental model is:\n\n\n\nQuarto Mental Model\n\n\nQuarto is not the same thing as your editor.\nFor example:\n\nVS Code: lets you edit the file\nQuarto: renders the file\n\nIf your document contains executable code, another tool may also be involved.\nFor Python, Jupyter executes the code and Quarto incorporates the results into the final document.\n\n\n\nQuarto+Jupyter Mental Model\n\n\nFor R, knitr executes the code and Quarto incorporates the results into the final document.\n\n\n\nQuarto+knitr Mental Model\n\n\n\nMental Model\nQuarto is the publishing system.\nYour editor helps you write the source file.\nJupyter or knitr connects Quarto to the language (Python or R) used to execute your code\nKeeping those roles separate makes troubleshooting much easier."
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html#install-quarto",
+    "href": "quarto/installation-guide/index.html#install-quarto",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "Install Quarto",
+    "text": "Install Quarto\n\n\nOpen the official Quarto website\nGo to:\nhttps://quarto.org/docs/get-started/\nUse the official Quarto download links rather than a third-party download site.\n\n\nDownload Quarto\nChoose the installer for your operating system.\n\n\n\n\nThe Quarto download page.\n\n\n\n\nInstall Quarto\nFollow the instructions for your operating system below.\n\n\n\nmacOS\n\nDownload the macOS installer from the official Quarto website.\nOpen the installer package.\nFollow the installation steps.\nComplete the installation.\nClose and reopen any terminal windows that were already open.\n\n\n\nWindows\n\nDownload the Windows installer from the official Quarto website.\nOpen the installer.\nFollow the installation prompts.\nComplete the installation.\nClose and reopen Command Prompt, PowerShell, or the VS Code terminal.\n\n\n\nLinux\nFollow the installation instructions provided for your Linux distribution on the official Quarto website.\nAfter installation, open a new terminal before testing Quarto."
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html#verify-the-quarto-installation",
+    "href": "quarto/installation-guide/index.html#verify-the-quarto-installation",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "Verify the Quarto Installation",
+    "text": "Verify the Quarto Installation\nDo not move on to editor configuration until Quarto itself works.\nOpen a terminal and run:\nquarto --version\nA successful result displays a version number.\nFor example:\n1.8.27\nThe exact version number may differ.\n\nThe terminal displays a Quarto version number without an error.\n\n\nBest Practice\nVerify Quarto from the command line before configuring VS Code, Jupyter, R, or RStudio.\nIf quarto --version does not work, the Quarto installation itself needs attention first."
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html#create-a-basic-quarto-document",
+    "href": "quarto/installation-guide/index.html#create-a-basic-quarto-document",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "Create a Basic Quarto Document",
+    "text": "Create a Basic Quarto Document\nLet’s test Quarto without adding Python or R yet.\n\n\nCreate a project folder\nCreate a folder somewhere easy to find.\nFor example:\nquarto-test\n\n\nCreate a Quarto file\nInside the folder, create a file named:\nhello-quarto.qmd\nAdd:\n---\ntitle: \"My First Quarto Document\"\nformat: html\n---\n\n## Hello, Quarto\n\nIf you can read this in the rendered document, Quarto is working.\n\n\nSave the file\nSave the .qmd file before rendering."
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html#render-the-test-document",
+    "href": "quarto/installation-guide/index.html#render-the-test-document",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "Render the Test Document",
+    "text": "Render the Test Document\nOpen a terminal in the folder containing hello-quarto.qmd.\nRun:\nquarto render hello-quarto.qmd\nQuarto should create an HTML file in the same project area.\nYou can also use:\nquarto preview hello-quarto.qmd\nPreview is especially useful while editing because Quarto watches the source file and refreshes the rendered output when the document changes.\n\nQuarto creates or previews an HTML document containing:\nMy First Quarto Document\nand\nHello, Quarto\n\n\nMental Model\nquarto render creates the output.\nquarto preview renders the document and keeps watching for changes while you work."
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html#vs-code-quarto",
+    "href": "quarto/installation-guide/index.html#vs-code-quarto",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "VS Code + Quarto",
+    "text": "VS Code + Quarto\nVS Code and Quarto are separate programs.\nThere are two pieces:\n\nQuarto installation: Renders Quarto documents\nQuarto VS Code extension: Adds Quarto support inside VS Code\n\nInstalling the extension does not install Quarto itself.\n\nInstall the Quarto Extension\nOpen VS Code.\nOpen the Extensions panel and search for:\nQuarto\nInstall the official Quarto extension.\n\n\n\n\nThe Quarto extension in VS Code.\n\n\n\n\nOpen Your Project Folder\nIn VS Code, choose:\nFile → Open Folder\nOpen your quarto-test folder.\nThen open:\nhello-quarto.qmd\nfrom the Explorer.\n\nBest Practice\nOpen the project folder rather than only opening the .qmd file.\nThis keeps the terminal, relative paths, images, project files, and Quarto context aligned.\n\n\n\nPreview the Document\nUse the Preview button in the upper-right area of the editor.\n\n\n\n\nQuarto file and resulting preview in VS Code. The cursor is pointing to the ‘Preview’ button in the upper right corner of the editor.\n\n\n\nThe rendered Quarto document opens in a preview window or browser and updates when you save changes.\n\n\nCommon Mistake\nSeeing the Quarto extension in VS Code does not mean Quarto itself is installed.\nIf Preview fails, check:\nquarto --version\nbefore reinstalling the extension."
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html#python-jupyter-quarto",
+    "href": "quarto/installation-guide/index.html#python-jupyter-quarto",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "Python + Jupyter + Quarto",
+    "text": "Python + Jupyter + Quarto\nIf your Quarto documents contain Python code, Quarto commonly uses Jupyter to execute that code.\nThat introduces another layer: your Python environment.\nQuarto can be installed correctly even when Python execution is not configured correctly.\n\nCheck Python\nIn a terminal, run:\npython --version\nor:\npython3 --version\nIf neither command works, complete the Python Installation Guide first.\n\n\nCheck Jupyter\nDepending on your Python setup, Jupyter may already be available.\nYou can check with:\njupyter --version\nIf Jupyter is not installed in the environment you plan to use, install the required Jupyter packages into that environment.\nFor many standard Python installations:\npython -m pip install jupyter\nor:\npython3 -m pip install jupyter\nIf you use Anaconda, Jupyter is often already included.\n\n\nTest Python in Quarto\nCreate a new file named:\npython-test.qmd\nAdd:\n---\ntitle: \"Python Test\"\nformat: html\njupyter: python3\n---\n\n## Test\n\n\n::: {.cell}\n\n```{.python .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n2\n```\n\n\n:::\n:::\nRender it with:\nquarto render python-test.qmd\n\nThe rendered document displays the result:\n2\n\n\nMental Model\nIf text renders but Python code does not execute, Quarto itself may be working correctly.\nThe problem may instead involve:\n\nPython\nJupyter\nthe selected environment or\na missing package."
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html#r-knitr-quarto",
+    "href": "quarto/installation-guide/index.html#r-knitr-quarto",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "R + knitr + Quarto",
+    "text": "R + knitr + Quarto\nQuarto can also execute R code.\nIn a typical R workflow, Quarto uses knitr to execute R code and incorporate the results into the rendered document.\n\nCheck R\nOpen a terminal and run:\nR --version\nIf R is not installed, install R before continuing.\n\n\nCheck knitr\nOpen R and run:\npackageVersion(\"knitr\")\nIf knitr is not installed, install it with:\ninstall.packages(\"knitr\")\n\n\nTest R in Quarto\nCreate:\nr-test.qmd\nAdd:\n---\ntitle: \"R Test\"\nformat: html\n---\n\n## Test\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\nRender the document:\nquarto render r-test.qmd\n\nThe rendered document displays the result:\n2\n\n\nMental Model\nRemember, for an R document:\n\nQuarto: controls publishing\nknitr: executes the R code\nR: performs the computation"
+  },
+  {
+    "objectID": "quarto/installation-guide/index.html#rstudio-quarto",
+    "href": "quarto/installation-guide/index.html#rstudio-quarto",
+    "title": "Quarto Installation & Setup Guide",
+    "section": "RStudio + Quarto",
+    "text": "RStudio + Quarto\nIf you primarily work in RStudio, you can author and render Quarto documents there.\nRecent versions of RStudio include Quarto support, but Quarto itself still needs to be available.\n\nCheck Quarto from RStudio\nOpen RStudio.\nCreate or open a .qmd file.\nYou should see Quarto-specific rendering or preview controls.\nYou can also verify Quarto from the RStudio Terminal:\nquarto --version\n\n\nTest a Quarto Document\nOpen the r-test.qmd file you created earlier.\nUse the Render button in RStudio.\n\nRStudio renders the Quarto document and displays the finished output.\n\n\nCommon Mistake\nRStudio, R, knitr, and Quarto are related but separate pieces.\nInstalling RStudio does not guarantee that every Quarto or R dependency is configured correctly."
+  },
+  {
+    "objectID": "python/installation-guide/index.html",
+    "href": "python/installation-guide/index.html",
+    "title": "Python Installation Guide",
+    "section": "",
+    "text": "Install Python, verify that it works, and avoid the most common beginner setup problems\n\n\nBeginning Python and Data Science Students · 15–25 minutes · Beginner · Version 0.1"
+  },
+  {
+    "objectID": "python/installation-guide/index.html#before-you-begin",
+    "href": "python/installation-guide/index.html#before-you-begin",
+    "title": "Python Installation Guide",
+    "section": "Before You Begin",
+    "text": "Before You Begin\nThis guide is for you if you:\n\nhave never installed Python before\nare preparing for an introductory programming or data science course\nwant to check whether Python is already installed correctly or\nare seeing messages such as python: command not found, Python was not found, or pip is not recognized.\n\nBy the end of the guide, you will be able to:\n\nchoose between a standard Python installation and Anaconda\ninstall Python using the approach that fits your needs\nverify that Python and pip are available\nunderstand the basic pieces that were installed and\ndiagnose several common installation problems.\n\n\n\n\n\n\n\nNoteA note for students\n\n\n\nFollow your instructor’s directions when they specify a particular Python version, distribution, or environment. Course requirements should take priority over the general recommendations in this guide."
+  },
+  {
+    "objectID": "python/installation-guide/index.html#which-installation-should-you-choose",
+    "href": "python/installation-guide/index.html#which-installation-should-you-choose",
+    "title": "Python Installation Guide",
+    "section": "Which Installation Should You Choose?",
+    "text": "Which Installation Should You Choose?\nThere is more than one legitimate way to install Python. The best option depends on what you are trying to do.\n\n\n\nYour situation\nRecommended starting point\n\n\n\n\nYou are taking your first Python course\nInstall Python from python.org\n\n\nYou want a small, general-purpose installation\nInstall Python from python.org\n\n\nYour instructor specifically requires Anaconda\nInstall Anaconda\n\n\nYou want Python, Jupyter, and many scientific packages bundled together\nConsider Anaconda\n\n\nYou already have a working installation\nSkip to Verify Your Installation\n\n\n\n\nOption 1: Python from python.org\nThis is the recommended starting point for most beginners.\nAdvantages\n\nrelatively small installation\nworks well with VSCode and most other IDEs\nmakes the relationship between Python and installed packages easier to understand and\nincludes pip, Python’s standard package installer.\n\nTradeoff\nYou install additional packages yourself as you need them.\n\n\nOption 2: Anaconda\nAnaconda is a Python distribution designed primarily for scientific computing and data science. It bundles Python with Jupyter, the Conda environment manager, and many commonly used packages.\nAdvantages\n\nincludes many scientific and data-analysis tools\nincludes Jupyter\noffers environment and package management through conda and\ncan be convenient when a course or research group already uses Conda.\n\nTradeoffs\n\nmuch larger download\nintroduces additional concepts, including Conda environments and the distinction between conda and pip\ncan be more setup than a first-time learner needs.\n\n\nRecommendation: Install Python from python.org unless your instructor asks you to use Anaconda or you specifically want the bundled scientific-computing environment.\n\n\n\nI already installed Anaconda. Should I uninstall it?\nNo. If Anaconda is working and your course supports it, there is usually no reason to remove it. The important question is which Python environment your terminal, editor, or notebook is currently using."
+  },
+  {
+    "objectID": "python/installation-guide/index.html#install-python-from-python.org",
+    "href": "python/installation-guide/index.html#install-python-from-python.org",
+    "title": "Python Installation Guide",
+    "section": "Install Python from python.org",
+    "text": "Install Python from python.org\n\n\n\nThe official Python downloads page recommends a current stable release for your operating system.\n\n\n\n\nOpen the official Python website\nGo to https://www.python.org/downloads/.\nAvoid downloading Python from an advertisement, third-party download site, or an unfamiliar app store listing.\n\n\nDownload the recommended stable release\nThe website normally recommends an installer for your operating system. Unless your instructor specifies a version, choose the current stable Python 3 release.\nSave the installer somewhere you can find it, such as your Downloads folder.\n\n\nRun the installer\nFollow the instructions for your operating system below.\n\n\n\nWindows Installation\n\nOpen the downloaded Python Install Manager.\nFollow the prompts to install the Python Install Manager.\nOnce installation is complete, open Command Prompt, PowerShell, or the VS Code terminal.\nRun:\npython\nIf a Python runtime is not already installed, the Python Install Manager can install the latest stable version of Python.\nFollow any additional configuration prompts that appear.\nClose and reopen your terminal before verifying the installation.\n\n\n\n\n\n\n\nNoteThe Windows installation process has changed\n\n\n\nRecent versions of Python use the Python Install Manager on Windows. You may see older tutorials that use a standalone Python installer with an Add python.exe to PATH checkbox. The standalone installer is being phased out, so this guide uses the newer installation method.\n\n\n\nThe Windows installer with “Add python.exe to PATH” highlighted.\n\n\n\n\n\n\n\n\n\n\nTipUsing the Python Install Manager\n\n\n\nThe Python Install Manager manages the Python versions installed on your computer. After setup, commands such as python and py can be used to access Python from the command line.\nIf you later need a particular version of Python, you can use the Python Install Manager to install and manage additional versions rather than downloading a separate installer for each version.\n\n\n\n\nmacOS Installation\n\nOpen the downloaded .pkg installer.\nContinue through the installation screens.\nAccept the default location unless you have a specific reason to change it.\nFinish the installation.\nClose and reopen Terminal before verifying the installation.\n\nOn many Macs, the command used for Python 3 is python3 rather than python.\n\n\nLinux Installation\nMany Linux distributions already include Python 3. Before installing anything, open a terminal and run:\npython3 --version\nWhen Python is missing or your course requires a different version, follow the package-management instructions for your Linux distribution."
+  },
+  {
+    "objectID": "python/installation-guide/index.html#install-anaconda",
+    "href": "python/installation-guide/index.html#install-anaconda",
+    "title": "Python Installation Guide",
+    "section": "Install Anaconda",
+    "text": "Install Anaconda\nUse this section only when you have chosen Anaconda.\n\n\nDownload Anaconda\nGo to https://www.anaconda.com/download and select the installer for your operating system.\n\n\nRun the installer\nAccept the default installation options unless your course or workplace provides different directions.\nOn Windows, Anaconda may recommend that you launch its tools through Anaconda Navigator or Anaconda Prompt rather than adding Anaconda to the system PATH. Follow the current installer recommendation.\n\n\nLaunch Anaconda Navigator\nOpen Anaconda Navigator and confirm that applications such as Jupyter Notebook or JupyterLab are available.\n\n\nVerify Conda\nOpen Anaconda Prompt on Windows, or Terminal on macOS or Linux, and run:\nconda --version\nYou should see a Conda version number.\n\n\n\n\n\n\n\n\nNoteConda and pip are not the same tool\n\n\n\nBoth can install Python packages, but they manage packages and environments differently. Avoid switching between them casually inside the same environment until you understand which environment you are changing."
+  },
+  {
+    "objectID": "python/installation-guide/index.html#verify-your-installation",
+    "href": "python/installation-guide/index.html#verify-your-installation",
+    "title": "Python Installation Guide",
+    "section": "Verify Your Installation",
+    "text": "Verify Your Installation\nVerification is not optional. It tells you whether the installation worked and which command your computer recognizes.\n\nCheck Python\nOpen a new terminal window.\nOn Windows, try:\npython --version\nOn macOS or Linux, try:\npython3 --version\nA successful result looks similar to:\nPython 3.x.x\nThe exact version number may differ.\n\n\nStart Python Interactively\nRun the command that worked for you:\npython\nor:\npython3\nYou should see a Python prompt beginning with &gt;&gt;&gt;.\nTest it:\nprint(\"Python is ready\")\nExit with:\nexit()\n\n\nCheck pip\nUse the Python command that worked on your computer:\npython -m pip --version\nor:\npython3 -m pip --version\nUsing python -m pip or python3 -m pip makes the connection between the Python interpreter and its package installer explicit."
+  },
+  {
+    "objectID": "python/installation-guide/index.html#what-did-you-install",
+    "href": "python/installation-guide/index.html#what-did-you-install",
+    "title": "Python Installation Guide",
+    "section": "What Did You Install?",
+    "text": "What Did You Install?\nA standard Python installation normally gives you three important pieces.\n\nThe Python Interpreter\nThe interpreter executes Python code. When you run a .py file, a notebook cell, or an interactive command, a Python interpreter performs the computation.\n\n\nThe Standard Library\nPython includes many built-in modules for common tasks such as working with files, dates, mathematics, and operating-system information.\n\n\npip\npip installs additional packages that are not included in the standard library.\nFor example:\npython -m pip install pandas\nDo not install packages merely to test the installation. First verify Python and pip; then install the packages required for your course or project."
+  },
+  {
+    "objectID": "python/installation-guide/index.html#python-is-not-recognized-or-the-command-is-not-found",
+    "href": "python/installation-guide/index.html#python-is-not-recognized-or-the-command-is-not-found",
+    "title": "Python Installation Guide",
+    "section": "python is not recognized or the command is not found",
+    "text": "python is not recognized or the command is not found\n\nTry python3 --version. If that works, use python3 on this computer.\n\nWhy it happens\nYour system may use python3 as the command name, or Python may not have been added to PATH.\nCheck\npython3 --version\nFix\n\nIf python3 works, use python3.\nIf neither command works, close and reopen the terminal.\nOn Windows, rerun the installer and confirm that Python is added to PATH.\nConfirm that the installation completed successfully."
+  },
+  {
+    "objectID": "python/installation-guide/index.html#windows-opens-the-microsoft-store-when-i-type-python",
+    "href": "python/installation-guide/index.html#windows-opens-the-microsoft-store-when-i-type-python",
+    "title": "Python Installation Guide",
+    "section": "Windows opens the Microsoft Store when I type python",
+    "text": "Windows opens the Microsoft Store when I type python\n\nWindows may be using an App Execution Alias instead of the Python installation you intended.\n\nCheck\nConfirm whether Python is installed from python.org and whether its installation folder is on PATH.\nFix\n\nSearch Windows Settings for App execution aliases.\nReview the aliases for python.exe and python3.exe.\nDisable conflicting store aliases when you have installed Python separately.\nOpen a new terminal and check the version again."
+  },
+  {
+    "objectID": "python/installation-guide/index.html#pip-is-not-recognized",
+    "href": "python/installation-guide/index.html#pip-is-not-recognized",
+    "title": "Python Installation Guide",
+    "section": "pip is not recognized",
+    "text": "pip is not recognized\n\nUse the Python interpreter to launch pip directly.\n\nTry:\npython -m pip --version\nor:\npython3 -m pip --version\nIf this works, use the same form when installing packages:\npython -m pip install package-name"
+  },
+  {
+    "objectID": "python/installation-guide/index.html#a-package-installs-but-python-still-cannot-import-it",
+    "href": "python/installation-guide/index.html#a-package-installs-but-python-still-cannot-import-it",
+    "title": "Python Installation Guide",
+    "section": "A package installs, but Python still cannot import it",
+    "text": "A package installs, but Python still cannot import it\n\nThe package was probably installed into a different Python environment.\n\nWhy it happens\nYour computer may have more than one Python installation. The pip command and the Python interpreter used by your editor or notebook may refer to different environments.\nFix\n\nIdentify the Python interpreter used by the terminal, editor, or notebook.\nRun pip through that interpreter:\n\npython -m pip install package-name\n\nIn VS Code, verify the selected interpreter or notebook kernel."
+  },
+  {
+    "objectID": "python/installation-guide/index.html#i-have-more-than-one-version-of-python",
+    "href": "python/installation-guide/index.html#i-have-more-than-one-version-of-python",
+    "title": "Python Installation Guide",
+    "section": "I have more than one version of Python",
+    "text": "I have more than one version of Python\n\nMultiple versions are not automatically a problem. The goal is to know which one your project is using.\n\nAs a beginner, keep one primary installation when possible. Before installing packages, verify the interpreter with:\npython --version\nor:\npython3 --version"
+  },
+  {
+    "objectID": "python/installation-guide/index.html#anaconda-navigator-opens-but-my-terminal-cannot-find-conda",
+    "href": "python/installation-guide/index.html#anaconda-navigator-opens-but-my-terminal-cannot-find-conda",
+    "title": "Python Installation Guide",
+    "section": "Anaconda Navigator opens, but my terminal cannot find conda",
+    "text": "Anaconda Navigator opens, but my terminal cannot find conda\n\nUse Anaconda Prompt on Windows, or initialize Conda for your shell if your installation instructions require it.\n\nDo not repeatedly reinstall Anaconda. First confirm whether Conda works inside Anaconda Prompt and whether your ordinary shell has been configured to recognize it."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html",
+    "href": "vscode/installation-guide/index.html",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "",
+    "text": "Install Visual Studio Code, connect it to Python, and configure the tools you use\n\n\nBeginning programming and data science students · 20–40 minutes · Beginner · Version 0.1"
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#before-you-begin",
+    "href": "vscode/installation-guide/index.html#before-you-begin",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Before You Begin",
+    "text": "Before You Begin\nVisual Studio Code, usually called VS Code, is a code editor that brings the different tools you use for programming into one workspace.\nThis guide is for you if you:\n\nare using VS Code for the first time\nhave installed Python and want to use it from VS Code\nare preparing for a programming or data science course\nare unsure which Python installation VS Code is using or\nwant to configure VS Code for tools such as Jupyter, Pylint, pytest, Quarto, Git, or Markdown.\n\nBy the end of this guide, you will be able to:\n\ninstall VS Code\nunderstand the main parts of the VS Code interface\nopen a project folder correctly\nconnect VS Code to your Python installation\ncreate and run a Python script\nuse the integrated terminal and\nconfigure the additional tools you need for your work.\n\n\nBefore you start\n\nPython is installed on your computer.\nYou can open a terminal.\nYou know where you would like to store your programming projects.\n\n\nIf Python is not installed yet, complete the Python Installation Guide first."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#what-is-vs-code",
+    "href": "vscode/installation-guide/index.html#what-is-vs-code",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "What Is VS Code?",
+    "text": "What Is VS Code?\nOne of the most important things to understand about VS Code is that it is a workspace, not the programming tools themselves.\nFor example, VS Code can help you work with:\n\nPython\nJupyter notebooks\nPylint\npytest\nQuarto\nGit and\nMarkdown.\n\nBut those tools do not all become part of VS Code simply because you install the editor.\n\nMental Model\nThink of VS Code as your workspace.\nYour files live on your computer. Python executes your Python code. Git tracks changes. Quarto renders documents. Other tools check, test, or display your work.\nVS Code gives you one place to work with all of them.\n\nThis distinction is useful when troubleshooting. If something goes wrong, one of the first questions to ask is:\n\nWhich tool is actually producing the problem?"
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#install-vs-code",
+    "href": "vscode/installation-guide/index.html#install-vs-code",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Install VS Code",
+    "text": "Install VS Code\n\n\nDownload VS Code\nGo to the official Visual Studio Code website, https://code.visualstudio.com/Download, and download the version for your operating system.\n\n\n\n\nThe official Visual Studio Code downloads page\n\n\nAvoid downloading from an advertisement, third-party download site, or an unfamiliar app store listing.\n\n\nDownload the recommended stable release\nChoose the current VS Code release for your operating system.\nSave the installer somewhere you can find it, such as your Downloads folder.\n\n\nInstall VS Code\nOpen the installer and follow the instructions for your operating system.\n\nmacOS\n\nOpen the downloaded VS Code file.\nDrag Visual Studio Code into your Applications folder.\nOpen VS Code from Applications, Launchpad, or Spotlight.\nOnce you have confirmed that VS Code opens from Applications, you can remove the downloaded installer or disk image.\n\n\nCommon Mistake\nDo not repeatedly open VS Code from your Downloads folder or directly from the downloaded installer.\nOn macOS, make sure Visual Studio Code has been moved into the Applications folder. This gives it a permanent location on your computer.\n\n\n\nWindows\n\nOpen the downloaded VS Code installer.\nFollow the installation prompts.\nComplete the installation before opening VS Code.\nAfter installation, open VS Code from the Start menu or its installed shortcut rather than reopening the downloaded installer.\n\n\n\n\nOpen VS Code\nLaunch Visual Studio Code.\nYou should see the Welcome screen.\n\n\n\n\nThe VS Code Welcome Screen. Your screen may look slightly different depending on the extensions you have installed."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#get-to-know-your-workspace",
+    "href": "vscode/installation-guide/index.html#get-to-know-your-workspace",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Get to Know Your Workspace",
+    "text": "Get to Know Your Workspace\nBefore configuring anything, it helps to know the names of the major parts of VS Code.\n\n\n\n\nThe major parts of the VS Code interface.\n\n\n\nExplorer\nThe Explorer (blue in the image) shows the files and folders in your current project.\nYou can use it to create, open, rename, move, and organize files.\n\n\nEditor\nThe editor (green in the image) is the main area where you write and edit your files.\nDepending on the file, the editor might contain Python code, Markdown, a Quarto document, a Jupyter notebook, or another type of content.\n\n\nIntegrated Terminal\nThe terminal (yellow in the image) lets you run command-line tools without leaving VS Code.\nYou may use it to:\n\nrun Python\ninstall packages\nrun tests\nuse Git\nrender documents\nperform other project-related tasks\n\n\n\nExtensions\nExtensions (button to view highlighted in magenta in the image) add support for languages and tools that are not built directly into the basic editor.\nYou will install some of these later in this guide.\n\n\nProblems and Output\nThe Problems and Output (red and orange respectively in the image) panels contain information from VS Code and its extensions.\nWhen something goes wrong, notice where the message appears. A Python error, Pylint warning, failed pytest test, and VS Code extension error mean different things."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#open-a-project-folder",
+    "href": "vscode/installation-guide/index.html#open-a-project-folder",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Open a Project Folder",
+    "text": "Open a Project Folder\nOne of the most useful VS Code habits is also one of the simplest:\nOpen the project folder, not just the file you want to edit.\n\nRecommendation\nStart by opening the folder containing your project. Then open individual files from the Explorer.\n\nOpening the project folder gives VS Code context for your work. It helps VS Code understand:\n\nwhich files belong together\nwhere the terminal should start\nhow relative file paths should behave\nwhether the project is a Git repository\nwhich project-specific settings apply\n\n\n\nCreate a test project folder\nCreate a folder somewhere easy to find.\nFor example:\nvscode-test\n\n\nOpen the folder\nIn VS Code, choose:\nFile → Open Folder\nSelect your vscode-test folder.\n\nThe folder name appears in the Explorer on the left side of VS Code.\n\n\n\n\nCommon Mistake\nOpening a .py file by itself may make everything appear normal at first, but VS Code may not have the project context you expect.\nWhen possible, open the project folder first."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#connect-vs-code-to-python",
+    "href": "vscode/installation-guide/index.html#connect-vs-code-to-python",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Connect VS Code to Python",
+    "text": "Connect VS Code to Python\nInstalling VS Code does not install Python support automatically.\nThere are two separate pieces:\nPython installation → Executes Python code\n\nPython extension → Helps VS Code work with Python\nYou need both.\n\nInstall the Python Extension\n\n\n\nOpen Extensions\nSelect the Extensions icon in the Activity (left side) Bar.\n\n\nFind the Python extension\nSearch for:\nPython\nChoose the official Python extension published by Microsoft.\n\n\n\n\nThe official Microsoft Python extension in VS Code.\n\n\n\n\nInstall it\nSelect Install.\nRestart or reload VS Code if prompted.\n\n\n\nCommon Mistake\nInstalling the Python extension does not install Python.\nThe extension allows VS Code to communicate with a Python installation that already exists on your computer."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#select-your-python-interpreter",
+    "href": "vscode/installation-guide/index.html#select-your-python-interpreter",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Select Your Python Interpreter",
+    "text": "Select Your Python Interpreter\nYour computer may contain more than one Python installation or environment.\nVS Code therefore needs to know:\n\nWhich Python should run this project?\n\n\nOpen the Command Palette\nOn macOS:\nCommand + Shift + P\nOn Windows or Linux:\nCtrl + Shift + P\nSearch for:\nPython: Select Interpreter\nChoose the Python environment you intend to use.\n\n\n\n\nThe interface for selecting your Python interpreter.\n\n\n\nBest Practice\nCheck your interpreter before troubleshooting package problems.\nA package can be installed successfully in one Python environment while VS Code is running your code with another."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#test-your-python-setup",
+    "href": "vscode/installation-guide/index.html#test-your-python-setup",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Test Your Python Setup",
+    "text": "Test Your Python Setup\nLet’s verify that VS Code and Python are connected.\n\n\nCreate a Python file\nIn the Explorer, create:\nhello.py\n\n\n\nThe button for creating a new file. Hover for the button to appear. To create a new file within your project folder (recommended) click the button next to the project folder name.\n\n\n\n\nAdd some Python\nprint(\"Python is running in VS Code!\")\nSave the file using: File → Save\n\n\nRun the file\nUse Run Python File in VS Code.\n\n\n\n\nThe button for running a Python file. Looks like a ‘play’ button.\n\n\n\nThe integrated terminal opens and displays:\nPython is running in VS Code!"
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#use-the-integrated-terminal",
+    "href": "vscode/installation-guide/index.html#use-the-integrated-terminal",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Use the Integrated Terminal",
+    "text": "Use the Integrated Terminal\nOpen the terminal with:\nTerminal → New Terminal\nBecause you opened a project folder, the terminal should normally begin inside that folder.\nCheck Python with:\npython --version\nor:\npython3 --version\nYou can also check which pip belongs to that Python installation:\npython -m pip --version\nor:\npython3 -m pip --version\n\nMental Model\nThe terminal is not a separate copy of your project.\nIt is another way of interacting with the files and tools on your computer. Its current working directory determines where commands are being run."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#jupyter-notebooks",
+    "href": "vscode/installation-guide/index.html#jupyter-notebooks",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Jupyter Notebooks",
+    "text": "Jupyter Notebooks\nIf you work with .ipynb files, VS Code can provide a notebook interface directly inside your workspace.\n\nInstall the Jupyter Extension\nOpen Extensions and search for:\nJupyter\nInstall the official Jupyter extension published by Microsoft.\n\n\nUnderstand the Kernel\nA Jupyter notebook needs a kernel to execute its code.\nFor a Python notebook, that kernel is connected to a Python environment.\nOpen a notebook in your project folder or create a new notebook in the same way you created a python file, except use the file extension .ipynb. Then, use the kernel selector to choose the Python environment you want.\nSelect Kernel → Python Environments → Choose your desired environment\n\nYou can run:\nprint(\"Jupyter is ready!\")\nand see the output directly below the cell.\n\n\n\nThe jupyter interface in VS Code.\n\n\n\n\n\nMy notebook opens, but the cells will not run\n\nCheck the Jupyter extension and selected kernel before reinstalling Python.\n\nConfirm that:\n\nthe Python extension is installed,\nthe Jupyter extension is installed and enabled,\na Python kernel is selected, and\nthe selected environment contains the packages you need.\n\nIf VS Code asks to install ipykernel, follow the prompt for the environment you intend to use."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#code-style-checking-with-pylint",
+    "href": "vscode/installation-guide/index.html#code-style-checking-with-pylint",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Code Style Checking with Pylint",
+    "text": "Code Style Checking with Pylint\nPylint analyzes Python code and identifies potential problems with code quality and style.\nIt is important to understand what this means:\n\nPylint is a development tool.\nIts purpose is not simply to assign penalties to your code.\nIt gives you feedback while you are writing so that you can identify potential problems before submitting or sharing your work.\n\n\nSet Up Pylint\nOpen Extensions and search for:\nPylint\nInstall the appropriate Pylint support for VS Code.\nDepending on your setup, VS Code may also prompt you to install the pylint Python package into your selected environment.\n\n\nUnderstand the Feedback\nPylint feedback may appear as:\n\ncolored underlines in the editor\nmessages when you hover over code\nentries in the Problems panel\n\n\nCommon Mistake\nA Pylint warning is not necessarily a Python error.\nPython may be able to run code that Pylint recommends changing.\nAlways identify whether you are looking at:\n\na Python runtime error,\na syntax error, or\na linting/style message.\n\n\nA separate Python style guide can explain the conventions themselves in more detail. Here, the goal is simply to make the feedback available while you work."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#testing-with-pytest",
+    "href": "vscode/installation-guide/index.html#testing-with-pytest",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Testing with pytest",
+    "text": "Testing with pytest\nTests let you check whether your code behaves the way you expect.\nLike Pylint, pytest should not be thought of only as something an instructor or autograder uses.\n\nTests are feedback while you develop.\nRunning tests yourself lets you find problems earlier and determine whether a change accidentally broke something that previously worked.\n\n\nConfigure Python Tests\nOpen the Command Palette and search for:\nPython: Configure Tests\nChoose:\npytest\nThen select the folder containing your tests when prompted. VS Code may also prompt you to install pytest in your Python environment if you haven’t already.\nVS Code should discover tests that follow pytest’s expected naming conventions.\n\n\nRun Tests\nOpen the Testing panel (click the icon that looks like an erlenmeyer flask on the left side panel).\nFrom there, you can run:\n\nall tests,\none test file, or\nan individual test.\n\n\n\n\n\nThe testing panel in VS Code, showing 1 out of 1 tests passed.\n\n\n\nVS Code displays which tests passed and which tests failed.\n\n\nCommon Mistake\nA failed test does not necessarily mean pytest is broken.\nIt usually means pytest successfully ran the test and discovered that the actual behavior did not match the expected behavior.\nRead the failure output before changing your setup."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#quarto",
+    "href": "vscode/installation-guide/index.html#quarto",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Quarto",
+    "text": "Quarto\nIf you write .qmd documents, VS Code can provide editor support for Quarto.\nThere are again two separate pieces:\nQuarto installation → Renders Quarto documents\n\nQuarto VS Code extension → Adds editor support inside VS Code\nInstalling the extension does not install Quarto itself.\n\nInstall the Quarto Extension\nOpen Extensions and search for:\nQuarto\nInstall the official Quarto extension.\n\n\nOpen a Quarto Document\nOpen a .qmd file from your project or create a new .qmd file.\nVS Code should recognize it as a Quarto document and provide Quarto-specific editing features.\n\n\nPreview the Document\nUse Quarto’s preview functionality to render the document.\n\n\n\nQuarto file and resulting preview in VS Code. The curser is pointing to the ‘Preview’ button in the upper right corner of the editor.\n\n\n\nYour .qmd source renders into the requested output format and the preview opens successfully.\n\nIf Quarto itself is not installed, complete the Quarto Installation & Setup Guide.\nFor YAML, Markdown, code chunks, document formats, and the authoring workflow, continue to Getting Started with Quarto."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#git-source-control",
+    "href": "vscode/installation-guide/index.html#git-source-control",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Git Source Control",
+    "text": "Git Source Control\nVS Code includes a Source Control interface for working with Git repositories.\n\n\n\nThe source control panel in VS Code. The curser is pointing to the ‘Source Control’ icon in the Activity Bar on the left side of the workspace. The panel shows a list of files with changes that have not yet been committed to the Git repository.\n\n\nYou do not need to learn Git from this section. The goal is simply to understand what you are seeing.\nIf you open a folder that is already a Git repository, the Source Control panel may show files as:\n\nmodified (M)\nadded (A)\ndeleted (D) or\nuntracked (U).\n\nThose statuses come from Git.\nVS Code is displaying Git’s information through a graphical interface.\n\nMental Model\nGit performs the version control.\nVS Code’s Source Control panel gives you an interface for interacting with Git.\nThey are related, but they are not the same thing.\n\nIf Git is not installed or you are ready to learn the workflow, continue with:\n\nGit Installation & Setup\nGit for Beginners\n\nThose guides will cover repositories, commits, branches, pushing, pulling, and the larger Git workflow."
+  },
+  {
+    "objectID": "vscode/installation-guide/index.html#markdown-preview",
+    "href": "vscode/installation-guide/index.html#markdown-preview",
+    "title": "VS Code Installation & Setup Guide",
+    "section": "Markdown Preview",
+    "text": "Markdown Preview\nMarkdown files use the .md extension and appear frequently in programming projects.\nFor example:\nREADME.md\nVS Code can display both the Markdown source and a rendered preview.\nOpen a Markdown file and use:\nOpen Preview\nor:\nOpen Preview to the Side\nin the upper right corner of the editor. (Placement may depend on other extensions you have installed.)\nThis is useful when writing:\n\nREADME files\nproject documentation\nGitHub documentation\nMarkdown that will later be used inside Quarto or other tools.\n\n\nBest Practice\nUse the preview to check how your Markdown will render rather than relying only on how the source looks in the editor."
+  }
+]

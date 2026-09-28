@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Amanda R. Kube Jotte">
+<meta name="dcterms.date" content="2026-09-27">
+
+<title>Quarto Installation &amp; Setup Guide – Teaching Resources | Student Guides</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2a890b4f4ecfc8517c73d5eba00faa62.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-2ae9d128b9b6acf21c0753cbc8859995.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Teaching Resources | Student Guides</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">Quarto Installation &amp; Setup Guide</a></li>
+  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before You Begin</a></li>
+  <li><a href="#what-is-quarto" id="toc-what-is-quarto" class="nav-link" data-scroll-target="#what-is-quarto">What Is Quarto?</a></li>
+  <li><a href="#install-quarto" id="toc-install-quarto" class="nav-link" data-scroll-target="#install-quarto">Install Quarto</a>
+  <ul class="collapse">
+  <li><a href="#macos" id="toc-macos" class="nav-link" data-scroll-target="#macos">macOS</a></li>
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
+  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux">Linux</a></li>
+  </ul></li>
+  <li><a href="#verify-the-quarto-installation" id="toc-verify-the-quarto-installation" class="nav-link" data-scroll-target="#verify-the-quarto-installation">Verify the Quarto Installation</a></li>
+  <li><a href="#create-a-basic-quarto-document" id="toc-create-a-basic-quarto-document" class="nav-link" data-scroll-target="#create-a-basic-quarto-document">Create a Basic Quarto Document</a></li>
+  <li><a href="#render-the-test-document" id="toc-render-the-test-document" class="nav-link" data-scroll-target="#render-the-test-document">Render the Test Document</a></li>
+  <li><a href="#set-up-quarto-for-how-you-work" id="toc-set-up-quarto-for-how-you-work" class="nav-link" data-scroll-target="#set-up-quarto-for-how-you-work">Set Up Quarto for How You Work</a>
+  <ul class="collapse">
+  <li><a href="#vs-code-quarto" id="toc-vs-code-quarto" class="nav-link" data-scroll-target="#vs-code-quarto">VS Code + Quarto</a>
+  <ul class="collapse">
+  <li><a href="#install-the-quarto-extension" id="toc-install-the-quarto-extension" class="nav-link" data-scroll-target="#install-the-quarto-extension">Install the Quarto Extension</a></li>
+  <li><a href="#open-your-project-folder" id="toc-open-your-project-folder" class="nav-link" data-scroll-target="#open-your-project-folder">Open Your Project Folder</a></li>
+  <li><a href="#preview-the-document" id="toc-preview-the-document" class="nav-link" data-scroll-target="#preview-the-document">Preview the Document</a></li>
+  </ul></li>
+  <li><a href="#python-jupyter-quarto" id="toc-python-jupyter-quarto" class="nav-link" data-scroll-target="#python-jupyter-quarto">Python + Jupyter + Quarto</a>
+  <ul class="collapse">
+  <li><a href="#check-python" id="toc-check-python" class="nav-link" data-scroll-target="#check-python">Check Python</a></li>
+  <li><a href="#check-jupyter" id="toc-check-jupyter" class="nav-link" data-scroll-target="#check-jupyter">Check Jupyter</a></li>
+  <li><a href="#test-python-in-quarto" id="toc-test-python-in-quarto" class="nav-link" data-scroll-target="#test-python-in-quarto">Test Python in Quarto</a></li>
+  </ul></li>
+  <li><a href="#r-knitr-quarto" id="toc-r-knitr-quarto" class="nav-link" data-scroll-target="#r-knitr-quarto">R + knitr + Quarto</a>
+  <ul class="collapse">
+  <li><a href="#check-r" id="toc-check-r" class="nav-link" data-scroll-target="#check-r">Check R</a></li>
+  <li><a href="#check-knitr" id="toc-check-knitr" class="nav-link" data-scroll-target="#check-knitr">Check knitr</a></li>
+  <li><a href="#test-r-in-quarto" id="toc-test-r-in-quarto" class="nav-link" data-scroll-target="#test-r-in-quarto">Test R in Quarto</a></li>
+  </ul></li>
+  <li><a href="#rstudio-quarto" id="toc-rstudio-quarto" class="nav-link" data-scroll-target="#rstudio-quarto">RStudio + Quarto</a>
+  <ul class="collapse">
+  <li><a href="#check-quarto-from-rstudio" id="toc-check-quarto-from-rstudio" class="nav-link" data-scroll-target="#check-quarto-from-rstudio">Check Quarto from RStudio</a></li>
+  <li><a href="#test-a-quarto-document" id="toc-test-a-quarto-document" class="nav-link" data-scroll-target="#test-a-quarto-document">Test a Quarto Document</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#common-problems" id="toc-common-problems" class="nav-link" data-scroll-target="#common-problems">Common Problems</a>
+  <ul class="collapse">
+  <li><a href="#quarto-command-not-found" id="toc-quarto-command-not-found" class="nav-link" data-scroll-target="#quarto-command-not-found"><code>quarto: command not found</code></a></li>
+  <li><a href="#vs-code-does-not-recognize-my-.qmd-file" id="toc-vs-code-does-not-recognize-my-.qmd-file" class="nav-link" data-scroll-target="#vs-code-does-not-recognize-my-.qmd-file">VS Code does not recognize my <code>.qmd</code> file</a></li>
+  <li><a href="#the-preview-button-is-missing" id="toc-the-preview-button-is-missing" class="nav-link" data-scroll-target="#the-preview-button-is-missing">The Preview button is missing</a></li>
+  <li><a href="#the-quarto-extension-is-installed-but-preview-still-fails" id="toc-the-quarto-extension-is-installed-but-preview-still-fails" class="nav-link" data-scroll-target="#the-quarto-extension-is-installed-but-preview-still-fails">The Quarto extension is installed, but Preview still fails</a></li>
+  <li><a href="#my-document-renders-but-the-python-code-fails" id="toc-my-document-renders-but-the-python-code-fails" class="nav-link" data-scroll-target="#my-document-renders-but-the-python-code-fails">My document renders, but the Python code fails</a></li>
+  <li><a href="#my-document-renders-but-the-r-code-fails" id="toc-my-document-renders-but-the-r-code-fails" class="nav-link" data-scroll-target="#my-document-renders-but-the-r-code-fails">My document renders, but the R code fails</a></li>
+  <li><a href="#quarto-reports-a-yaml-error" id="toc-quarto-reports-a-yaml-error" class="nav-link" data-scroll-target="#quarto-reports-a-yaml-error">Quarto reports a YAML error</a></li>
+  <li><a href="#quarto-preview-does-not-open" id="toc-quarto-preview-does-not-open" class="nav-link" data-scroll-target="#quarto-preview-does-not-open">Quarto Preview does not open</a></li>
+  <li><a href="#markdown-files-open-with-quarto-preview-instead-of-the-normal-markdown-preview" id="toc-markdown-files-open-with-quarto-preview-instead-of-the-normal-markdown-preview" class="nav-link" data-scroll-target="#markdown-files-open-with-quarto-preview-instead-of-the-normal-markdown-preview">Markdown files open with Quarto Preview instead of the normal Markdown preview</a></li>
+  <li><a href="#something-worked-before-but-now-it-does-not-render" id="toc-something-worked-before-but-now-it-does-not-render" class="nav-link" data-scroll-target="#something-worked-before-but-now-it-does-not-render">Something worked before, but now it does not render</a></li>
+  </ul></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#verify-your-setup" id="toc-verify-your-setup" class="nav-link" data-scroll-target="#verify-your-setup">Verify Your Setup</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quarto Installation &amp; Setup Guide</h1>
+<p class="subtitle lead">Install Quarto, verify that it works, and connect it to the tools you use</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Amanda R. Kube Jotte </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 27, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="section" class="level1 guide-header">
+<h1>Quarto Installation &amp; Setup Guide</h1>
+<div class="subtitle">
+<p>Install Quarto, verify that it works, and connect it to the tools you use</p>
+</div>
+<div class="guide-meta-inline">
+<p>Beginning programming and data science students · 20–40 minutes · Beginner · Version 0.1</p>
+</div>
+</section>
+<section id="before-you-begin" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-begin">Before You Begin</h2>
+<p>Quarto is a publishing system that lets you combine text, code, output, figures, and other content into documents such as HTML pages, PDFs, presentations, and reports.</p>
+<p>This guide is for you if you:</p>
+<ul>
+<li>are installing Quarto for the first time</li>
+<li>want to check whether Quarto is installed correctly</li>
+<li>want to use Quarto from VS Code</li>
+<li>want to execute Python code through Jupyter</li>
+<li>want to execute R code through knitr</li>
+<li>want to use Quarto from RStudio or</li>
+<li>are seeing errors such as <code>quarto: command not found</code>.</li>
+</ul>
+<p>By the end of this guide, you will be able to:</p>
+<ul>
+<li>install Quarto</li>
+<li>verify that Quarto is available from the command line</li>
+<li>create and render a basic <code>.qmd</code> document</li>
+<li>understand the difference between Quarto and the editor you use</li>
+<li>connect Quarto to VS Code</li>
+<li>verify a Python + Jupyter workflow</li>
+<li>verify an R + knitr workflow</li>
+<li>work with Quarto from RStudio and</li>
+<li>diagnose several common setup problems.</li>
+</ul>
+<div class="guide-checklist">
+<p><strong>Before you start</strong></p>
+<p>You only need the tools that match the way you plan to use Quarto.</p>
+<ul class="task-list">
+<li><label><input type="checkbox">I have access to a web browser.</label></li>
+<li><label><input type="checkbox">I know where I want to store my Quarto projects.</label></li>
+<li><label><input type="checkbox">If I plan to use Python, Python is installed.</label></li>
+<li><label><input type="checkbox">If I plan to use R, R is installed.</label></li>
+<li><label><input type="checkbox">If I plan to use VS Code, VS Code is installed.</label></li>
+<li><label><input type="checkbox">If I plan to use RStudio, RStudio is installed.</label></li>
+</ul>
+</div>
+<p>If you are missing one of those tools, install it first or return to that part of this guide later.</p>
+</section>
+<section id="what-is-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-quarto">What Is Quarto?</h2>
+<p>Quarto is a <strong>publishing system</strong>.</p>
+<p>It takes a source file, such as a <code>.qmd</code> file, and turns it into a finished document.</p>
+<p>A simple mental model is:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/quarto-mental-model.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>Quarto Mental Model</figcaption>
+</figure>
+</div>
+<p>Quarto is not the same thing as your editor.</p>
+<p>For example:</p>
+<ul>
+<li>VS Code: lets you edit the file</li>
+<li>Quarto: renders the file</li>
+</ul>
+<p>If your document contains executable code, another tool may also be involved.</p>
+<p>For Python, Jupyter executes the code and Quarto incorporates the results into the final document.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/quarto-jupyter-mental-model.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>Quarto+Jupyter Mental Model</figcaption>
+</figure>
+</div>
+<p>For R, knitr executes the code and Quarto incorporates the results into the final document.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/quarto-knitr-mental-model.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>Quarto+knitr Mental Model</figcaption>
+</figure>
+</div>
+<div class="recommendation">
+<p><strong>Mental Model</strong></p>
+<p>Quarto is the publishing system.</p>
+<p>Your editor helps you write the source file.</p>
+<p>Jupyter or knitr connects Quarto to the language (Python or R) used to execute your code</p>
+<p>Keeping those roles separate makes troubleshooting much easier.</p>
+</div>
+</section>
+<section id="install-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="install-quarto">Install Quarto</h2>
+<div class="guide-steps">
+<section id="open-the-official-quarto-website" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="open-the-official-quarto-website">Open the official Quarto website</h3>
+<p>Go to:</p>
+<p><code>https://quarto.org/docs/get-started/</code></p>
+<p>Use the official Quarto download links rather than a third-party download site.</p>
+</section>
+<section id="download-quarto" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="download-quarto">Download Quarto</h3>
+<p>Choose the installer for your operating system.</p>
+<!-- SCREENSHOT: Quarto download page -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/quarto-download-page.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The Quarto download page.</figcaption>
+</figure>
+</div>
+</section>
+<section id="install-quarto-1" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="install-quarto-1">Install Quarto</h3>
+<p>Follow the instructions for your operating system below.</p>
+</section>
+</div>
+<section id="macos" class="level3">
+<h3 class="anchored" data-anchor-id="macos">macOS</h3>
+<ol type="1">
+<li>Download the macOS installer from the official Quarto website.</li>
+<li>Open the installer package.</li>
+<li>Follow the installation steps.</li>
+<li>Complete the installation.</li>
+<li>Close and reopen any terminal windows that were already open.</li>
+</ol>
+</section>
+<section id="windows" class="level3">
+<h3 class="anchored" data-anchor-id="windows">Windows</h3>
+<ol type="1">
+<li>Download the Windows installer from the official Quarto website.</li>
+<li>Open the installer.</li>
+<li>Follow the installation prompts.</li>
+<li>Complete the installation.</li>
+<li>Close and reopen Command Prompt, PowerShell, or the VS Code terminal.</li>
+</ol>
+</section>
+<section id="linux" class="level3">
+<h3 class="anchored" data-anchor-id="linux">Linux</h3>
+<p>Follow the installation instructions provided for your Linux distribution on the official Quarto website.</p>
+<p>After installation, open a new terminal before testing Quarto.</p>
+</section>
+</section>
+<section id="verify-the-quarto-installation" class="level2">
+<h2 class="anchored" data-anchor-id="verify-the-quarto-installation">Verify the Quarto Installation</h2>
+<p>Do not move on to editor configuration until Quarto itself works.</p>
+<p>Open a terminal and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A successful result displays a version number.</p>
+<p>For example:</p>
+<pre class="text"><code>1.8.27</code></pre>
+<p>The exact version number may differ.</p>
+<div class="expected-result">
+<p>The terminal displays a Quarto version number without an error.</p>
+</div>
+<div class="best-practice">
+<p><strong>Best Practice</strong></p>
+<p>Verify Quarto from the command line before configuring VS Code, Jupyter, R, or RStudio.</p>
+<p>If <code>quarto --version</code> does not work, the Quarto installation itself needs attention first.</p>
+</div>
+</section>
+<section id="create-a-basic-quarto-document" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-basic-quarto-document">Create a Basic Quarto Document</h2>
+<p>Let’s test Quarto without adding Python or R yet.</p>
+<div class="guide-steps">
+<section id="create-a-project-folder" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="create-a-project-folder">Create a project folder</h3>
+<p>Create a folder somewhere easy to find.</p>
+<p>For example:</p>
+<pre class="text"><code>quarto-test</code></pre>
+</section>
+<section id="create-a-quarto-file" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="create-a-quarto-file">Create a Quarto file</h3>
+<p>Inside the folder, create a file named:</p>
+<pre class="text"><code>hello-quarto.qmd</code></pre>
+<p>Add:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "My First Quarto Document"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Hello, Quarto</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>If you can read this in the rendered document, Quarto is working.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="save-the-file" class="level3 guide-step">
+<h3 class="anchored" data-anchor-id="save-the-file">Save the file</h3>
+<p>Save the <code>.qmd</code> file before rendering.</p>
+</section>
+</div>
+</section>
+<section id="render-the-test-document" class="level2">
+<h2 class="anchored" data-anchor-id="render-the-test-document">Render the Test Document</h2>
+<p>Open a terminal in the folder containing <code>hello-quarto.qmd</code>.</p>
+<p>Run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render hello-quarto.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Quarto should create an HTML file in the same project area.</p>
+<p>You can also use:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview hello-quarto.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Preview is especially useful while editing because Quarto watches the source file and refreshes the rendered output when the document changes.</p>
+<div class="expected-result">
+<p>Quarto creates or previews an HTML document containing:</p>
+<p><strong>My First Quarto Document</strong></p>
+<p>and</p>
+<p><strong>Hello, Quarto</strong></p>
+</div>
+<div class="recommendation">
+<p><strong>Mental Model</strong></p>
+<p><code>quarto render</code> creates the output.</p>
+<p><code>quarto preview</code> renders the document and keeps watching for changes while you work.</p>
+</div>
+</section>
+<section id="set-up-quarto-for-how-you-work" class="level1">
+<h1>Set Up Quarto for How You Work</h1>
+<p>The rest of this guide depends on the tools you plan to use.</p>
+<p>You do <strong>not</strong> need every setup below.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>If you will…</th>
+<th>Set up…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Edit Quarto documents in VS Code</td>
+<td>VS Code + Quarto</td>
+</tr>
+<tr class="even">
+<td>Execute Python code</td>
+<td>Python + Jupyter</td>
+</tr>
+<tr class="odd">
+<td>Execute R code</td>
+<td>R + knitr</td>
+</tr>
+<tr class="even">
+<td>Work primarily in RStudio</td>
+<td>RStudio + Quarto</td>
+</tr>
+</tbody>
+</table>
+<section id="vs-code-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="vs-code-quarto">VS Code + Quarto</h2>
+<p>VS Code and Quarto are separate programs.</p>
+<p>There are two pieces:</p>
+<ol type="1">
+<li>Quarto installation: Renders Quarto documents</li>
+<li>Quarto VS Code extension: Adds Quarto support inside VS Code</li>
+</ol>
+<p>Installing the extension does not install Quarto itself.</p>
+<section id="install-the-quarto-extension" class="level3">
+<h3 class="anchored" data-anchor-id="install-the-quarto-extension">Install the Quarto Extension</h3>
+<p>Open VS Code.</p>
+<p>Open the <strong>Extensions</strong> panel and search for:</p>
+<pre class="text"><code>Quarto</code></pre>
+<p>Install the official Quarto extension.</p>
+<!-- SCREENSHOT: Quarto extension -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-quarto-extension.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>The Quarto extension in VS Code.</figcaption>
+</figure>
+</div>
+</section>
+<section id="open-your-project-folder" class="level3">
+<h3 class="anchored" data-anchor-id="open-your-project-folder">Open Your Project Folder</h3>
+<p>In VS Code, choose:</p>
+<p><strong>File → Open Folder</strong></p>
+<p>Open your <code>quarto-test</code> folder.</p>
+<p>Then open:</p>
+<pre class="text"><code>hello-quarto.qmd</code></pre>
+<p>from the Explorer.</p>
+<div class="best-practice">
+<p><strong>Best Practice</strong></p>
+<p>Open the project folder rather than only opening the <code>.qmd</code> file.</p>
+<p>This keeps the terminal, relative paths, images, project files, and Quarto context aligned.</p>
+</div>
+</section>
+<section id="preview-the-document" class="level3">
+<h3 class="anchored" data-anchor-id="preview-the-document">Preview the Document</h3>
+<p>Use the <strong>Preview</strong> button in the upper-right area of the editor.</p>
+<!-- SCREENSHOT: Quarto Preview button -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/vscode-quarto-preview.png" class="screenshot img-fluid figure-img"></p>
+<figcaption>Quarto file and resulting preview in VS Code. The cursor is pointing to the ‘Preview’ button in the upper right corner of the editor.</figcaption>
+</figure>
+</div>
+<div class="expected-result">
+<p>The rendered Quarto document opens in a preview window or browser and updates when you save changes.</p>
+</div>
+<div class="common-mistake">
+<p><strong>Common Mistake</strong></p>
+<p>Seeing the Quarto extension in VS Code does not mean Quarto itself is installed.</p>
+<p>If Preview fails, check:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>before reinstalling the extension.</p>
+</div>
+</section>
+</section>
+<section id="python-jupyter-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="python-jupyter-quarto">Python + Jupyter + Quarto</h2>
+<p>If your Quarto documents contain Python code, Quarto commonly uses Jupyter to execute that code.</p>
+<p>That introduces another layer: your Python environment.</p>
+<p>Quarto can be installed correctly even when Python execution is not configured correctly.</p>
+<section id="check-python" class="level3">
+<h3 class="anchored" data-anchor-id="check-python">Check Python</h3>
+<p>In a terminal, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>or:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If neither command works, complete the <strong>Python Installation Guide</strong> first.</p>
+</section>
+<section id="check-jupyter" class="level3">
+<h3 class="anchored" data-anchor-id="check-jupyter">Check Jupyter</h3>
+<p>Depending on your Python setup, Jupyter may already be available.</p>
+<p>You can check with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If Jupyter is not installed in the environment you plan to use, install the required Jupyter packages into that environment.</p>
+<p>For many standard Python installations:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>or:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If you use Anaconda, Jupyter is often already included.</p>
+</section>
+<section id="test-python-in-quarto" class="level3">
+<h3 class="anchored" data-anchor-id="test-python-in-quarto">Test Python in Quarto</h3>
+<p>Create a new file named:</p>
+<pre class="text"><code>python-test.qmd</code></pre>
+<p>Add:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Python Test"</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Test</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="in">```{.python .cell-code}</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>::: {.cell-output .cell-output-stdout}</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="in">2</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Render it with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render python-test.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="expected-result">
+<p>The rendered document displays the result:</p>
+<pre class="text"><code>2</code></pre>
+</div>
+<div class="recommendation">
+<p><strong>Mental Model</strong></p>
+<p>If text renders but Python code does not execute, Quarto itself may be working correctly.</p>
+<p>The problem may instead involve:</p>
+<ul>
+<li>Python</li>
+<li>Jupyter</li>
+<li>the selected environment or</li>
+<li>a missing package.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="r-knitr-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="r-knitr-quarto">R + knitr + Quarto</h2>
+<p>Quarto can also execute R code.</p>
+<p>In a typical R workflow, Quarto uses <strong>knitr</strong> to execute R code and incorporate the results into the rendered document.</p>
+<section id="check-r" class="level3">
+<h3 class="anchored" data-anchor-id="check-r">Check R</h3>
+<p>Open a terminal and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If R is not installed, install R before continuing.</p>
+</section>
+<section id="check-knitr" class="level3">
+<h3 class="anchored" data-anchor-id="check-knitr">Check knitr</h3>
+<p>Open R and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">"knitr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If <code>knitr</code> is not installed, install it with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"knitr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="test-r-in-quarto" class="level3">
+<h3 class="anchored" data-anchor-id="test-r-in-quarto">Test R in Quarto</h3>
+<p>Create:</p>
+<pre class="text"><code>r-test.qmd</code></pre>
+<p>Add:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "R Test"</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Test</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="in">```{.r .cell-code}</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>::: {.cell-output .cell-output-stdout}</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a><span class="in">[1] 2</span></span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Render the document:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render r-test.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="expected-result">
+<p>The rendered document displays the result:</p>
+<pre class="text"><code>2</code></pre>
+</div>
+<div class="recommendation">
+<p><strong>Mental Model</strong></p>
+<p>Remember, for an R document:</p>
+<ul>
+<li>Quarto: controls publishing</li>
+<li>knitr: executes the R code</li>
+<li>R: performs the computation</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="rstudio-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="rstudio-quarto">RStudio + Quarto</h2>
+<p>If you primarily work in RStudio, you can author and render Quarto documents there.</p>
+<p>Recent versions of RStudio include Quarto support, but Quarto itself still needs to be available.</p>
+<section id="check-quarto-from-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="check-quarto-from-rstudio">Check Quarto from RStudio</h3>
+<p>Open RStudio.</p>
+<p>Create or open a <code>.qmd</code> file.</p>
+<p>You should see Quarto-specific rendering or preview controls.</p>
+<p>You can also verify Quarto from the RStudio Terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="test-a-quarto-document" class="level3">
+<h3 class="anchored" data-anchor-id="test-a-quarto-document">Test a Quarto Document</h3>
+<p>Open the <code>r-test.qmd</code> file you created earlier.</p>
+<p>Use the <strong>Render</strong> button in RStudio.</p>
+<div class="expected-result">
+<p>RStudio renders the Quarto document and displays the finished output.</p>
+</div>
+<div class="common-mistake">
+<p><strong>Common Mistake</strong></p>
+<p>RStudio, R, knitr, and Quarto are related but separate pieces.</p>
+<p>Installing RStudio does not guarantee that every Quarto or R dependency is configured correctly.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="common-problems" class="level1">
+<h1>Common Problems</h1>
+<section id="quarto-command-not-found" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="quarto-command-not-found"><code>quarto: command not found</code></h3>
+<div class="quick-answer">
+<p>Quarto is either not installed or your terminal cannot find the installation.</p>
+</div>
+<p><strong>Check</strong></p>
+<p>Run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>in a new terminal window.</p>
+<p><strong>Fix</strong></p>
+<ol type="1">
+<li>Confirm that Quarto was installed successfully.</li>
+<li>Close and reopen the terminal.</li>
+<li>Restart VS Code or RStudio if they were open during installation.</li>
+<li>Reinstall Quarto only if the installation itself appears incomplete.</li>
+</ol>
+</section>
+<section id="vs-code-does-not-recognize-my-.qmd-file" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="vs-code-does-not-recognize-my-.qmd-file">VS Code does not recognize my <code>.qmd</code> file</h3>
+<div class="quick-answer">
+<p>Check the filename and the Quarto extension.</p>
+</div>
+<p>Confirm that:</p>
+<ul>
+<li>the file ends in <code>.qmd</code></li>
+<li>the Quarto VS Code extension is installed and enabled</li>
+<li>VS Code has been restarted since the extension was installed.</li>
+</ul>
+<p>Do not reinstall Quarto until you have confirmed that <code>quarto --version</code> works.</p>
+</section>
+<section id="the-preview-button-is-missing" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="the-preview-button-is-missing">The Preview button is missing</h3>
+<div class="quick-answer">
+<p>Check that the file is a <code>.qmd</code> file and that the Quarto extension is installed.</p>
+</div>
+<p>Also confirm that the document is recognized as Quarto in VS Code.</p>
+<p>If the extension was just installed, reload or restart VS Code.</p>
+</section>
+<section id="the-quarto-extension-is-installed-but-preview-still-fails" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="the-quarto-extension-is-installed-but-preview-still-fails">The Quarto extension is installed, but Preview still fails</h3>
+<div class="quick-answer">
+<p>The VS Code extension may be working while Quarto itself is missing or unavailable.</p>
+</div>
+<p>Open the VS Code terminal and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If that command fails, troubleshoot the Quarto installation first.</p>
+</section>
+<section id="my-document-renders-but-the-python-code-fails" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="my-document-renders-but-the-python-code-fails">My document renders, but the Python code fails</h3>
+<div class="quick-answer">
+<p>Quarto may be working correctly while your Python or Jupyter environment is not.</p>
+</div>
+<p>Check:</p>
+<ol type="1">
+<li>Which Python environment are you using?</li>
+<li>Does Python work in the terminal?</li>
+<li>Is Jupyter installed in that environment?</li>
+<li>Are the required Python packages installed in that environment?</li>
+</ol>
+<p>Try:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>and:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="my-document-renders-but-the-r-code-fails" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="my-document-renders-but-the-r-code-fails">My document renders, but the R code fails</h3>
+<div class="quick-answer">
+<p>Check R and knitr before troubleshooting Quarto itself.</p>
+</div>
+<p>In R, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">"knitr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If needed:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"knitr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Also confirm that R is installed and available to the environment you are using.</p>
+</section>
+<section id="quarto-reports-a-yaml-error" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="quarto-reports-a-yaml-error">Quarto reports a YAML error</h3>
+<div class="quick-answer">
+<p>Read the location in the error message before changing anything else.</p>
+</div>
+<p>YAML is sensitive to:</p>
+<ul>
+<li>indentation</li>
+<li>colons</li>
+<li>quotation marks</li>
+<li>invalid field names and</li>
+<li>incorrect nesting.</li>
+</ul>
+<p>A Quarto document can fail to render even when Quarto itself is installed correctly.</p>
+<p>The error usually identifies the file and approximate line where the problem occurred.</p>
+</section>
+<section id="quarto-preview-does-not-open" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="quarto-preview-does-not-open">Quarto Preview does not open</h3>
+<div class="quick-answer">
+<p>First determine whether rendering failed or whether only the preview window failed to open.</p>
+</div>
+<p>Run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render your-file.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If rendering succeeds, Quarto itself is working.</p>
+<p>Then try:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview your-file.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>and check the terminal output for the local preview address or additional errors.</p>
+</section>
+<section id="markdown-files-open-with-quarto-preview-instead-of-the-normal-markdown-preview" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="markdown-files-open-with-quarto-preview-instead-of-the-normal-markdown-preview">Markdown files open with Quarto Preview instead of the normal Markdown preview</h3>
+<div class="quick-answer">
+<p>VS Code may be associating the preview action with the Quarto extension.</p>
+</div>
+<p>For ordinary <code>.md</code> files, use VS Code’s Markdown preview commands when you want the standard Markdown preview.</p>
+<p>For <code>.qmd</code> files, use Quarto Preview.</p>
+</section>
+<section id="something-worked-before-but-now-it-does-not-render" class="level3 troubleshooting-item">
+<h3 class="anchored" data-anchor-id="something-worked-before-but-now-it-does-not-render">Something worked before, but now it does not render</h3>
+<div class="quick-answer">
+<p>Before reinstalling Quarto, identify which part of the workflow changed.</p>
+</div>
+<p>Check:</p>
+<ol type="1">
+<li>Does <code>quarto --version</code> still work?</li>
+<li>Does a simple text-only <code>.qmd</code> render?</li>
+<li>Is the error coming from Quarto, Python, Jupyter, R, knitr, or an extension?</li>
+<li>Did you change Python or R environments?</li>
+<li>Did you add or change YAML?</li>
+<li>Did you move project files or images?</li>
+<li>Did an extension update or become disabled?</li>
+</ol>
+<p>Reinstalling Quarto should usually come after these checks.</p>
+</section>
+</section>
+<section id="best-practices" class="level1">
+<h1>Best Practices</h1>
+<ul>
+<li>Verify Quarto from the terminal before troubleshooting editor integrations.</li>
+<li>Open the project folder rather than only an individual <code>.qmd</code> file.</li>
+<li>Keep related source files, images, and supporting files together in a project folder.</li>
+<li>Save the source file before troubleshooting unexpected output.</li>
+<li>Read the <strong>first meaningful render error</strong> rather than only the last line of a long error message.</li>
+<li>Distinguish Quarto errors from Python, Jupyter, R, knitr, or editor-extension errors.</li>
+<li>Use <code>quarto render</code> when you want a finished output.</li>
+<li>Use <code>quarto preview</code> while actively editing.</li>
+<li>Test a minimal document when a larger project stops working.</li>
+<li>Avoid reinstalling software before identifying which component is actually failing.</li>
+</ul>
+</section>
+<section id="next-steps" class="level1">
+<h1>Next Steps</h1>
+<p>Your Quarto installation is now ready.</p>
+<p>The next guide, <strong>Getting Started with Quarto</strong>, can focus on actually authoring documents, including:</p>
+<ul>
+<li>YAML front matter</li>
+<li>Markdown</li>
+<li>headings</li>
+<li>links and images</li>
+<li>code chunks</li>
+<li>Python and R execution</li>
+<li>chunk options</li>
+<li>figures and tables</li>
+<li>HTML and PDF output</li>
+<li>Quarto projects and</li>
+<li>the basic authoring workflow.</li>
+</ul>
+<p>You do not need to learn every Quarto feature at once. Start with the document format and language you actually plan to use.</p>
+</section>
+<section id="verify-your-setup" class="level1">
+<h1>Verify Your Setup</h1>
+<p>You only need to verify the workflows you plan to use.</p>
+<div class="guide-checklist">
+<p><strong>Core Quarto Setup</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox"><code>quarto --version</code> displays a version number.</label></li>
+<li><label><input type="checkbox">I can create a <code>.qmd</code> file.</label></li>
+<li><label><input type="checkbox"><code>quarto render</code> creates an output document.</label></li>
+<li><label><input type="checkbox"><code>quarto preview</code> opens a working preview.</label></li>
+</ul>
+</div>
+<div class="guide-checklist">
+<p><strong>Optional Workflows</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">VS Code recognizes <code>.qmd</code> files.</label></li>
+<li><label><input type="checkbox">The Quarto VS Code extension is installed.</label></li>
+<li><label><input type="checkbox">Quarto Preview works from VS Code.</label></li>
+<li><label><input type="checkbox">Python code executes through Jupyter.</label></li>
+<li><label><input type="checkbox">R code executes through knitr.</label></li>
+<li><label><input type="checkbox">RStudio can render a Quarto document.</label></li>
+</ul>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/amandakube\.github\.io\/teaching\/guides\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Amanda R. Kube Jotte</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>All Rights Reserved</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
