@@ -1,1058 +1,312 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-172221298-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+      gtag("config", "UA-172221298-1");
+    </script>
 
-<meta name="author" content="Amanda R. Kube Jotte">
-<meta name="dcterms.date" content="2026-09-27">
+    <meta charset="UTF-8" />
+    <meta name="author" content="Amanda R. Kube Jotte" />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta
+      name="keywords"
+      content="Amanda Kube Jotte, Amanda R. Kube Jotte, Amanda Jotte, University of Chicago, Data Science Institute, Data Science Education, Teaching, Pedagogy, Machine Learning, Data Science Ethics"
+    />
+    <meta
+      name="description"
+      content="Assistant Instructional Professor at the University of Chicago specializing in data science education, ethics, curriculum development, and interactive approaches to teaching machine learning and programming."
+    />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta name="google" content="notranslate" />
+    <meta
+      name="google-site-verification"
+      content="leIOIHzfotk4I-5IQ5_YwW-Ubl-t0JqtmYpaa6gzBJg"
+    />
 
-<title>Python Installation Guide – Teaching Resources | Student Guides</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-</style>
+    <title>Amanda R. Kube Jotte</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:700"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2a890b4f4ecfc8517c73d5eba00faa62.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2ae9d128b9b6acf21c0753cbc8859995.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
-<style>html{ scroll-behavior: smooth; }</style>
-
-
-</head>
-
-<body class="nav-fixed quarto-light">
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Teaching Resources | Student Guides</span>
-    </a>
-  </div>
-        <div class="quarto-navbar-tools tools-end">
-</div>
-          <div id="quarto-search" class="" title="Search"></div>
-      </div> <!-- /container-fluid -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html" style="font-size: 20px">Home</a></li>
+            <li>
+              <a href="teaching.html" style="font-size: 20px">Teaching</a>
+            </li>
+            <!-- <li>
+              <a href="publications.html" style="font-size: 20px"
+                >Publications</a
+              >
+            </li>-->
+            <li>
+              <a
+                href="cv/Amanda_Kube_CV_0626.pdf"
+                target="_blank"
+                style="font-size: 20px"
+                >CV</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">Python Installation Guide</a></li>
-  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before You Begin</a></li>
-  <li><a href="#which-installation-should-you-choose" id="toc-which-installation-should-you-choose" class="nav-link" data-scroll-target="#which-installation-should-you-choose">Which Installation Should You Choose?</a>
-  <ul class="collapse">
-  <li><a href="#option-1-python-from-python.org" id="toc-option-1-python-from-python.org" class="nav-link" data-scroll-target="#option-1-python-from-python.org">Option 1: Python from python.org</a></li>
-  <li><a href="#option-2-anaconda" id="toc-option-2-anaconda" class="nav-link" data-scroll-target="#option-2-anaconda">Option 2: Anaconda</a></li>
-  <li><a href="#i-already-installed-anaconda.-should-i-uninstall-it" id="toc-i-already-installed-anaconda.-should-i-uninstall-it" class="nav-link" data-scroll-target="#i-already-installed-anaconda.-should-i-uninstall-it">I already installed Anaconda. Should I uninstall it?</a></li>
-  </ul></li>
-  <li><a href="#install-python-from-python.org" id="toc-install-python-from-python.org" class="nav-link" data-scroll-target="#install-python-from-python.org">Install Python from python.org</a>
-  <ul class="collapse">
-  <li><a href="#windows-installation" id="toc-windows-installation" class="nav-link" data-scroll-target="#windows-installation">Windows Installation</a></li>
-  <li><a href="#macos-installation" id="toc-macos-installation" class="nav-link" data-scroll-target="#macos-installation">macOS Installation</a></li>
-  <li><a href="#linux-installation" id="toc-linux-installation" class="nav-link" data-scroll-target="#linux-installation">Linux Installation</a></li>
-  </ul></li>
-  <li><a href="#install-anaconda" id="toc-install-anaconda" class="nav-link" data-scroll-target="#install-anaconda">Install Anaconda</a></li>
-  <li><a href="#verify-your-installation" id="toc-verify-your-installation" class="nav-link" data-scroll-target="#verify-your-installation">Verify Your Installation</a>
-  <ul class="collapse">
-  <li><a href="#check-python" id="toc-check-python" class="nav-link" data-scroll-target="#check-python">Check Python</a></li>
-  <li><a href="#start-python-interactively" id="toc-start-python-interactively" class="nav-link" data-scroll-target="#start-python-interactively">Start Python Interactively</a></li>
-  <li><a href="#check-pip" id="toc-check-pip" class="nav-link" data-scroll-target="#check-pip">Check pip</a></li>
-  </ul></li>
-  <li><a href="#what-did-you-install" id="toc-what-did-you-install" class="nav-link" data-scroll-target="#what-did-you-install">What Did You Install?</a>
-  <ul class="collapse">
-  <li><a href="#the-python-interpreter" id="toc-the-python-interpreter" class="nav-link" data-scroll-target="#the-python-interpreter">The Python Interpreter</a></li>
-  <li><a href="#the-standard-library" id="toc-the-standard-library" class="nav-link" data-scroll-target="#the-standard-library">The Standard Library</a></li>
-  <li><a href="#pip" id="toc-pip" class="nav-link" data-scroll-target="#pip">pip</a></li>
-  </ul></li>
-  <li><a href="#common-installation-problems" id="toc-common-installation-problems" class="nav-link" data-scroll-target="#common-installation-problems">Common Installation Problems</a>
-  <ul class="collapse">
-  <li><a href="#python-is-not-recognized-or-the-command-is-not-found" id="toc-python-is-not-recognized-or-the-command-is-not-found" class="nav-link" data-scroll-target="#python-is-not-recognized-or-the-command-is-not-found"><code>python</code> is not recognized or the command is not found</a></li>
-  <li><a href="#windows-opens-the-microsoft-store-when-i-type-python" id="toc-windows-opens-the-microsoft-store-when-i-type-python" class="nav-link" data-scroll-target="#windows-opens-the-microsoft-store-when-i-type-python">Windows opens the Microsoft Store when I type <code>python</code></a></li>
-  <li><a href="#pip-is-not-recognized" id="toc-pip-is-not-recognized" class="nav-link" data-scroll-target="#pip-is-not-recognized"><code>pip</code> is not recognized</a></li>
-  <li><a href="#a-package-installs-but-python-still-cannot-import-it" id="toc-a-package-installs-but-python-still-cannot-import-it" class="nav-link" data-scroll-target="#a-package-installs-but-python-still-cannot-import-it">A package installs, but Python still cannot import it</a></li>
-  <li><a href="#i-have-more-than-one-version-of-python" id="toc-i-have-more-than-one-version-of-python" class="nav-link" data-scroll-target="#i-have-more-than-one-version-of-python">I have more than one version of Python</a></li>
-  <li><a href="#anaconda-navigator-opens-but-my-terminal-cannot-find-conda" id="toc-anaconda-navigator-opens-but-my-terminal-cannot-find-conda" class="nav-link" data-scroll-target="#anaconda-navigator-opens-but-my-terminal-cannot-find-conda">Anaconda Navigator opens, but my terminal cannot find <code>conda</code></a></li>
-  </ul></li>
-  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
-  <li><a href="#quick-verification-checklist" id="toc-quick-verification-checklist" class="nav-link" data-scroll-target="#quick-verification-checklist">Quick Verification Checklist</a></li>
-  </ul>
-</nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Python Installation Guide</h1>
-<p class="subtitle lead">Install Python, verify that it works, and avoid the most common beginner setup problems</p>
-</div>
+    <div class="container">
+      <div class="row">
+        <!-- Contact Info on the Sidebar -->
+        <div class="col-sm-12 col-md-4">
+          <div class="ContactInfoContainer">
+            <img
+              class="img-responsive Headshot"
+              src="pics/headshot_jotte.jpg"
+              alt="image of me"
+            /><br />
+            <div class="ContactInfoTextMain NameAndTitles">
+              <b>Amanda R. Kube Jotte, M.S., Ph.D.</b>
+            </div>
+            <br />
+            <div class="ContactInfoTextMain CurrentPosition">
+              <b>Assistant Instructional Professor</b>
+            </div>
+            <br />
+            <p><b>akube@uchicago.edu</b><br /></p>
+            <p>
+              Data Science Institute<br />
+              The University of Chicago<br />
+            </p>
+            <a href="https://twitter.com/AmandaRKube" title=""
+              ><img
+                alt="twitter"
+                target="_blank"
+                src="icons/twitter.png"
+                class="SocialIcon"
+            /></a>
 
+            <a href="https://www.linkedin.com/in/amanda-kube-488071a8/" title=""
+              ><img
+                alt="linkedin"
+                target="_blank"
+                src="icons/linkedin.png"
+                class="SocialIcon"
+            /></a>
 
+            <a
+              href="https://scholar.google.com/citations?user=eML9qi8AAAAJ&hl=en&inst=2230987035966559800"
+              title=""
+              ><img
+                alt="Google Scholar"
+                target="_blank"
+                src="icons/google-scholar.svg"
+                class="SocialIcon"
+            /></a>
 
-<div class="quarto-title-meta">
+            <a
+              href="https://www.researchgate.net/profile/Amanda_Kube?cp=shp"
+              title=""
+              ><img
+                alt="Follow me on ResearchGate"
+                target="_blank"
+                src="icons/researchgate.svg"
+                class="SocialIcon"
+            /></a>
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Amanda R. Kube Jotte </p>
+            <a href="https://orcid.org/0000-0002-4814-3209" title=""
+              ><img
+                alt="orcid"
+                target="_blank"
+                src="icons/orcid.svg"
+                class="SocialIcon"
+            /></a>
           </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 27, 2026</p>
+        </div>
+
+        <!-- Page Content -->
+
+        <!-- Entries Column -->
+        <div class="col-sm-12 col-md-8 EntriesColumn">
+          <div
+            style="
+              margin-top: 5%;
+              font-size: 20px;
+              line-height: 1.5;
+              line-height: 134%;
+            "
+          >
+            <p>
+              I am an Assistant Instructional Professor in the 
+                <a href="https://datascience.uchicago.edu/" target="_blank"
+                    >Data Science Institute</a
+                > at the University of Chicago. My teaching and scholarly work focus on data science education, 
+                ethical data practice, and the design of accessible, interactive learning experiences for students 
+                developing technical, statistical, and critical reasoning skills.
+            </p>
+
+            <p>
+              I teach across the undergraduate data science curriculum, including
+              introductory data science, computer science for data science, machine
+              learning, and data science ethics. I am especially interested in helping
+              students connect technical methods to real-world decision-making, communicate
+              clearly about data, and develop confidence as problem solvers.
+            </p>
+
+            <p>
+              Before coming to the University of Chicago I attended Washington
+              University in St. Louis where I received a double major in
+              mathematics and psychology, graduating summa cum laude and as a
+              member of the Phi Beta Kappa honor society. I went on to earn a masters 
+            degree in  
+                <a href="https://ese.wustl.edu/academics/graduate-programs/masters-and-certificates/MS-in-Data-Analytics-Statistics.html" target="_blank"
+                    >Data Analytics and Statistics</a
+                    > before earning my doctorate in
+              <a href="https://datasciences.wustl.edu/" target="_blank"
+                >Computational and Data Sciences</a
+              >
+              from Washington University in St. Louis as the pioneering graduate
+              of the program, where I studied applications of machine learning
+              and AI for scarce resource allocation in the context of
+              homelessness prevention services. I was advised by
+              <a href="https://people.cs.vt.edu/sanmay/" target="_blank"
+                >Dr. Sanmay Das</a
+              >&nbsp; at Virginia Tech and
+              <a
+                href="https://brownschool.wustl.edu/Faculty-and-Research/Pages/Patrick-Fowler.aspx"
+                target="_blank"
+                >Dr. Patrick Fowler</a
+              >
+              in the Division of Computational and Data Sciences at Washington
+              University in St. Louis.
+            </p>
+          </div>
+          <div
+            style="
+              margin-top: 10%;
+              font-size: 20px;
+              line-height: 1.5;
+              margin-bottom: 10%;
+            "
+          >
+            <h2 id="news">News</h2>
+            <ul>
+                <li> 
+                    June 2026: Congratulations to <a href="https://atticusginsborg.github.io/"  target="_blank"> Atticus Ginsborg </a> on presenting our work in his first conference poster at this year's <a href="https://2026.isls.org/" target="_blank">ISLS Annual Meeting!</a> The poster highlighted our recent work on developing interactive educational resources for teaching data science. 
+                </li>
+                <li> 
+                    December 2025: So proud of our ethics students this quarter! The end-of-quarter poster session was featured on the DSI <a href="https://datascience.uchicago.edu/news/data-ethics-students-tackle-real-world-challenges-in-poster-session/"  target="_blank"> blog</a>
+                </li>
+                <li> 
+                    November 2025: I've officially taken on a leadership role in the Data Science Institute's <a href="https://datascience.uchicago.edu/outreach/preceptors/" target="_blank"> Preceptorship Program </a>
+                </li>
+                <li>  
+                    August 2025: I was accepted as a member of this year's cohort of Pedagogy Fellows through the <a href="https://teaching.uchicago.edu/" target="_blank"> Chicago Center for Teaching and Learning. </a> Happy to be doing more work with the amazing people at the CCTL!
+                </li>
+                <li>
+                    January 2025: I received a competitive Physical Sciences Collegiate Division Curricular Innovation Award (Co-PI) to support the development of interactive, self-grading data science educational resources
+                </li>
+                <li class="extra-news">
+                    June 2024: Excited to have been interviewed by the Office of Civic Engagement about my work with Chicago Community Colleges as a Data Science Preceptor at The University of Chicago.
+                    You can learn more about this partnership in the resulting <a href="https://civicengagement.uchicago.edu/news/unique-data-science-partnership-with-city-colleges-of-chicago-offers-rising-professors-and-their-students-a-more-inclusive-learning-experience" target="_blank"> article</a>.
+                </li>
+               <li class="extra-news">
+                April 2024: Very honored to have been profiled by data.org in their article 
+                   series <i>5 Minutes With...</i> The article can be found
+                   <a href="https://data.org/news/5-minutes-with-dr-amanda-r-kube-jotte/" target="_blank"> here</a>.
+              </li>
+              <li class="extra-news">
+                April 2024: Looking forward to starting my new position as
+                Assistant Instructional Professor at the University of Chicago
+                Data Science Institute.
+              </li>
+              <li class="extra-news">
+                October 2023: Thrilled to be presenting at ADSA this year in San
+                Antonio! Looking forward to discussing data science education
+                with so many wonderful instructors.
+              </li>
+              <li class="extra-news">
+                April 2023: Excited to announce our paper
+                <i
+                  >Fair and Efficient Allocation of Scarce Resources Based on
+                  Predicted Outcomes: Implications for Homeless Service
+                  Delivery</i
+                >
+                is officially published and available
+                <a
+                  href="https://jair.org/index.php/jair/article/view/12847"
+                  target="_blank"
+                  >here</a
+                >
+              </li>
+              <li class="extra-news">
+                June 2022: I am now officially a Preceptor at UChicago's DSI -
+                excited to welcome our Summer Lab students!
+              </li>
+              <li class="extra-news">April 2022: I successfully defended my dissertation!</li>
+              <li class="extra-news">
+                February 2022: I accepted a position at the University of
+                Chicago to begin June 2022
+              </li>
+            </ul>
+              <button id="toggle-news" class="btn btn-default">See more</button>
+
+            <script>
+              const button = document.getElementById("toggle-news");
+              const extraNews = document.querySelectorAll(".extra-news");
+            
+              extraNews.forEach(item => item.style.display = "none");
+            
+              button.addEventListener("click", function () {
+                const hidden = extraNews[0].style.display === "none";
+                extraNews.forEach(item => item.style.display = hidden ? "list-item" : "none");
+                button.textContent = hidden ? "See less" : "See more";
+              });
+            </script>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<!--
-PUBLIC VERSION
-Keep the next two includes and render with:
-quarto preview guides/python-installation/index.qmd --profile public
--->
-<section id="section" class="level1 guide-header">
-<h1>Python Installation Guide</h1>
-<div class="subtitle">
-<p>Install Python, verify that it works, and avoid the most common beginner setup problems</p>
-</div>
-<div class="guide-meta-inline">
-<p>Beginning Python and Data Science Students · 15–25 minutes · Beginner · Version 0.1</p>
-</div>
-</section>
-<!--
-COURSE VERSION
-1. Comment out the two public includes above.
-2. Uncomment the course cover below.
-3. Render with --profile course.
--->
-<!-- {{< include ../../templates/_course-cover.qmd >}} -->
-<section id="before-you-begin" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-begin">Before You Begin</h2>
-<p>This guide is for you if you:</p>
-<ul>
-<li>have never installed Python before</li>
-<li>are preparing for an introductory programming or data science course</li>
-<li>want to check whether Python is already installed correctly or</li>
-<li>are seeing messages such as <code>python: command not found</code>, <code>Python was not found</code>, or <code>pip is not recognized</code>.</li>
-</ul>
-<p>By the end of the guide, you will be able to:</p>
-<ul>
-<li>choose between a standard Python installation and Anaconda</li>
-<li>install Python using the approach that fits your needs</li>
-<li>verify that Python and <code>pip</code> are available</li>
-<li>understand the basic pieces that were installed and</li>
-<li>diagnose several common installation problems.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled" title="A note for students">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>A note for students
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Follow your instructor’s directions when they specify a particular Python version, distribution, or environment. Course requirements should take priority over the general recommendations in this guide.</p>
-</div>
-</div>
-</section>
-<section id="which-installation-should-you-choose" class="level2">
-<h2 class="anchored" data-anchor-id="which-installation-should-you-choose">Which Installation Should You Choose?</h2>
-<p>There is more than one legitimate way to install Python. The best option depends on what you are trying to do.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Your situation</th>
-<th>Recommended starting point</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>You are taking your first Python course</td>
-<td>Install Python from <strong>python.org</strong></td>
-</tr>
-<tr class="even">
-<td>You want a small, general-purpose installation</td>
-<td>Install Python from <strong>python.org</strong></td>
-</tr>
-<tr class="odd">
-<td>Your instructor specifically requires Anaconda</td>
-<td>Install <strong>Anaconda</strong></td>
-</tr>
-<tr class="even">
-<td>You want Python, Jupyter, and many scientific packages bundled together</td>
-<td>Consider <strong>Anaconda</strong></td>
-</tr>
-<tr class="odd">
-<td>You already have a working installation</td>
-<td>Skip to <a href="#verify-your-installation">Verify Your Installation</a></td>
-</tr>
-</tbody>
-</table>
-<section id="option-1-python-from-python.org" class="level3">
-<h3 class="anchored" data-anchor-id="option-1-python-from-python.org">Option 1: Python from python.org</h3>
-<p>This is the recommended starting point for most beginners.</p>
-<p><strong>Advantages</strong></p>
-<ul>
-<li>relatively small installation</li>
-<li>works well with VSCode and most other IDEs</li>
-<li>makes the relationship between Python and installed packages easier to understand and</li>
-<li>includes <code>pip</code>, Python’s standard package installer.</li>
-</ul>
-<p><strong>Tradeoff</strong></p>
-<p>You install additional packages yourself as you need them.</p>
-</section>
-<section id="option-2-anaconda" class="level3">
-<h3 class="anchored" data-anchor-id="option-2-anaconda">Option 2: Anaconda</h3>
-<p>Anaconda is a Python distribution designed primarily for scientific computing and data science. It bundles Python with Jupyter, the Conda environment manager, and many commonly used packages.</p>
-<p><strong>Advantages</strong></p>
-<ul>
-<li>includes many scientific and data-analysis tools</li>
-<li>includes Jupyter</li>
-<li>offers environment and package management through <code>conda</code> and</li>
-<li>can be convenient when a course or research group already uses Conda.</li>
-</ul>
-<p><strong>Tradeoffs</strong></p>
-<ul>
-<li>much larger download</li>
-<li>introduces additional concepts, including Conda environments and the distinction between <code>conda</code> and <code>pip</code></li>
-<li>can be more setup than a first-time learner needs.</li>
-</ul>
-<div class="quick-answer">
-<p><strong>Recommendation:</strong> Install Python from python.org unless your instructor asks you to use Anaconda or you specifically want the bundled scientific-computing environment.</p>
-</div>
-</section>
-<section id="i-already-installed-anaconda.-should-i-uninstall-it" class="level3 faq-item">
-<h3 class="anchored" data-anchor-id="i-already-installed-anaconda.-should-i-uninstall-it">I already installed Anaconda. Should I uninstall it?</h3>
-<p>No.&nbsp;If Anaconda is working and your course supports it, there is usually no reason to remove it. The important question is which Python environment your terminal, editor, or notebook is currently using.</p>
-</section>
-</section>
-<section id="install-python-from-python.org" class="level2">
-<h2 class="anchored" data-anchor-id="install-python-from-python.org">Install Python from python.org</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../images/python-download-page.png" class="screenshot img-fluid figure-img"></p>
-<figcaption>The official Python downloads page recommends a current stable release for your operating system.</figcaption>
-</figure>
-</div>
-<div class="steps">
-<section id="open-the-official-python-website" class="level3 step">
-<h3 class="anchored" data-anchor-id="open-the-official-python-website">Open the official Python website</h3>
-<p>Go to <code>https://www.python.org/downloads/</code>.</p>
-<p>Avoid downloading Python from an advertisement, third-party download site, or an unfamiliar app store listing.</p>
-</section>
-<section id="download-the-recommended-stable-release" class="level3 step">
-<h3 class="anchored" data-anchor-id="download-the-recommended-stable-release">Download the recommended stable release</h3>
-<p>The website normally recommends an installer for your operating system. Unless your instructor specifies a version, choose the current stable Python 3 release.</p>
-<p>Save the installer somewhere you can find it, such as your Downloads folder.</p>
-</section>
-<section id="run-the-installer" class="level3 step">
-<h3 class="anchored" data-anchor-id="run-the-installer">Run the installer</h3>
-<p>Follow the instructions for your operating system below.</p>
-</section>
-</div>
-<section id="windows-installation" class="level3">
-<h3 class="anchored" data-anchor-id="windows-installation">Windows Installation</h3>
-<ol type="1">
-<li><p>Open the downloaded <strong>Python Install Manager</strong>.</p></li>
-<li><p>Follow the prompts to install the Python Install Manager.</p></li>
-<li><p>Once installation is complete, open <strong>Command Prompt</strong>, <strong>PowerShell</strong>, or the VS Code terminal.</p></li>
-<li><p>Run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>python</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p>If a Python runtime is not already installed, the Python Install Manager can install the latest stable version of Python.</p></li>
-<li><p>Follow any additional configuration prompts that appear.</p></li>
-<li><p>Close and reopen your terminal before verifying the installation.</p></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled" title="The Windows installation process has changed">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>The Windows installation process has changed
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Recent versions of Python use the <strong>Python Install Manager</strong> on Windows. You may see older tutorials that use a standalone Python installer with an <strong>Add python.exe to PATH</strong> checkbox. The standalone installer is being phased out, so this guide uses the newer installation method.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../images/python-windows-installer.png" class="screenshot img-fluid figure-img"></p>
-<figcaption>The Windows installer with “Add python.exe to PATH” highlighted.</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Using the Python Install Manager">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Using the Python Install Manager
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The Python Install Manager manages the Python versions installed on your computer. After setup, commands such as <code>python</code> and <code>py</code> can be used to access Python from the command line.</p>
-<p>If you later need a particular version of Python, you can use the Python Install Manager to install and manage additional versions rather than downloading a separate installer for each version.</p>
-</div>
-</div>
-</section>
-<section id="macos-installation" class="level3">
-<h3 class="anchored" data-anchor-id="macos-installation">macOS Installation</h3>
-<ol type="1">
-<li>Open the downloaded <code>.pkg</code> installer.</li>
-<li>Continue through the installation screens.</li>
-<li>Accept the default location unless you have a specific reason to change it.</li>
-<li>Finish the installation.</li>
-<li>Close and reopen Terminal before verifying the installation.</li>
-</ol>
-<p>On many Macs, the command used for Python 3 is <code>python3</code> rather than <code>python</code>.</p>
-</section>
-<section id="linux-installation" class="level3">
-<h3 class="anchored" data-anchor-id="linux-installation">Linux Installation</h3>
-<p>Many Linux distributions already include Python 3. Before installing anything, open a terminal and run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>When Python is missing or your course requires a different version, follow the package-management instructions for your Linux distribution.</p>
-</section>
-</section>
-<section id="install-anaconda" class="level2">
-<h2 class="anchored" data-anchor-id="install-anaconda">Install Anaconda</h2>
-<p>Use this section only when you have chosen Anaconda.</p>
-<div class="steps">
-<section id="download-anaconda" class="level3 step">
-<h3 class="anchored" data-anchor-id="download-anaconda">Download Anaconda</h3>
-<p>Go to <code>https://www.anaconda.com/download</code> and select the installer for your operating system.</p>
-</section>
-<section id="run-the-installer-1" class="level3 step">
-<h3 class="anchored" data-anchor-id="run-the-installer-1">Run the installer</h3>
-<p>Accept the default installation options unless your course or workplace provides different directions.</p>
-<p>On Windows, Anaconda may recommend that you launch its tools through <strong>Anaconda Navigator</strong> or <strong>Anaconda Prompt</strong> rather than adding Anaconda to the system <code>PATH</code>. Follow the current installer recommendation.</p>
-</section>
-<section id="launch-anaconda-navigator" class="level3 step">
-<h3 class="anchored" data-anchor-id="launch-anaconda-navigator">Launch Anaconda Navigator</h3>
-<p>Open Anaconda Navigator and confirm that applications such as Jupyter Notebook or JupyterLab are available.</p>
-</section>
-<section id="verify-conda" class="level3 step">
-<h3 class="anchored" data-anchor-id="verify-conda">Verify Conda</h3>
-<p>Open Anaconda Prompt on Windows, or Terminal on macOS or Linux, and run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You should see a Conda version number.</p>
-</section>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="Conda and pip are not the same tool">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Conda and pip are not the same tool
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Both can install Python packages, but they manage packages and environments differently. Avoid switching between them casually inside the same environment until you understand which environment you are changing.</p>
-</div>
-</div>
-</section>
-<section id="verify-your-installation" class="level2">
-<h2 class="anchored" data-anchor-id="verify-your-installation">Verify Your Installation</h2>
-<p>Verification is not optional. It tells you whether the installation worked and which command your computer recognizes.</p>
-<section id="check-python" class="level3">
-<h3 class="anchored" data-anchor-id="check-python">Check Python</h3>
-<p>Open a new terminal window.</p>
-<p>On Windows, try:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>On macOS or Linux, try:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>A successful result looks similar to:</p>
-<pre class="text"><code>Python 3.x.x</code></pre>
-<p>The exact version number may differ.</p>
-</section>
-<section id="start-python-interactively" class="level3">
-<h3 class="anchored" data-anchor-id="start-python-interactively">Start Python Interactively</h3>
-<p>Run the command that worked for you:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>or:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You should see a Python prompt beginning with <code>&gt;&gt;&gt;</code>.</p>
-<p>Test it:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Python is ready"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Exit with:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>exit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="check-pip" class="level3">
-<h3 class="anchored" data-anchor-id="check-pip">Check pip</h3>
-<p>Use the Python command that worked on your computer:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>or:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Using <code>python -m pip</code> or <code>python3 -m pip</code> makes the connection between the Python interpreter and its package installer explicit.</p>
-</section>
-</section>
-<section id="what-did-you-install" class="level2">
-<h2 class="anchored" data-anchor-id="what-did-you-install">What Did You Install?</h2>
-<p>A standard Python installation normally gives you three important pieces.</p>
-<section id="the-python-interpreter" class="level3">
-<h3 class="anchored" data-anchor-id="the-python-interpreter">The Python Interpreter</h3>
-<p>The interpreter executes Python code. When you run a <code>.py</code> file, a notebook cell, or an interactive command, a Python interpreter performs the computation.</p>
-</section>
-<section id="the-standard-library" class="level3">
-<h3 class="anchored" data-anchor-id="the-standard-library">The Standard Library</h3>
-<p>Python includes many built-in modules for common tasks such as working with files, dates, mathematics, and operating-system information.</p>
-</section>
-<section id="pip" class="level3">
-<h3 class="anchored" data-anchor-id="pip">pip</h3>
-<p><code>pip</code> installs additional packages that are not included in the standard library.</p>
-<p>For example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install pandas</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Do not install packages merely to test the installation. First verify Python and <code>pip</code>; then install the packages required for your course or project.</p>
-</section>
-</section>
-<section id="common-installation-problems" class="level1">
-<h1>Common Installation Problems</h1>
-<section id="python-is-not-recognized-or-the-command-is-not-found" class="level2 troubleshooting-item">
-<h2 class="anchored" data-anchor-id="python-is-not-recognized-or-the-command-is-not-found"><code>python</code> is not recognized or the command is not found</h2>
-<div class="quick-answer">
-<p>Try <code>python3 --version</code>. If that works, use <code>python3</code> on this computer.</p>
-</div>
-<p><strong>Why it happens</strong></p>
-<p>Your system may use <code>python3</code> as the command name, or Python may not have been added to <code>PATH</code>.</p>
-<p><strong>Check</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Fix</strong></p>
-<ul>
-<li>If <code>python3</code> works, use <code>python3</code>.</li>
-<li>If neither command works, close and reopen the terminal.</li>
-<li>On Windows, rerun the installer and confirm that Python is added to <code>PATH</code>.</li>
-<li>Confirm that the installation completed successfully.</li>
-</ul>
-</section>
-<section id="windows-opens-the-microsoft-store-when-i-type-python" class="level2 troubleshooting-item">
-<h2 class="anchored" data-anchor-id="windows-opens-the-microsoft-store-when-i-type-python">Windows opens the Microsoft Store when I type <code>python</code></h2>
-<div class="quick-answer">
-<p>Windows may be using an App Execution Alias instead of the Python installation you intended.</p>
-</div>
-<p><strong>Check</strong></p>
-<p>Confirm whether Python is installed from python.org and whether its installation folder is on <code>PATH</code>.</p>
-<p><strong>Fix</strong></p>
-<ol type="1">
-<li>Search Windows Settings for <strong>App execution aliases</strong>.</li>
-<li>Review the aliases for <code>python.exe</code> and <code>python3.exe</code>.</li>
-<li>Disable conflicting store aliases when you have installed Python separately.</li>
-<li>Open a new terminal and check the version again.</li>
-</ol>
-</section>
-<section id="pip-is-not-recognized" class="level2 troubleshooting-item">
-<h2 class="anchored" data-anchor-id="pip-is-not-recognized"><code>pip</code> is not recognized</h2>
-<div class="quick-answer">
-<p>Use the Python interpreter to launch pip directly.</p>
-</div>
-<p>Try:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>or:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>If this works, use the same form when installing packages:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install package-name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="a-package-installs-but-python-still-cannot-import-it" class="level2 troubleshooting-item">
-<h2 class="anchored" data-anchor-id="a-package-installs-but-python-still-cannot-import-it">A package installs, but Python still cannot import it</h2>
-<div class="quick-answer">
-<p>The package was probably installed into a different Python environment.</p>
-</div>
-<p><strong>Why it happens</strong></p>
-<p>Your computer may have more than one Python installation. The <code>pip</code> command and the Python interpreter used by your editor or notebook may refer to different environments.</p>
-<p><strong>Fix</strong></p>
-<ol type="1">
-<li>Identify the Python interpreter used by the terminal, editor, or notebook.</li>
-<li>Run pip through that interpreter:</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install package-name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="3" type="1">
-<li>In VS Code, verify the selected interpreter or notebook kernel.</li>
-</ol>
-</section>
-<section id="i-have-more-than-one-version-of-python" class="level2 troubleshooting-item">
-<h2 class="anchored" data-anchor-id="i-have-more-than-one-version-of-python">I have more than one version of Python</h2>
-<div class="quick-answer">
-<p>Multiple versions are not automatically a problem. The goal is to know which one your project is using.</p>
-</div>
-<p>As a beginner, keep one primary installation when possible. Before installing packages, verify the interpreter with:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>or:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="anaconda-navigator-opens-but-my-terminal-cannot-find-conda" class="level2 troubleshooting-item">
-<h2 class="anchored" data-anchor-id="anaconda-navigator-opens-but-my-terminal-cannot-find-conda">Anaconda Navigator opens, but my terminal cannot find <code>conda</code></h2>
-<div class="quick-answer">
-<p>Use Anaconda Prompt on Windows, or initialize Conda for your shell if your installation instructions require it.</p>
-</div>
-<p>Do not repeatedly reinstall Anaconda. First confirm whether Conda works inside Anaconda Prompt and whether your ordinary shell has been configured to recognize it.</p>
-</section>
-</section>
-<section id="best-practices" class="level1">
-<h1>Best Practices</h1>
-<ul>
-<li>Download Python or Anaconda only from the official source.</li>
-<li>Follow your course’s required version or distribution when one is specified.</li>
-<li>Verify the installation before adding packages or configuring an editor.</li>
-<li>Use <code>python -m pip</code> or <code>python3 -m pip</code> when you need to ensure that pip belongs to the intended interpreter.</li>
-<li>Avoid installing several Python distributions without a clear reason.</li>
-<li>Before reinstalling anything, identify which interpreter or environment is currently active.</li>
-<li>Copy complete error messages as text when asking for help.</li>
-</ul>
-</section>
-<section id="next-steps" class="level1">
-<h1>Next Steps</h1>
-<p>Once Python is installed and verified, continue with the tools required for your work.</p>
-<p>Common next steps include:</p>
-<ol type="1">
-<li>install Visual Studio Code</li>
-<li>select the correct Python interpreter in VS Code</li>
-<li>install or launch Jupyter</li>
-<li>create a project folder</li>
-<li>install only the packages required for the project.</li>
-</ol>
-</section>
-<section id="quick-verification-checklist" class="level1">
-<h1>Quick Verification Checklist</h1>
-<ul class="task-list">
-<li><label><input type="checkbox">I know whether I installed standard Python or Anaconda.</label></li>
-<li><label><input type="checkbox">I can display a Python version in a new terminal window.</label></li>
-<li><label><input type="checkbox">I can start Python and run <code>print("Python is ready")</code>.</label></li>
-<li><label><input type="checkbox">I can display the pip or Conda version.</label></li>
-<li><label><input type="checkbox">I know which command works on my computer: <code>python</code> or <code>python3</code>.</label></li>
-<li><label><input type="checkbox">I know that my editor or notebook must use the same intended Python environment.</label></li>
-</ul>
-
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/amandakube\.github\.io\/teaching\/guides\/");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-        }
-      }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
-    }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
-    }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
-      } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
-      }
-    }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
-          }
-        } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
-            if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
-      } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
-        });
-      }
-    }
-  });
-  </script>
-</div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>© 2026 Amanda R. Kube Jotte</p>
-</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
-<p>All Rights Reserved</p>
-</div>
-  </div>
-</footer>
-
-
-
-
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
-</body></html>
+  </body>
+</html>
